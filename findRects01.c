@@ -1,4 +1,11 @@
-//Kyle Mulligan
+//
+//  findRects01.c
+//  
+//
+//  Created by Kyle Mulligan on 11/13/17.
+//
+
+#include "findRects01.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,28 +15,12 @@
 
 #define BUFF_SIZE 256
 
-struct rectangle
-{
-    int x0;
-    int y0;
-    int x1;
-    int y1;
-};
 
-struct img
-{
-    char name[1000];
-    int xdim;
-    int ydim;
-    int numRects;
-    struct rectangle rectArray[50];
-    
-};
 
-int main (int argc, char **argv)
+
+void findRects( img imgArray[], char filePath[] )
 {
     FILE *inFile;
-    struct img imgArray[500];
     
     char buff[BUFF_SIZE];
     char rec[]="rect:";
@@ -37,6 +28,7 @@ int main (int argc, char **argv)
     
     bool isRect;
     bool imgNameFound;
+    bool xfound;
     
     
     int buffCount; //used to address into each line of characters from the file
@@ -44,6 +36,7 @@ int main (int argc, char **argv)
     int imgNameBuffCount; //used to look for .jpg file extension while acquiring img name
     int nameCount; //keeps track of where in the img name the characters are going
     int imgCount=0; //keeps track of how many images there are in the imgArray
+    int tagCount; //keeps track of where in the 'tag' char array to put characters
     
     
     int coordinate;
@@ -51,10 +44,10 @@ int main (int argc, char **argv)
     
     
     
-    inFile=fopen("out.txt", "r");
+    inFile=fopen(filePath, "r");
     if (inFile==NULL)
     {
-        perror("Error opening the file");
+        perror("Error opening the file: ");
     }
     else
     {
@@ -102,7 +95,20 @@ int main (int argc, char **argv)
                         buffCount++;
                         coordArray[j]=coordinate;
                     }
+                    /*
+                    tagCount=0;
+                    while (buff[buffCount]!='\n')
+                    {
+                        imgArray[imgCount-1].rectArray[rectCount].tag[tagCount]=buff[buffCount];
+                        tagCount++;
+                        buffCount++;
+                    }
+                    */
+                    
                     //store the coordinates found in a rectangle struct array
+                    //putting them into imgArray[imgCount-1] because each time
+                    //a new image is found, imgCount is incremented and would address
+                    //a position in the imgArray thats one more than the current img.
                     imgArray[imgCount-1].rectArray[rectCount].x0=coordArray[0];
                     imgArray[imgCount-1].rectArray[rectCount].y0=coordArray[1];
                     imgArray[imgCount-1].rectArray[rectCount].x1=coordArray[2];
@@ -116,7 +122,6 @@ int main (int argc, char **argv)
                 /////////////////////////////////////////////////////////////////////////
                 else
                 {
-                    //printf("made it 01\n");
                     //since not a rectangle, need to reset the buff count to 0
                     //to start looking for the image name from the beginning
                     buffCount=0;
@@ -124,50 +129,55 @@ int main (int argc, char **argv)
                     nameCount=0;
                     while ( !imgNameFound )
                     {
-                        //printf("made it 03\n");
-                        //printf("%c\n",imgArray[imgCount].name[nameCount-1]);
-                        // if the character isn't a period ( . ), put it into the name array for the img struct
-                        if (buff[buffCount]!='.')
+                        // if the character isn't a space ' ', put it into the name array for the img struct
+                        if (buff[buffCount]!=' ')
                         {
                             imgArray[imgCount].name[nameCount]=buff[buffCount];
                             nameCount++;
                         }
-                        // if it is a period ( . ) assume the end of the img name
-                        //has been found and check if the file extension .jpg is present.
-                        else if (buff[buffCount]=='.')
+                        // if it is a space ' '  assume the end of the img name has been found.
+                        else
                         {
-                            //printf("made it 04\n");
-                            //when a . is found assume that the end of the img name has been found
+                            //when a ' ' is found assume that the end of the img name has been found
                             imgNameFound=true;
-#if 0
-                            //check the next three values in the buffer to see if they are the file extension .jpg
-                            imgNameBuffCount=buffCount+1;
-                            for (int i=0; i<3 && imgNameFound ; i++)
-                            {
-                                //if a mismatch is found then we have not found the end of the img name
-                                if (jpg[i]!=buff[imgNameBuffCount])
-                                {
-                                    imgNameFound=false;
-                                }
-                            }
-#endif
+                            
                         }
-                        else if (buff[buffCount]=='\n' || buff[buffCount]=='\0')
-                        {
-                            imgNameFound=true;
-                        }
-                        // once the end of the img name is found, copy the
-                        // file extension and string termination character
-                        // into the end of the name array of the img struct
+                        
+                        buffCount++;
+                        
+                        // once the end of the img name is found,
+                        //acquire the dimensions of the images.
+                        
                         if (imgNameFound)
                         {
-                            imgArray[imgCount].name[nameCount]='.';
-                            imgArray[imgCount].name[nameCount+1]='j';
-                            imgArray[imgCount].name[nameCount+2]='p';
-                            imgArray[imgCount].name[nameCount+3]='g';
-                            imgArray[imgCount].name[nameCount+4]='\0';
+                            xfound=false;
+                            imgArray[imgCount].xdim=0;
+                            imgArray[imgCount].ydim=0;
+                                                        
+                            while ( buff[buffCount]!= '\n' )
+                            {
+                                if ( buff[buffCount]!='x')
+                                {
+                                    
+                                    if (!xfound)
+                                    {
+                                        imgArray[imgCount].xdim= (imgArray[imgCount].xdim*10) + (buff[buffCount]-'0');
+                                    }
+                                    else
+                                    {
+                                        imgArray[imgCount].ydim= (imgArray[imgCount].ydim*10) + (buff[buffCount]-'0');
+                                    }
+                                }
+                                else
+                                {
+                                    xfound = true;
+                                }
+                                buffCount++;
+                                
+                            }
+                            
                         }
-                        buffCount++;
+                        
                         
                     }
                     //since a new image has been found, store the number of rectangles in the previous img struct
@@ -185,17 +195,11 @@ int main (int argc, char **argv)
                     imgCount++;
                     
                 }
-                
             }
         }
         //put the number of rectangles into the last image struct after the end of file is found.
         imgArray[imgCount-1].numRects=rectCount;
-        puts(buff);
         fclose(inFile);
     }
-    printf(" %d rectangles\n", imgArray[0].numRects);
-    printf("x0: %d \ny0: %d\nx1: %d\ny1: %d\n", imgArray[0].rectArray[0].x0, imgArray[0].rectArray[0].y0, imgArray[0].rectArray[0].x1, imgArray[0].rectArray[0].y1);
-    printf("img name: %s\n", imgArray[0].name);
     
-    return 0;
 }
