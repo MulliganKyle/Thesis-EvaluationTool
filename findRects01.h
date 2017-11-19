@@ -10,6 +10,10 @@
 
 #include <stdio.h>
 
+#define DATACOUNT 1000
+#define BUFF_SIZE 256
+
+
 typedef struct
 {
     int x0;
@@ -18,7 +22,7 @@ typedef struct
     int y1;
     
     //the type of damage denoted by the rectangle
-    //char tag[50];
+    char tag[50];
     
 }rectangle;
 

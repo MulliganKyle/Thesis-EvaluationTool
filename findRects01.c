@@ -13,7 +13,6 @@
 #include <stdbool.h>
 
 
-#define BUFF_SIZE 256
 
 
 
@@ -95,7 +94,7 @@ void findRects( img imgArray[], char filePath[] )
                         buffCount++;
                         coordArray[j]=coordinate;
                     }
-                    /*
+                    
                     tagCount=0;
                     while (buff[buffCount]!='\n')
                     {
@@ -103,7 +102,7 @@ void findRects( img imgArray[], char filePath[] )
                         tagCount++;
                         buffCount++;
                     }
-                    */
+                    imgArray[imgCount-1].rectArray[rectCount].tag[tagCount]='\0';
                     
                     //store the coordinates found in a rectangle struct array
                     //putting them into imgArray[imgCount-1] because each time

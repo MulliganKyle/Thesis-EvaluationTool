@@ -1,10 +1,10 @@
 CC=gcc
-CFLAGS=-I -Wall.
+CFLAGS=-I.
 DEPS = findRects01.h
 OBJ = findRects01.o main.o 
 
 %.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -c -Wall -g -o $@ $< $(CFLAGS)
 
 evaluate: $(OBJ)
 	gcc -o $@ $^ $(CFLAGS)
