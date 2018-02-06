@@ -21,6 +21,10 @@ typedef struct
     int x1;
     int y1;
     
+    int centerX;
+    int centerY;
+    int area;
+    
     //the type of damage denoted by the rectangle
     char tag[50];
     

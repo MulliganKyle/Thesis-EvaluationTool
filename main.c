@@ -25,17 +25,31 @@ int main ()
     {
         memset( instructorImgArray, 0, (sizeof(img)*DATACOUNT) );
     }
-    //img * studentImgArray = malloc ( sizeof(img)*DATACOUNT );
+    img * studentImgArray = malloc ( sizeof(img)*DATACOUNT );
+    if ( studentImgArray==NULL )
+    {
+        perror("Error malloc failed: ");
+        exit(1);
+    }
+    else
+    {
+        memset( studentImgArray, 0, (sizeof(img)*DATACOUNT) );
+    }
     
     
     findRects(instructorImgArray, "out.txt");
+    findRects(studentImgArray,"studentOut.txt");
     
     printf(" %d rectangles\n", instructorImgArray[0].numRects);
     printf("x0: %d \ny0: %d\nx1: %d\ny1: %d\n", instructorImgArray[0].rectArray[0].x0, instructorImgArray[0].rectArray[0].y0, instructorImgArray[0].rectArray[0].x1, instructorImgArray[0].rectArray[0].y1);
+    
+    printf("centerX: %d\ncenterY: %d\n", instructorImgArray[0].rectArray[0].centerX, instructorImgArray[0].rectArray[0].centerY);
+    printf("area: %d\n", instructorImgArray[0].rectArray[0].area);
     printf("tag: %s\n", instructorImgArray[0].rectArray[0].tag);
     printf("img name: %s\n", instructorImgArray[0].name);
     printf("xdim: %d \nydim: %d \n", instructorImgArray[0].xdim, instructorImgArray[0].ydim);
     
     
     free(instructorImgArray);
+    free(studentImgArray);
 }

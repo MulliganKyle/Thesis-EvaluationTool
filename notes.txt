@@ -1,0 +1,10 @@
+check number of recs
+
+then check each rec brute force to find ones that are close
+
+look at center
+then look at area
+
+
+if the rectangle is close, then check the tag
+

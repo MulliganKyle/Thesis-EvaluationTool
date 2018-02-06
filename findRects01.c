@@ -16,14 +16,18 @@
 
 
 
-
+/************************************************
+ FINDRECTS:
+ takes in an array of img structs and a string.
+ string is the path to the input file to read from.
+ puts information into the img structs from the file.
+ *************************************************/
 void findRects( img imgArray[], char filePath[] )
 {
     FILE *inFile;
     
     char buff[BUFF_SIZE];
     char rec[]="rect:";
-    char jpg[]="jpg";
     
     bool isRect;
     bool imgNameFound;
@@ -32,7 +36,6 @@ void findRects( img imgArray[], char filePath[] )
     
     int buffCount; //used to address into each line of characters from the file
     int rectCount=0; //counts the number of rectangles in an image
-    int imgNameBuffCount; //used to look for .jpg file extension while acquiring img name
     int nameCount; //keeps track of where in the img name the characters are going
     int imgCount=0; //keeps track of how many images there are in the imgArray
     int tagCount; //keeps track of where in the 'tag' char array to put characters
@@ -112,6 +115,33 @@ void findRects( img imgArray[], char filePath[] )
                     imgArray[imgCount-1].rectArray[rectCount].y0=coordArray[1];
                     imgArray[imgCount-1].rectArray[rectCount].x1=coordArray[2];
                     imgArray[imgCount-1].rectArray[rectCount].y1=coordArray[3];
+                    
+                    //find center of the rectangle
+                    //find centerX
+                    if ( coordArray[0]< coordArray[2] )
+                    {
+                        imgArray[imgCount-1].rectArray[rectCount].centerX= coordArray[0] + ((coordArray[2]-coordArray[0])/2);
+                    }
+                    else
+                    {
+                        imgArray[imgCount-1].rectArray[rectCount].centerX= coordArray[2] + ((coordArray[0]-coordArray[2])/2);
+                    }
+                    //find centerY
+                    if ( coordArray[1]< coordArray[3] )
+                    {
+                        imgArray[imgCount-1].rectArray[rectCount].centerY= coordArray[1] + ((coordArray[3]-coordArray[1])/2);
+                    }
+                    else
+                    {
+                        imgArray[imgCount-1].rectArray[rectCount].centerY= coordArray[3] + ((coordArray[1]-coordArray[3])/2);
+                    }
+                    
+                    
+                    //find the area of the rectangle
+                    imgArray[imgCount-1].rectArray[rectCount].area= abs(coordArray[0]-coordArray[2])*abs(coordArray[1]-coordArray[3]);
+                    
+                    
+                    
                     //increment the number of rectangles found
                     rectCount++;
                 }
