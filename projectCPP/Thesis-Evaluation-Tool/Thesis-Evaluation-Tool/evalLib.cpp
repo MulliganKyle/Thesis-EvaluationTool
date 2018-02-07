@@ -181,9 +181,19 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
                     checkCenterX = (*checkRectsIterator)->getCenterX();
                     checkCenterY = (*checkRectsIterator)->getCenterY();
                     
-                    //if the center of the rectangle is close enough check area. TODO MAKE THE PERCENTAGE A #DEFINE
-                    if ( (abs(keyCenterX-checkCenterX) <= (imageDimX*0.05)) && (abs(keyCenterY-checkCenterY) <= (imageDimY*0.05)) )
+                    //if the center of the rectangle is close enough check area.
+                    if ( (abs(keyCenterX-checkCenterX) <= (imageDimX*CENTER_PERCENT_ERROR)) &&
+                         (abs(keyCenterY-checkCenterY) <= (imageDimY*CENTER_PERCENT_ERROR)) )
                     {
+                        keyArea = (*keyRectsIterator)->getArea();
+                        checkArea = (*checkRectsIterator)->getArea();
+                        
+                        //if the differences in area are close enough, then it is likely this rectangle
+                        //is the correct one. store it somehow with a score maybe.
+                        if( abs(keyArea-checkArea)<=(imageDimX*imageDimY*AREA_PERCENT_ERROR) )
+                        {
+                            
+                        }
                         
                     }
                     
