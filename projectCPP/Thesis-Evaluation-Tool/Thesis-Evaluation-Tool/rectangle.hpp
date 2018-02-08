@@ -40,6 +40,12 @@ private:
     //the type of damage denoted by the rectangle
     std::string tag_;
     
+    //the attributes used to match a rectangle to another rectangle
+    Rectangle* match_;
+    double matchCentXDiff_;
+    double matchCentYDiff_;
+    double matchAreaDiff_;
+    
     //****************************//
     //class wide attributes       //
     //****************************//
@@ -76,6 +82,11 @@ public:
     
     std::string getTag () const { return tag_; }
     
+    Rectangle* getMatch () const { return match_; }
+    double getMatchCentXDiff () const { return matchCentXDiff_; }
+    double getMatchCentYDiff () const { return matchCentYDiff_; }
+    double getMatchAreaDiff () const { return matchAreaDiff_; }
+    
     int getNumberOfRects () const { return numberOfRects_; }
     
     
@@ -94,9 +105,12 @@ public:
     
     void setTag(std::string);
     
+    void setMatch(Rectangle*, double, double, double);
+    
+    
     //helpers
     //
-    
+    bool compareMatch(double, double, double);
 
 };
 

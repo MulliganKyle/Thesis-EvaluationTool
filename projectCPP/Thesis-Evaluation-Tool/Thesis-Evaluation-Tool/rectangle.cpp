@@ -49,6 +49,8 @@ Rectangle::Rectangle(int newX0,
     
     tag_=newTag;
     
+    setMatch(NULL, 0.0, 0.0, 0.0);
+    
     numberOfRects_++;
 }
 
@@ -120,6 +122,56 @@ void Rectangle::setTag(std::string newTag)
 {
     tag_=newTag;
 }
+
+void Rectangle::setMatch(Rectangle* newMatch, double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
+{
+    match_=newMatch;
+    matchCentXDiff_=newMatchCentXDiff;
+    matchCentYDiff_=newMatchCentYDiff;
+    matchAreaDiff_=newMatchAreaDiff;
+}
+
+
+//helper
+//
+
+
+//compare the current match to a new potential match.
+//if the new match is better returns true.
+//if there is no new match returns true.
+//use the sum of the differences to determine if the new rectangle is better.
+bool Rectangle::compareMatch(double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
+{
+    //if there is no current match then return true.
+    if ( match_ == NULL)
+    {
+        return true;
+    }
+    else
+    {
+        //TODO decide how to compare the two rectangles, is area or center more important?
+        if ( true )
+        {
+            if ( true )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+
+
+
+
 
 
 

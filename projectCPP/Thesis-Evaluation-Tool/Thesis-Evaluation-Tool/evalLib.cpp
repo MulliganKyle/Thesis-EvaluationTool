@@ -165,8 +165,6 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
         {
             for ( checkRectsIterator=checkRects.begin(); checkRectsIterator!=checkRects.end(); ++checkRectsIterator)
             {
-                // TODO FIGURE OUT HOW TO ACTUALLY COMPARE TWO RECTANGLES AND PICK THE BEST ONE.
-                // THEN FIGURE OUT WHAT TO DO IF THERE IS OVERLAP ON BEST RECTANGLES...
                 //if the tags are not the same, this is not the correct rectangle so continue
                 if ( (*keyRectsIterator)->getTag() != (*checkRectsIterator)->getTag() )
                 {
@@ -188,15 +186,25 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
                         keyArea = (*keyRectsIterator)->getArea();
                         checkArea = (*checkRectsIterator)->getArea();
                         
-                        //if the differences in area are close enough, then it is likely this rectangle
-                        //is the correct one. store it somehow with a score maybe.
+                        //if the differences in area are close enough, then it is likely this
+                        //rectangle is the correct one. store it the match into the key
+                        //rectangle.
                         if( abs(keyArea-checkArea)<=(imageDimX*imageDimY*AREA_PERCENT_ERROR) )
                         {
-                            
+                            //check if this new match is a better match than the current match
+                            //if there is a current match. if the compare comes back true,
+                            //then the new match is better and should be stored.
+                            if ( (*keyRectsIterator)->compareMatch( abs(keyCenterX-checkCenterX),
+                                                                   abs(keyCenterY-checkCenterY),
+                                                                   abs(keyArea-checkArea)) )
+                            {
+                                (*keyRectsIterator)->setMatch( (*checkRectsIterator),
+                                                              abs(keyCenterX-checkCenterX),
+                                                              abs(keyCenterY-checkCenterY),
+                                                              abs(keyArea-checkArea) );
+                            }
                         }
-                        
                     }
-                    
                 }
             }
         }
