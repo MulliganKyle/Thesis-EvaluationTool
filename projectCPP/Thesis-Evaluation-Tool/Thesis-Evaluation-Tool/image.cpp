@@ -62,6 +62,11 @@ void Image::addNewRectangle(int x0, int x1, int y0, int y1, std::string tag)
     
 }
 
+void Image::increaseNumMatches()
+{
+    numMatches_++;
+}
+
 //helpers
 //
 void Image::sortRectangles()

@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <cmath>
 
 
 #define DEF_VAL 0

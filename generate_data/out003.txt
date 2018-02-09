@@ -1,0 +1,931 @@
+Anchorage1964_01.jpg 200x300
+rect:108 8 215 206 Shear/diagonal failure coupling beam
+rect:103 265 206 221 Shear/diagonal failure coupling beam
+Anchorage1964_02.jpg 200x300
+rect:621 250 15 67 Longitudinal bar buckling structural wall
+rect:326 293 18 73 Longitudinal bar buckling structural wall
+rect:168 198 324 74 Concrete spalling structural wall
+rect:392 190 17 60 Longitudinal bar buckling structural wall
+rect:217 251 21 53 Longitudinal bar buckling structural wall
+rect:511 251 14 61 Longitudinal bar buckling structural wall
+rect:252 72 104 58 Shear cracking structural wall
+rect:368 311 23 71 Longitudinal bar buckling structural wall
+rect:671 46 114 122 Shear cracking coupling beam
+rect:100 233 31 24 Concrete spalling beam
+rect:35 217 186 44 Flexural cracking beam
+rect:150 272 53 17 Concrete spalling beam
+rect:39 24 177 57 Flexural cracking beam
+rect:293 188 18 87 Longitudinal bar buckling structural wall
+rect:142 118 82 71 Shear cracking beam
+rect:319 38 270 96 Shear cracking structural wall
+rect:527 213 115 53 Shear cracking structural wall
+rect:52 31 89 15 Concrete spalling beam
+rect:416 305 28 78 Longitudinal bar buckling structural wall
+Anchorage1964_03.jpg 200x300
+rect:273 89 369 211 overturning core wall system
+rect:0 323 832 80 Partial/full collapse full/partial building
+rect:2 237 155 63 overturning core wall system
+Anchorage1964_04.jpg 200x300
+rect:269 244 20 20 Shear cracking coupling beam
+rect:241 444 27 28 Shear/diagonal failure coupling beam
+rect:246 269 13 21 Shear/diagonal failure coupling beam
+rect:282 463 15 23 Shear/diagonal failure coupling beam
+rect:199 290 33 14 Flexural cracking beam
+rect:144 212 22 24 Flexural cracking beam
+rect:217 20 34 21 Flexural cracking beam
+rect:364 201 14 20 Shear/diagonal failure coupling beam
+rect:318 134 30 20 Flexural cracking beam
+rect:367 135 24 18 Flexural cracking beam
+rect:120 178 37 23 Flexural cracking beam
+rect:246 219 17 28 Shear/diagonal failure coupling beam
+rect:418 79 42 14 Flexural cracking beam
+rect:353 196 15 19 Shear/diagonal failure coupling beam
+rect:252 458 10 1 Shear/diagonal failure coupling beam
+rect:112 397 28 20 Flexural cracking beam
+rect:268 350 26 18 Flexural cracking beam
+rect:310 368 15 19 Shear/diagonal failure coupling beam
+rect:266 24 39 13 Flexural cracking beam
+rect:286 80 24 15 Flexural cracking beam
+rect:220 250 27 18 Flexural cracking beam
+rect:330 495 35 17 Flexural cracking beam
+rect:150 426 23 25 Flexural cracking beam
+rect:430 197 39 25 Flexural cracking beam
+rect:127 88 31 20 Flexural cracking beam
+rect:426 218 30 14 Flexural cracking beam
+rect:253 84 20 33 Shear/diagonal failure coupling beam
+rect:243 398 18 13 Flexural cracking beam
+rect:443 314 38 16 Flexural cracking beam
+rect:122 83 37 17 Flexural cracking beam
+rect:299 260 17 20 Shear/diagonal failure coupling beam
+rect:368 275 26 19 Flexural cracking beam
+rect:169 505 72 13 Concrete spalling structural wall
+rect:380 137 27 20 Flexural cracking beam
+rect:145 52 25 13 Flexural cracking beam
+rect:158 464 44 17 Flexural cracking beam
+rect:358 271 19 28 Shear/diagonal failure coupling beam
+rect:319 282 21 25 Shear/diagonal failure coupling beam
+rect:163 193 32 16 Flexural cracking beam
+Anchorage1964_05.jpg 200x300
+rect:42 279 22 30 Shear/diagonal failure coupling beam
+rect:92 172 22 59 Shear/diagonal failure coupling beam
+rect:63 192 16 39 Shear/diagonal failure coupling beam
+rect:350 94 54 66 Shear/diagonal failure coupling beam
+rect:563 251 55 19 Concrete spalling beam
+rect:690 249 61 25 Flexural cracking beam
+rect:401 215 45 47 Shear/diagonal failure coupling beam
+rect:111 21 23 28 Shear/diagonal failure coupling beam
+rect:379 215 48 31 Concrete core crushing structural wall
+rect:76 240 15 63 Shear/diagonal failure coupling beam
+rect:222 38 94 41 Flexural cracking beam
+rect:530 318 50 12 Concrete spalling beam
+rect:118 113 15 66 Shear/diagonal failure coupling beam
+rect:337 215 34 71 Shear cracking coupling beam
+rect:459 105 31 47 Shear/diagonal failure coupling beam
+rect:77 71 22 55 Shear/diagonal failure coupling beam
+rect:395 153 28 15 Concrete core crushing structural wall
+rect:205 132 111 16 Flexural cracking beam
+rect:198 38 128 50 Concrete spalling beam
+rect:724 334 49 32 Flexural cracking beam
+rect:42 389 17 39 Shear/diagonal failure coupling beam
+rect:216 111 167 47 Concrete spalling beam
+rect:305 1 41 70 Shear/diagonal failure coupling beam
+rect:362 28 42 63 Shear/diagonal failure coupling beam
+rect:24 346 31 65 Shear/diagonal failure coupling beam
+rect:635 319 43 53 Shear cracking coupling beam
+rect:342 229 113 80 Concrete spalling structural wall
+rect:403 243 52 53 Shear/diagonal failure coupling beam
+rect:365 126 41 63 Shear/diagonal failure coupling beam
+Anchorage1964_06.jpg 200x300
+rect:114 171 75 386 Longitudinal bar buckling structural wall
+rect:107 72 232 284 Global buckling/instability structural wall
+rect:214 328 61 110 Concrete core crushing structural wall
+Anchorage1964_07.jpg 200x300
+rect:282 138 48 142 Longitudinal bar buckling structural wall
+rect:276 291 354 189 Concrete spalling structural wall
+rect:20 262 258 30 Concrete core crushing structural wall
+rect:337 150 197 156 Concrete core crushing structural wall
+rect:300 220 108 61 Concrete core crushing structural wall
+rect:240 190 70 134 Longitudinal bar fracture structural wall
+rect:8 59 734 422 Concrete spalling structural wall
+rect:159 2 115 59 Concrete spalling structural wall
+rect:7 302 364 41 Flexural cracking structural wall
+Anchorage1964_08.jpg 200x300
+rect:35 94 128 93 Shear/diagonal failure coupling beam
+rect:426 371 131 124 Shear/diagonal failure coupling beam
+rect:419 36 142 138 Shear/diagonal failure coupling beam
+rect:40 701 94 167 Shear/diagonal failure coupling beam
+rect:69 375 124 136 Shear/diagonal failure coupling beam
+rect:224 218 133 136 Shear/diagonal failure coupling beam
+Anchorage1964_09.jpg 200x300
+rect:395 98 133 19 Flexural cracking construction joint
+rect:13 19 56 10 Concrete spalling construction joint
+rect:105 152 76 50 Shear/diagonal failure coupling beam
+rect:136 309 95 62 Shear cracking coupling beam
+rect:69 50 78 87 Shear cracking coupling beam
+rect:13 125 105 16 Flexural cracking construction joint
+rect:201 101 288 14 Flexural cracking construction joint
+rect:351 196 87 59 Shear/diagonal failure coupling beam
+rect:396 8 218 12 Flexural cracking construction joint
+rect:686 206 1 1 Concrete spalling construction joint
+rect:14 164 19 7 Concrete spalling construction joint
+rect:359 184 66 70 Shear/diagonal failure coupling beam
+rect:627 157 99 18 Flexural cracking construction joint
+rect:552 8 88 12 Concrete spalling construction joint
+rect:48 160 66 8 Concrete spalling construction joint
+rect:717 32 106 52 Shear cracking coupling beam
+rect:614 197 88 95 Shear/diagonal failure coupling beam
+rect:13 15 337 11 Flexural cracking construction joint
+rect:505 293 85 66 Shear cracking coupling beam
+Anchorage1964_10.jpg 200x300
+rect:250 265 104 132 Concrete core crushing coupling beam
+rect:187 241 143 89 Concrete spalling coupling beam
+rect:67 250 240 392 Shear/diagonal failure coupling beam
+rect:69 443 373 164 Concrete spalling coupling beam
+Anchorage1964_11.jpg 200x300
+rect:109 496 684 18 Flexural cracking structural wall
+rect:744 8 102 37 Shear/diagonal failure coupling beam
+rect:209 186 303 32 Concrete core crushing structural wall
+rect:72 348 542 12 Flexural cracking structural wall
+rect:505 119 146 124 Shear/diagonal failure coupling beam
+rect:166 60 216 93 Shear cracking structural wall
+rect:148 209 473 17 Flexural cracking construction joint
+rect:107 214 462 82 Concrete spalling structural wall
+Anchorage1964_12.jpg 200x300
+rect:321 98 40 187 Longitudinal bar buckling structural wall
+rect:495 69 170 190 Concrete core crushing structural wall
+rect:248 149 26 118 Longitudinal bar buckling structural wall
+rect:12 90 656 222 Concrete spalling structural wall
+rect:353 66 43 240 Longitudinal bar buckling structural wall
+Anchorage1964_13.jpg 200x300
+rect:478 550 129 13 Concrete core crushing construction joint
+rect:304 542 223 26 Concrete spalling structural wall
+rect:382 279 34 215 seperation structural wall connection
+Anchorage1964_14.jpg 200x300
+rect:19 621 26 65 Longitudinal bar buckling embedded steel section wall boundary element
+rect:308 309 182 41 Flexural cracking construction joint
+rect:435 7 88 170 Concrete core crushing structural wall
+rect:51 397 66 48 Longitudinal bar buckling embedded steel section wall boundary element
+rect:194 318 61 84 buckling embedded steel section wall boundary element
+rect:263 12 71 651 seperation structural wall connection
+rect:321 11 77 278 Concrete core crushing structural wall
+rect:8 771 158 101 Concrete core crushing structural wall
+rect:89 339 141 27 Flexural cracking construction joint
+rect:287 420 175 104 Concrete spalling embedded steel section wall boundary element
+rect:132 507 41 65 Longitudinal bar buckling embedded steel section wall boundary element
+rect:136 698 42 54 Longitudinal bar buckling embedded steel section wall boundary element
+Anchorage1964_15.jpg 200x300
+rect:272 276 181 32 Flexural cracking construction joint
+rect:186 70 46 388 seperation structural wall connection
+rect:245 9 74 55 Shear cracking structural wall
+rect:391 328 76 26 Concrete spalling structural wall connection
+rect:429 235 164 39 Concrete core crushing structural wall
+rect:468 11 112 45 Shear cracking structural wall
+rect:280 106 64 111 Concrete core crushing structural wall connection
+rect:180 170 27 86 Concrete core crushing structural wall
+rect:234 373 202 77 Concrete spalling structural wall
+Anchorage1964_16.jpg 200x300
+rect:149 95 213 161 Concrete spalling structural wall
+rect:150 228 211 145 Concrete core crushing structural wall
+rect:108 270 93 79 Concrete core crushing structural wall
+rect:14 393 62 63 Concrete spalling structural wall
+rect:639 181 98 228 Concrete spalling structural wall
+rect:17 119 144 250 Concrete spalling structural wall
+Anchorage1964_17.jpg 200x300
+rect:221 40 176 235 overturning core wall system
+rect:8 261 515 266 Partial/full collapse full/partial building
+rect:10 129 267 126 overturning core wall system
+Anchorage1964_18.jpg 200x300
+rect:423 158 131 78 Shear cracking structural wall
+rect:425 329 224 21 Flexural cracking construction joint
+rect:573 240 44 15 Concrete spalling structural wall
+rect:123 281 63 55 Concrete core crushing structural wall
+rect:389 286 98 23 Concrete spalling structural wall
+rect:730 328 74 23 Concrete spalling structural wall
+rect:245 320 35 48 Concrete core crushing structural wall
+rect:311 175 127 71 Shear cracking structural wall
+rect:196 138 75 80 Shear cracking structural wall
+rect:168 315 16 55 Concrete core crushing structural wall
+Anchorage1964_19.jpg 200x300
+rect:406 120 33 36 Concrete core crushing joint-column connection
+rect:428 273 25 39 Slab fracture coupling beam
+rect:436 286 12 36 Concrete core crushing joint-column connection
+rect:402 229 10 31 Concrete core crushing joint-column connection
+rect:331 108 19 44 Concrete core crushing joint-column connection
+rect:720 144 6 6 Concrete core crushing joint-column connection
+rect:769 227 10 13 Concrete core crushing joint-column connection
+rect:527 124 28 59 Global buckling/instability slender column
+rect:295 334 21 30 Concrete core crushing joint-column connection
+rect:247 111 41 56 Concrete core crushing joint-column connection
+rect:5 264 89 187 Concrete core crushing joint-column connection
+rect:513 99 38 99 Global buckling/instability slender column
+rect:287 79 65 116 Global buckling/instability slender column
+rect:654 106 56 24 Slab fracture coupling beam
+rect:602 127 8 20 Concrete core crushing joint-column connection
+rect:239 82 37 32 Longitudinal bar buckling joint-column connection
+rect:272 270 46 58 Concrete core crushing joint-column connection
+rect:26 219 37 129 Longitudinal bar buckling joint-column connection
+Anchorage1964_20.jpg 200x300
+rect:260 326 78 154 Concrete core crushing joint-column connection
+rect:340 552 47 61 Concrete core crushing joint-column connection
+rect:226 95 63 56 Longitudinal bar buckling joint-column connection
+rect:226 116 103 66 Concrete core crushing joint-column connection
+rect:166 82 122 136 Global buckling/instability slender column
+Anchorage1964_21.jpg 200x300
+rect:49 225 32 25 Concrete core crushing joint-column connection
+rect:2 113 57 38 Concrete core crushing joint-column connection
+rect:148 142 610 166 Slab fracture floor diaphragm/slab
+rect:-6 70 85 200 Global buckling/instability slender column
+Bingol2003_01.jpg 200x300
+rect:311 398 100 86 Concrete spalling beam
+rect:433 58 91 61 Concrete spalling beam
+rect:834 303 57 48 Interaction b/w infill and frame infill wall
+rect:445 244 175 127 failure infill wall
+rect:639 364 46 157 Concrete spalling slender column
+rect:23 261 71 84 Interaction b/w infill and frame infill wall
+rect:468 365 38 63 Concrete spalling joint-column connection
+rect:772 351 63 49 Concrete spalling beam
+rect:553 462 229 73 Concrete spalling beam
+rect:431 242 49 49 Concrete spalling beam
+rect:820 96 79 97 Concrete spalling beam
+rect:2 384 1127 251 Partial/full collapse full/partial building
+rect:473 113 131 175 failure infill wall
+rect:354 145 78 70 Interaction b/w infill and frame infill wall
+rect:206 80 79 26 Concrete spalling beam
+rect:812 285 102 73 Interaction b/w infill and frame infill wall
+rect:117 242 69 55 Interaction b/w infill and frame infill wall
+rect:630 219 56 132 Concrete spalling joint-column connection
+rect:607 259 106 61 Interaction b/w infill and frame infill wall
+Bingol2003_02.jpg 200x300
+rect:194 330 58 319 Concrete spalling slender column
+rect:212 93 384 124 Concrete spalling joint-column connection
+rect:461 377 80 129 Concrete core crushing joint-column connection
+rect:116 623 186 201 Concrete spalling slender column
+rect:916 71 96 93 failure beam
+rect:344 252 564 560 failure infill wall
+rect:303 285 107 78 Concrete spalling beam
+rect:503 215 440 105 Shear cracking floor diaphragm/slab
+Bingol2003_03.jpg 200x300
+rect:676 327 299 739 Shear cracking structural wall
+rect:84 33 86 154 Interaction b/w infill and frame infill wall
+rect:559 -7 324 169 Shear cracking structural wall
+rect:320 152 304 180 Concrete spalling structural wall
+rect:70 34 176 45 Concrete spalling structural wall
+rect:579 236 242 71 Concrete core crushing structural wall
+rect:590 569 304 274 Concrete spalling structural wall
+Bingol2003_04.jpg 200x300
+rect:111 692 30 63 Longitudinal bar buckling structural wall
+rect:290 576 49 157 Longitudinal bar buckling structural wall
+rect:409 756 118 105 Concrete spalling structural wall
+rect:375 293 126 199 Shear cracking structural wall
+rect:102 674 20 70 Longitudinal bar buckling structural wall
+rect:170 504 39 106 Longitudinal bar buckling structural wall
+rect:74 654 115 63 Concrete spalling structural wall
+rect:186 354 227 196 Concrete spalling structural wall
+CanterburyNZSeries2010_01.jpg 200x300
+rect:76 91 100 345 Global buckling/instability structural wall
+CanterburyNZSeries2010_02.jpg 200x300
+rect:33 7 189 303 Distributed plastic hinging beam
+rect:55 44 179 153 Concrete spalling beam
+CanterburyNZSeries2010_03.jpg 200x300
+rect:52 79 422 172 Global buckling/instability floor diaphragm/slab
+CanterburyNZSeries2010_04.jpg 200x300
+rect:366 270 49 120 Longitudinal bar buckling short/captive column
+rect:288 518 15 52 Longitudinal bar buckling short/captive column
+rect:301 328 34 60 Longitudinal bar buckling short/captive column
+rect:198 590 119 188 Concrete spalling short/captive column
+rect:275 8 99 223 Shear cracking short/captive column
+rect:188 233 236 295 Shear/diagonal failure short/captive column
+rect:408 385 19 41 Longitudinal bar buckling short/captive column
+rect:228 480 21 115 Longitudinal bar buckling short/captive column
+CanterburyNZSeries2010_05.jpg 200x300
+rect:396 348 141 430 Shear cracking structural wall
+rect:212 188 117 141 Flexural cracking construction joint
+CanterburyNZSeries2010_06.jpg 200x300
+rect:69 86 565 742 Shear cracking structural wall
+rect:306 251 229 151 Concrete spalling structural wall
+CanterburyNZSeries2010_08.jpg 200x300
+rect:732 466 32 178 Concrete spalling slender column
+rect:1144 625 48 106 Shear cracking slender column
+rect:707 431 119 135 Shear cracking slender column
+rect:591 124 143 329 Shear/diagonal failure joint-column connection
+CanterburyNZSeries2010_09.jpg 200x300
+rect:197 250 166 396 Shear/diagonal failure short/captive column
+rect:260 92 167 193 Shear cracking joint-column connection
+CanterburyNZSeries2010_10.jpg 200x300
+rect:156 529 260 137 Concrete spalling beam
+rect:365 275 252 59 Concrete core crushing beam
+rect:160 273 270 183 Concrete spalling beam
+rect:348 211 215 83 Shear cracking beam
+CanterburyNZSeries2010_11.jpg 200x300
+rect:257 260 212 217 Flexural cracking beam
+rect:344 226 294 164 Shear cracking beam
+CanterburyNZSeries2010_12.jpg 200x300
+rect:446 415 210 59 Concrete core crushing structural wall
+rect:222 644 139 42 Concrete core crushing structural wall
+rect:53 304 837 269 Concrete spalling structural wall
+rect:4 286 686 504 Shear/compression failure structural wall
+CanterburyNZSeries2010_13.jpg 200x300
+rect:372 177 111 451 Concrete core crushing structural wall
+rect:187 22 406 645 Global buckling/instability structural wall
+Caracas1967_01.jpg 200x300
+rect:356 110 82 118 Shear/compression failure short/captive column
+rect:527 59 125 258 Shear/compression failure short/captive column
+rect:240 215 11 46 Shear/compression failure short/captive column
+rect:388 186 48 87 Shear/compression failure short/captive column
+Caracas1967_02.jpg 200x300
+rect:301 1 88 206 Flexural cracking construction joint
+rect:92 397 47 65 Concrete core crushing slender column
+rect:150 274 50 43 Longitudinal bar buckling slender column
+rect:175 239 207 315 general structural wall
+Caracas1967_03.jpg 200x300
+rect:289 72 57 88 Flexural cracking structural wall
+rect:388 410 60 61 Concrete core crushing joint-column connection
+rect:401 335 37 134 Longitudinal bar buckling joint-column connection
+rect:276 332 35 79 Longitudinal bar buckling joint-column connection
+rect:333 332 158 222 Concrete spalling joint-column connection
+rect:15 339 222 67 Concrete spalling beam
+Caracas1967_04.jpg 200x300
+rect:136 328 54 92 Concrete core crushing joint-column connection
+rect:120 288 20 86 Longitudinal bar buckling joint-column connection
+rect:101 281 220 163 Concrete spalling joint-column connection
+Caracas1967_05.jpg 200x300
+rect:395 280 48 192 Longitudinal bar buckling short/captive column
+rect:67 414 80 279 Longitudinal bar buckling short/captive column
+rect:71 466 187 259 Concrete core crushing short/captive column
+rect:450 168 60 293 Longitudinal bar buckling short/captive column
+rect:322 224 126 190 Concrete core crushing short/captive column
+rect:42 98 402 330 Concrete spalling short/captive column
+rect:259 369 61 266 Longitudinal bar buckling short/captive column
+rect:171 245 32 217 Longitudinal bar buckling short/captive column
+rect:29 77 411 573 Shear/compression failure short/captive column
+rect:173 331 65 177 Longitudinal bar buckling short/captive column
+Caracas1967_06.jpg 200x300
+rect:465 337 75 49 Concrete spalling beam
+rect:239 118 353 259 Shear cracking beam
+Caracas1967_07.jpg 200x300
+rect:287 159 37 205 Longitudinal bar buckling joint-column connection
+rect:212 99 205 276 Concrete spalling joint-column connection
+rect:426 461 95 51 Failure of confining hoops/ties joint-column connection
+rect:473 167 136 295 Concrete spalling joint-column connection
+rect:534 265 96 89 Failure of confining hoops/ties joint-column connection
+rect:476 10 118 282 Concrete spalling joint-column connection
+rect:306 40 27 266 Longitudinal bar buckling joint-column connection
+Caracas1967_08.jpg 200x300
+rect:224 355 69 115 Concrete spalling scissor stairs
+rect:237 229 64 113 Pounding scissor stairs
+rect:412 180 86 172 Concrete spalling scissor stairs
+Caracas1967_09.jpg 200x300
+rect:437 11 195 196 Shear/compression failure short/captive column
+rect:139 215 118 110 Shear/compression failure short/captive column
+rect:28 219 72 41 Shear/compression failure short/captive column
+rect:80 241 72 52 Shear/compression failure short/captive column
+Caracas1967_10.jpg 200x300
+rect:42 230 246 308 Concrete spalling short/captive column
+rect:407 278 72 168 Longitudinal bar buckling short/captive column
+rect:22 198 319 455 Shear/compression failure short/captive column
+rect:322 439 50 171 Longitudinal bar buckling short/captive column
+Caracas1967_11.jpg 200x300
+rect:41 14 430 990 Shear/compression failure short/captive column
+rect:41 178 251 428 Concrete spalling short/captive column
+rect:349 16 163 258 Concrete spalling short/captive column
+Caracas1967_12.jpg 200x300
+rect:538 308 32 43 Concrete spalling joint-column connection
+rect:787 364 29 58 Concrete spalling slender column
+rect:693 325 21 48 Concrete spalling slender column
+rect:159 373 23 43 Shear/compression failure slender column
+Caracas1967_13.jpg 200x300
+rect:131 445 159 290 Pounding scissor stairs
+Caracas1967_14.jpg 200x300
+rect:148 303 297 30 Concrete spalling beam
+rect:124 153 802 172 Shear/diagonal failure beam
+Chichi1999_01.jpg 200x300
+rect:4 6 556 169 potential collapse story
+rect:309 113 45 195 Shear cracking short/captive column
+Chichi1999_02.jpg 200x300
+rect:316 140 257 499 Partial/full collapse Unknown
+rect:5 121 397 175 potential collapse story
+Chichi1999_03.jpg 200x300
+rect:58 162 77 139 fracture roof diaphgram
+rect:0 158 752 197 potential collapse story
+Chichi1999_04.jpg 200x300
+rect:263 176 70 382 Shear/compression failure short/captive column
+rect:250 -15 64 168 Shear/compression failure short/captive column
+rect:185 290 30 42 Concrete core crushing short/captive column
+Chichi1999_05.jpg 200x300
+rect:446 105 52 58 Concrete spalling short/captive column
+rect:424 175 35 102 Concrete core crushing short/captive column
+rect:343 159 119 239 Shear/compression failure short/captive column
+rect:466 190 21 39 Concrete spalling short/captive column
+Chichi1999_06.jpg 200x300
+rect:142 19 654 183 Partial/full collapse full/partial building
+rect:336 196 18 33 Concrete core crushing short/captive column
+rect:441 238 34 59 Concrete spalling short/captive column
+rect:363 146 44 85 Shear/compression failure short/captive column
+rect:719 -15 101 53 Anchorage/connection failure beam
+rect:279 105 68 85 Lap splice failure short/captive column
+Chichi1999_07.jpg 200x300
+rect:110 163 63 193 Shear/compression failure short/captive column
+rect:671 260 18 29 Longitudinal bar fracture joint-column connection
+rect:313 219 28 29 Longitudinal bar fracture joint-column connection
+rect:59 222 578 121 soft story fail full Story
+rect:529 263 53 110 Shear/compression failure short/captive column
+rect:487 237 55 93 Shear/compression failure short/captive column
+rect:150 135 20 37 Longitudinal bar fracture joint-column connection
+Chichi1999_08.jpg 200x300
+rect:121 16 706 518 Partial/full collapse full/partial building
+Chichi1999_09.jpg 200x300
+rect:215 100 50 65 Longitudinal bar buckling short/captive column
+rect:169 61 146 122 Shear/compression failure short/captive column
+rect:175 111 38 93 Longitudinal bar buckling short/captive column
+rect:220 109 101 65 Concrete spalling short/captive column
+Chichi1999_10.jpg 200x300
+rect:156 14 466 587 Partial/full collapse full/partial building
+Chichi1999_11.jpg 200x300
+rect:147 206 108 81 Longitudinal bar fracture short/captive column
+rect:2 183 238 383 Partial/full collapse full/partial building
+Chichi1999_12.jpg 200x300
+rect:10 33 392 777 Residual displacement full/partial building
+Chichi1999_13.jpg 200x300
+rect:24 43 915 383 Partial/full collapse full/partial building
+Chichi1999_14.jpg 200x300
+rect:95 362 45 38 Shear/diagonal failure infill wall
+rect:193 344 40 41 Shear/diagonal failure short/captive column
+rect:156 247 36 45 Shear/diagonal failure infill wall
+rect:237 419 25 66 Shear/diagonal failure infill wall
+rect:65 425 39 28 Shear/diagonal failure infill wall
+rect:125 678 34 34 Shear/diagonal failure infill wall
+rect:284 200 42 35 Shear/diagonal failure short/captive column
+rect:90 377 43 55 Shear/diagonal failure infill wall
+rect:105 199 26 73 Shear/diagonal failure infill wall
+rect:309 302 24 25 Shear/diagonal failure short/captive column
+rect:133 386 35 45 Shear/diagonal failure infill wall
+rect:203 238 76 36 Shear/diagonal failure infill wall
+rect:197 496 35 27 Shear/diagonal failure infill wall
+rect:245 617 70 58 Shear/diagonal failure infill wall
+rect:408 327 40 51 Shear/diagonal failure infill wall
+rect:238 680 18 33 Shear/diagonal failure short/captive column
+rect:293 281 19 47 Shear/diagonal failure infill wall
+Chichi1999_15.jpg 200x300
+rect:217 30 287 475 Concrete spalling short/captive column
+Chichi1999_16.jpg 200x300
+rect:187 101 78 105 Concrete spalling slender column
+Chichi1999_17.jpg 200x300
+rect:168 316 32 44 Concrete spalling slender column
+Chichi1999_18.jpg 200x300
+rect:322 337 43 94 Concrete core crushing Unknown
+rect:151 192 20 138 Longitudinal bar buckling Unknown
+rect:353 280 23 181 Longitudinal bar buckling Unknown
+rect:150 300 41 105 Longitudinal bar buckling Unknown
+rect:180 240 29 99 Longitudinal bar buckling Unknown
+rect:137 252 119 340 Concrete spalling Unknown
+Chichi1999_19.jpg 200x300
+rect:196 152 186 198 Longitudinal bar buckling structural wall
+rect:261 19 230 525 Concrete spalling structural wall
+YogyakartaInd2006_03.jpg 200x300
+rect:210 414 190 21 Flexural cracking construction joint
+rect:308 121 72 40 Flexural cracking construction joint
+rect:193 21 88 2 Flexural cracking construction joint
+rect:298 191 17 6 Concrete spalling construction joint
+rect:445 79 182 68 Flexural cracking construction joint
+rect:292 256 324 143 fall out/failure tilt-up precast panel
+rect:370 345 67 24 Concrete spalling construction joint
+rect:286 76 61 40 Concrete spalling construction joint
+Chichi1999_20.jpg 200x300
+rect:145 224 89 265 Shear cracking short/captive column
+rect:242 449 59 164 Concrete spalling short/captive column
+Chichi1999_21.jpg 200x300
+rect:19 3 214 204 Slab fracture floor diaphragm/slab
+rect:406 39 324 263 Distributed plastic hinging beam
+rect:154 134 190 356 Lap splice failure joint-column connection
+rect:70 480 174 140 Flexural cracking beam
+rect:195 355 152 102 Distributed plastic hinging beam
+rect:525 128 154 101 Concrete spalling beam
+rect:209 329 109 99 Concrete spalling beam
+rect:520 7 155 84 Shear/diagonal failure beam
+Chichi1999_22.jpg 200x300
+rect:211 115 369 110 Partial/full collapse full/partial building
+rect:287 220 16 22 Shear/compression failure joint-column connection
+rect:359 308 20 16 Shear/compression failure joint-column connection
+rect:233 318 16 21 Shear/compression failure joint-column connection
+Chichi1999_23.jpg 200x300
+rect:376 348 49 79 Concrete spalling joint-column connection
+rect:258 302 57 131 Shear/compression failure joint-column connection
+rect:294 166 44 50 Shear/compression failure joint-column connection
+rect:92 124 63 44 Shear/compression failure joint-column connection
+rect:147 407 35 102 Shear/compression failure joint-column connection
+rect:140 220 21 29 Concrete spalling joint-column connection
+rect:345 135 37 34 Longitudinal bar buckling joint-column connection
+rect:4 51 590 141 Partial/full collapse full Story
+rect:363 125 26 19 Concrete core crushing joint-column connection
+rect:102 350 47 88 Concrete spalling joint-column connection
+Chichi1999_24.jpg 200x300
+rect:294 193 33 49 Concrete core crushing beam
+rect:3 290 364 242 Partial/full collapse full Story
+rect:208 353 86 68 Concrete spalling joint-column connection
+rect:157 122 169 66 fracture beam
+rect:373 399 1 2 Concrete core crushing beam
+Chichi1999_25.jpg 200x300
+rect:127 211 204 331 Shear/compression failure joint-column connection
+rect:150 309 41 59 Concrete core crushing joint-column connection
+rect:178 228 119 157 Concrete spalling joint-column connection
+Chichi1999_26.jpg 200x300
+rect:320 14 40 29 Shear/compression failure joint-column connection
+rect:167 627 109 97 Longitudinal bar buckling joint-column connection
+rect:175 118 67 83 Shear/compression failure joint-column connection
+rect:240 304 141 336 seperation b/w infill and frame infill wall
+rect:127 428 90 93 Concrete core crushing joint-column connection
+rect:120 413 177 120 Shear/compression failure joint-column connection
+Chichi1999_27.jpg 200x300
+rect:137 169 71 354 Concrete spalling slender column
+Chichi1999_28.jpg 200x300
+rect:293 188 241 87 Longitudinal bar fracture beam
+rect:133 108 170 267 Flexural cracking beam
+rect:328 100 127 180 fracture beam
+rect:18 86 294 148 Concrete spalling beam
+Chichi1999_29.jpg 200x300
+rect:104 257 198 333 Shear/compression failure short/captive column
+rect:275 196 77 186 Longitudinal bar buckling short/captive column
+rect:207 212 79 194 Concrete core crushing short/captive column
+Chichi1999_30.jpg 200x300
+rect:251 86 273 303 Longitudinal bar buckling short/captive column
+rect:39 248 72 177 Shear/compression failure joint-column connection
+rect:262 181 173 67 Failure of confining hoops/ties short/captive column
+rect:202 144 134 89 Concrete core crushing short/captive column
+Chichi1999_31.jpg 200x300
+rect:167 112 107 367 Shear/compression failure infill wall
+rect:402 140 63 227 Shear/compression failure short/captive column
+Chichi1999_32.jpg 200x300
+rect:237 47 45 206 Concrete spalling
+rect:679 110 51 190 Shear/diagonal failure short/captive column
+rect:160 7 78 420 Shear/compression failure
+rect:184 216 25 139 Concrete spalling
+Chichi1999_33.jpg 200x300
+rect:274 131 37 152 Concrete core crushing slender column
+rect:202 91 117 299 Shear/compression failure slender column
+rect:125 129 90 283 Concrete spalling slender column
+rect:89 68 107 336 Interaction b/w infill and frame infill wall
+rect:203 110 146 322 Concrete spalling slender column
+rect:94 183 40 144 Concrete core crushing slender column
+Chichi1999_34.jpg 200x300
+rect:114 113 380 345 Partial/full collapse full/partial building
+Duzce1999_01.jpg 200x300
+rect:95 128 97 94 Concrete spalling short/captive column
+rect:106 61 127 294 Shear/diagonal failure short/captive column
+Duzce1999_02.jpg 200x300
+rect:81 66 193 340 Concrete spalling short/captive column
+Duzce1999_03.jpg 200x300
+rect:248 139 100 303 failure infill wall
+rect:0 215 131 276 failure infill wall
+rect:78 114 120 278 Shear cracking short/captive column
+Gediz1970_01.jpg 200x300
+rect:144 242 119 201 Longitudinal bar buckling Unknown
+rect:249 573 55 171 Longitudinal bar buckling Unknown
+rect:108 122 276 599 Concrete spalling Unknown
+Guatemala1976_01.jpg 200x300
+rect:52 209 39 42 Concrete spalling short/captive column
+rect:27 154 498 171 soft story fail full/partial building
+rect:51 256 81 49 Concrete core crushing short/captive column
+rect:52 199 119 104 Shear/compression failure short/captive column
+rect:544 183 170 114 Shear/compression failure short/captive column
+rect:457 214 69 75 Concrete spalling short/captive column
+Guatemala1976_02.jpg 200x300
+rect:183 79 243 297 Shear/compression failure short/captive column
+rect:280 46 86 100 Longitudinal bar buckling short/captive column
+Guatemala1976_03.jpg 200x300
+rect:19 100 902 418 fracture beam
+Guatemala1976_04.jpg 200x300
+rect:38 93 350 198 Slab fracture floor diaphragm/slab
+rect:102 25 483 72 Slab fracture floor diaphragm/slab
+rect:475 198 168 271 Shear cracking structural wall
+rect:518 268 95 325 Shear cracking structural wall
+Guatemala1976_05.jpg 200x300
+rect:111 83 478 355 Shear/compression failure short/captive column
+rect:230 162 304 163 Concrete spalling short/captive column
+rect:142 110 351 237 Longitudinal bar buckling short/captive column
+Guatemala1976_06.jpg 200x300
+rect:93 110 247 525 Shear/diagonal failure short/captive column
+Guatemala1976_07.jpg 200x300
+rect:243 601 167 99 Shear cracking foundation beam
+rect:31 295 67 70 Concrete spalling beam
+rect:23 170 391 478 Partial/full collapse full/partial building
+Guatemala1976_08.jpg 200x300
+rect:154 33 370 291 Shear/compression failure short/captive column
+rect:294 74 151 323 Longitudinal bar buckling short/captive column
+rect:174 40 387 382 Concrete spalling short/captive column
+Guatemala1976_09.jpg 200x300
+rect:391 280 73 38 Concrete spalling concrete brace
+rect:726 288 70 69 concrete crushing brace
+rect:103 352 44 28 Concrete spalling concrete brace
+rect:661 335 53 49 Concrete spalling concrete brace
+rect:160 232 43 26 concrete crushing brace
+rect:107 253 24 34 concrete crushing brace
+rect:174 181 66 75 Concrete spalling concrete brace
+rect:308 343 49 58 concrete crushing brace
+Guatemala1976_10.jpg 200x300
+rect:269 135 322 288 concrete crushing braces
+rect:142 89 182 184 concrete spalling brace
+rect:329 385 47 95 concrete spalling brace
+Guatemala1976_11.jpg 200x300
+rect:192 214 156 192 Concrete spalling joint-column connection
+GujaratIndia2001_01.jpg 200x300
+rect:342 523 72 66 Concrete core crushing structural wall
+rect:95 418 49 29 Concrete spalling structural wall
+rect:32 384 121 117 Shear cracking structural wall
+rect:187 468 192 74 Concrete spalling structural wall
+Haiti2010_01.jpg 200x300
+rect:116 38 151 148 Shear cracking beam
+rect:352 315 21 119 Longitudinal bar buckling short/captive column
+rect:253 181 227 311 Concrete spalling short/captive column
+rect:572 532 210 187 Shear cracking structural wall
+rect:546 240 94 83 Shear cracking structural wall
+Haiti2010_02.jpg 200x300
+rect:35 113 320 244 Unseating/collapse of stairs scissor stairs
+rect:261 40 161 51 Flexural cracking structural wall
+Haiti2010_03.jpg 200x300
+rect:296 749 278 242 Concrete spalling foundation beam
+rect:249 386 152 143 Concrete spalling slender column
+rect:392 1 66 651 Concrete spalling slender column
+rect:324 376 61 55 Concrete core crushing slender column
+Haiti2010_04.jpg 200x300
+rect:2 109 348 196 Concrete spalling beam
+rect:135 216 278 369 Concrete spalling short/captive column
+rect:305 52 242 311 Concrete spalling joint-column connection
+Haiti2010_05.jpg 200x300
+rect:300 294 149 120 Concrete core crushing short/captive column
+rect:242 183 284 337 Interaction b/w infill and frame short/captive column
+rect:318 264 27 121 Longitudinal bar buckling short/captive column
+rect:391 286 31 94 Longitudinal bar buckling short/captive column
+Haiti2010_06.jpg 200x300
+rect:638 196 524 603 out-of-plane failure infill wall
+rect:505 116 66 99 Concrete spalling joint-column connection
+rect:235 258 338 462 out-of-plane failure infill wall
+rect:321 162 101 32 Concrete spalling beam
+rect:475 210 202 518 Interaction b/w infill and frame infill wall
+rect:647 188 70 202 Concrete spalling slender column
+rect:144 329 44 53 Concrete spalling joint-column connection
+ImperialValley1979_01.jpg 200x300
+rect:43 325 68 93 Longitudinal bar buckling slender column
+rect:475 331 21 41 Longitudinal bar buckling slender column
+rect:401 267 32 34 Concrete spalling slender column
+rect:11 338 140 114 Concrete spalling slender column
+rect:520 413 33 43 Concrete spalling slender column
+rect:631 359 23 19 Concrete core crushing slender column
+rect:519 406 20 21 Concrete core crushing slender column
+rect:431 371 39 70 Longitudinal bar buckling slender column
+rect:338 420 69 56 Concrete spalling slender column
+rect:352 354 39 19 Concrete core crushing slender column
+rect:14 400 85 81 Concrete core crushing slender column
+ImperialValley1979_02.jpg 200x300
+rect:295 167 113 224 Longitudinal bar buckling slender column
+rect:121 231 273 56 Failure of confining hoops/ties slender column
+rect:143 164 93 250 Longitudinal bar buckling slender column
+rect:293 203 51 159 Longitudinal bar buckling slender column
+rect:210 102 162 278 Concrete spalling slender column
+rect:313 268 103 36 Concrete core crushing slender column
+ImperialValley1979_03.jpg 200x300
+rect:101 349 80 261 Longitudinal bar buckling slender column
+rect:246 410 119 152 Longitudinal bar buckling slender column
+rect:96 385 229 25 Failure of confining hoops/ties slender column
+rect:106 149 155 177 Concrete spalling slender column
+rect:147 271 155 235 Concrete spalling slender column
+rect:380 358 68 227 Longitudinal bar buckling slender column
+rect:82 379 307 46 Failure of confining hoops/ties slender column
+Izmit1999_01.jpg 200x300
+rect:374 64 45 213 Longitudinal bar buckling joint-column connection
+rect:490 210 55 57 Concrete core crushing joint-column connection
+rect:188 168 30 135 Longitudinal bar buckling joint-column connection
+rect:242 166 43 153 Longitudinal bar buckling joint-column connection
+rect:231 74 255 386 Concrete spalling joint-column connection
+Izmit1999_02.jpg 200x300
+rect:27 151 588 253 Partial/full collapse full/partial building
+Izmit1999_03.jpg 200x300
+rect:125 107 58 229 Longitudinal bar buckling slender column
+rect:437 66 36 185 Longitudinal bar buckling slender column
+rect:450 66 36 288 Longitudinal bar buckling slender column
+rect:163 47 294 368 Distributed plastic hinging slender column
+rect:246 77 257 353 Concrete spalling slender column
+rect:151 210 303 25 Failure of confining hoops/ties slender column
+rect:371 75 43 296 Longitudinal bar buckling slender column
+rect:182 152 42 172 Longitudinal bar buckling slender column
+Izmit1999_04.jpg 200x300
+rect:372 318 21 60 Longitudinal bar buckling short/captive column
+rect:230 75 71 81 Shear/compression failure short/captive column
+rect:48 370 69 80 Concrete spalling short/captive column
+rect:52 409 60 51 Concrete spalling joint-column connection
+rect:75 333 42 103 Shear cracking short/captive column
+rect:419 320 23 75 Longitudinal bar buckling short/captive column
+rect:426 307 113 66 Concrete spalling short/captive column
+rect:144 219 125 87 Unseating/collapse of stairs scissor stairs
+rect:396 67 76 79 Concrete spalling short/captive column
+rect:119 635 291 155 Unseating/collapse of stairs scissor stairs
+Izmit1999_05.jpg 200x300
+rect:98 33 602 348 Partial/full collapse full/partial building
+Izmit1999_06.jpg 200x300
+rect:136 342 146 74 Concrete core crushing slender column
+rect:209 268 41 163 Longitudinal bar buckling slender column
+rect:178 230 98 210 Longitudinal bar buckling slender column
+rect:68 338 74 160 Longitudinal bar buckling slender column
+rect:233 277 43 135 Longitudinal bar buckling slender column
+rect:165 183 158 422 Concrete spalling slender column
+Izmit1999_07.jpg 200x300
+rect:388 130 64 92 Longitudinal bar buckling structural wall
+rect:27 116 432 771 Concrete spalling structural wall
+rect:302 158 41 80 Longitudinal bar buckling structural wall
+rect:312 238 69 436 Shear cracking structural wall
+rect:413 80 106 41 Concrete spalling beam
+rect:222 291 35 91 Longitudinal bar buckling structural wall
+rect:149 257 55 106 Longitudinal bar buckling structural wall
+Izmit1999_08.jpg 200x300
+rect:393 91 77 80 Concrete spalling short/captive column
+rect:148 30 103 79 Concrete spalling joint-column connection
+rect:271 311 217 106 Unseating/collapse of stairs scissor stairs
+rect:170 288 116 111 Shear cracking joint-column connection
+rect:639 6 107 50 Shear cracking joint-column connection
+rect:163 134 93 104 Concrete spalling short/captive column
+rect:560 91 46 22 Concrete core crushing short/captive column
+Izmit1999_09.jpg 200x300
+rect:240 222 126 71 Concrete spalling short/captive column
+rect:428 310 61 47 Concrete spalling short/captive column
+rect:659 172 60 65 Distributed plastic hinging short/captive column
+rect:304 186 42 37 Concrete spalling short/captive column
+rect:56 160 50 54 Concrete spalling short/captive column
+rect:335 282 109 133 Distributed plastic hinging short/captive column
+Izmit1999_10.jpg 200x300
+rect:101 389 311 71 Failure of confining hoops/ties short/captive column
+rect:59 149 93 175 Longitudinal bar buckling short/captive column
+rect:303 522 116 98 Longitudinal bar buckling short/captive column
+rect:40 265 352 38 Failure of confining hoops/ties short/captive column
+rect:59 134 377 668 Concrete spalling short/captive column
+rect:234 525 64 113 Longitudinal bar buckling short/captive column
+rect:252 175 48 192 Longitudinal bar buckling short/captive column
+rect:134 519 120 26 Failure of confining hoops/ties short/captive column
+rect:110 183 61 213 Longitudinal bar buckling short/captive column
+rect:314 663 61 26 Failure of confining hoops/ties short/captive column
+rect:355 102 129 187 Longitudinal bar buckling short/captive column
+Izmit1999_11.jpg 200x300
+rect:152 191 70 173 Longitudinal bar buckling short/captive column
+rect:257 444 111 129 Concrete spalling short/captive column
+rect:296 221 94 166 Longitudinal bar buckling short/captive column
+rect:220 276 161 202 Concrete spalling short/captive column
+rect:214 405 68 167 Longitudinal bar buckling short/captive column
+Izmit1999_12.jpg 200x300
+rect:396 265 67 119 Concrete core crushing short/captive column
+rect:41 242 80 67 Distributed plastic hinging short/captive column
+rect:399 197 58 126 Shear cracking short/captive column
+rect:318 208 69 102 Concrete spalling short/captive column
+rect:17 80 37 20 Concrete spalling beam
+rect:80 101 42 31 Concrete spalling beam
+rect:308 181 41 34 Concrete spalling beam
+rect:546 25 90 62 Concrete spalling joint-column connection
+rect:479 87 32 109 Concrete spalling short/captive column
+rect:421 131 64 103 Shear cracking joint-column connection
+rect:416 239 178 232 out-of-plane failure infill wall
+rect:284 234 103 183 Distributed plastic hinging short/captive column
+rect:290 194 57 47 Shear cracking beam
+rect:126 289 67 84 Unseating/collapse of stairs scissor stairs
+rect:314 244 59 79 Concrete spalling short/captive column
+rect:1 223 42 47 Concrete spalling short/captive column
+rect:62 365 30 61 Longitudinal bar buckling short/captive column
+rect:65 361 68 78 Concrete core crushing short/captive column
+Izmit1999_13.jpg 200x300
+rect:245 106 55 122 Concrete spalling short/captive column
+rect:197 243 94 84 Concrete core crushing short/captive column
+rect:146 332 31 98 Concrete spalling short/captive column
+rect:137 117 75 32 Concrete spalling beam
+rect:225 214 40 82 Concrete spalling short/captive column
+rect:6 92 83 216 Shear cracking short/captive column
+rect:371 151 94 243 Concrete spalling short/captive column
+rect:212 84 166 254 Shear/compression failure short/captive column
+rect:175 233 128 160 Distributed plastic hinging short/captive column
+Izmit1999_14.jpg 200x300
+rect:40 168 84 45 Concrete spalling joint-column connection
+rect:258 430 46 22 Concrete spalling joint-column connection
+rect:480 88 94 100 Concrete spalling joint-column connection
+rect:535 208 70 82 Shear cracking floor diaphragm/slab
+rect:243 358 48 39 Concrete spalling joint-column connection
+rect:297 6 166 60 Shear cracking floor diaphragm/slab
+rect:549 281 72 34 Concrete spalling joint-column connection
+rect:573 299 98 49 Concrete spalling joint-column connection
+rect:441 47 41 55 Concrete spalling floor diaphragm/slab
+Izmit1999_15.jpg 200x300
+rect:172 197 297 333 Shear cracking short/captive column
+Izmit1999_16.jpg 200x300
+rect:124 49 344 382 Interaction b/w infill and frame infill wall
+rect:177 92 47 73 Longitudinal bar buckling short/captive column
+rect:181 101 164 109 Concrete spalling short/captive column
+rect:125 57 222 377 Shear/diagonal failure short/captive column
+Izmit1999_17.jpg 200x300
+rect:87 139 224 262 Concrete spalling short/captive column
+Izmit1999_18.jpg 200x300
+rect:220 122 166 140 Concrete spalling short/captive column
+rect:178 107 150 354 Shear/diagonal failure short/captive column
+Izmit1999_19.jpg 200x300
+rect:180 88 185 227 Concrete spalling slender column
+rect:371 139 24 77 Longitudinal bar buckling slender column
+rect:428 194 31 53 Longitudinal bar buckling slender column
+rect:200 115 307 443 Shear/diagonal failure slender column
+Kobe1995_01.jpg 200x300
+rect:24 161 780 107 soft story fail full Story
+Kobe1995_02.jpg 200x300
+rect:2 78 354 695 Concrete spalling Unknown
+Kobe1995_03.jpg 200x300
+rect:38 71 488 704 Partial/full collapse full/partial building
+Kobe1995_04.jpg 200x300
+rect:287 272 73 47 Concrete spalling short/captive column
+Kobe1995_05.jpg 200x300
+rect:322 165 192 509 Longitudinal bar buckling short/captive column
+rect:4 130 95 555 Longitudinal bar buckling short/captive column
+rect:175 151 170 532 Concrete core crushing short/captive column
+rect:42 273 338 69 Failure of confining hoops/ties short/captive column
+rect:85 595 252 138 Failure of confining hoops/ties short/captive column
+Kobe1995_06.jpg 200x300
+rect:65 109 311 456 Concrete spalling short/captive column
+rect:152 369 328 463 Shear cracking short/captive column
+Kobe1995_07.jpg 200x300
+rect:550 331 42 43 Shear/diagonal failure short/captive column
+rect:133 194 32 33 Shear/diagonal failure short/captive column
+rect:187 309 28 45 Shear/diagonal failure short/captive column
+rect:463 399 29 55 Shear/diagonal failure short/captive column
+rect:279 115 34 26 Shear/diagonal failure short/captive column
+rect:165 294 31 39 Shear/diagonal failure short/captive column
+rect:424 342 25 41 Shear/diagonal failure short/captive column
+rect:181 201 50 49 Shear/diagonal failure short/captive column
+rect:110 286 32 26 Shear/diagonal failure short/captive column
+rect:124 140 39 44 Shear/diagonal failure short/captive column
+rect:422 555 37 51 Shear/diagonal failure short/captive column
+rect:402 203 39 41 Shear/diagonal failure short/captive column
+rect:321 205 40 26 Shear/diagonal failure short/captive column
+rect:156 516 36 31 Shear/diagonal failure short/captive column
+rect:470 257 54 44 Shear/diagonal failure short/captive column
+rect:456 499 27 48 Shear/diagonal failure short/captive column
+rect:441 115 32 25 Shear/diagonal failure short/captive column
+rect:241 189 56 51 Shear/diagonal failure short/captive column
+rect:57 326 29 33 Shear/diagonal failure short/captive column
+rect:349 261 39 35 Shear/diagonal failure short/captive column
+rect:149 284 31 47 Shear/diagonal failure short/captive column
+rect:266 374 35 38 Shear/diagonal failure short/captive column
+rect:205 367 25 44 Shear/diagonal failure short/captive column
+rect:41 183 51 45 Shear/diagonal failure short/captive column
+rect:366 284 33 25 Shear/diagonal failure short/captive column
+rect:264 410 35 46 Shear/diagonal failure short/captive column
+Kobe1995_08.jpg 200x300
+rect:217 59 406 150 concrete crushing structural wall with penetration
+Kobe1995_09.jpg 200x300
+rect:122 753 74 59 Unseating/collapse of stairs scissor stairs
+rect:138 551 204 60 concrete crushing structural wall with penetration
+rect:113 492 95 96 Unseating/collapse of stairs scissor stairs
+rect:130 411 94 56 Unseating/collapse of stairs scissor stairs
+SanSalvador_1986_01.jpg 200x300
+rect:313 121 148 176 Concrete spalling short/captive column
+rect:56 3 94 207 Concrete spalling Unknown
+SanSalvador_1986_02.jpg 200x300
+rect:151 164 22 40 Concrete spalling short/captive column
+rect:252 296 31 29 Concrete spalling short/captive column
+rect:206 198 39 46 Concrete spalling short/captive column
+rect:532 159 32 43 Shear cracking short/captive column
+rect:368 118 17 24 Concrete spalling short/captive column
+rect:401 246 34 49 Concrete spalling short/captive column
+rect:120 286 27 24 Concrete spalling short/captive column
+rect:634 241 24 37 Concrete spalling short/captive column
+rect:396 294 32 34 Concrete spalling short/captive column
+SikkimIndia2001_01.jpg 200x300
+rect:151 126 92 106 Concrete spalling joint-column connection
+SikkimIndia2001_02.jpg 200x300
+rect:7 176 46 40 Concrete spalling scissor stairs
+rect:275 256 110 49 Concrete spalling construction joint
+rect:474 111 110 48 Concrete spalling construction joint
+rect:-13 2 434 122 Interaction b/w infill and frame infill wall
+rect:150 91 144 395 Interaction b/w infill and frame infill wall
+rect:478 189 88 13 Concrete spalling construction joint
+rect:512 74 146 172 Interaction b/w infill and frame infill wall
+rect:10 7 327 62 Concrete spalling construction joint
+SikkimIndia2001_03.jpg 200x300
+rect:145 13 126 416 Global buckling/instability Unknown
+rect:237 105 62 189 Longitudinal bar buckling Unknown
+rect:237 237 119 122 Concrete core crushing Unknown
+SikkimIndia2001_04.jpg 200x300
+rect:3 27 241 352 seperation wall-slab/diaphragm connection
+rect:374 246 295 105 seperation wall-slab/diaphragm connection
+rect:323 170 133 123 Concrete spalling joint-column connection
+SumatraInd2009_01.jpg 200x300
+rect:351 32 44 424 Concrete spalling
+SumatraInd2009_02.jpg 200x300
+rect:155 105 175 194 Concrete spalling short/captive column
+WhittierNarrows1987_01.jpg 200x300
+rect:19 23 556 274 Partial/full collapse full/partial building
+WhittierNarrows1987_02.jpg 200x300
+rect:168 277 121 313 Concrete spalling short/captive column
+WhittierNarrows1987_03.jpg 200x300
+rect:354 105 145 223 Concrete spalling slender column
+WhittierNarrows1987_04.jpg 200x300
+rect:211 62 131 254 Concrete spalling short/captive column
+rect:223 7 220 70 Concrete spalling beam
+rect:241 10 248 157 Failure of confining hoops/ties beam
+YogyakartaInd2006_01.jpg 200x300
+rect:320 151 317 67 Concrete core crushing slender column
+rect:258 42 368 250 Concrete spalling slender column
+rect:162 -28 526 357 Global buckling/instability slender column
+YogyakartaInd2006_02.jpg 200x300
+rect:352 93 64 197 Longitudinal bar buckling Unknown
+rect:378 57 132 457 Global buckling/instability Unknown
+rect:279 107 94 205 Concrete core crushing Unknown

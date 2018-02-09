@@ -123,7 +123,7 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
 }
 
 //Compare two input lists of images
-//TODO DECIDE WHAT TO RETURN IF ANYTHING
+
 void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& checkImages)
 {
     std::list<Image*>::const_iterator keyImagesIterator;
@@ -145,6 +145,8 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
     double checkCenterY;
     double checkArea;
     
+    bool foundMatch;
+    
     
     
     // go through each image in the images lists
@@ -160,9 +162,13 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
         imageDimX=(*keyImagesIterator)->getXdim();
         imageDimY=(*keyImagesIterator)->getYdim();
         
-        //for each rectangle in the key list, check against all rectangles in the check rectangles
+        
+        //for each rectangle in the key list, check against all rectangles in the check rectangles list
         for ( keyRectsIterator=keyRects.begin(); keyRectsIterator!=keyRects.end(); ++keyRectsIterator)
         {
+            //for a new rectangle in the key list, set the foundMatch to false until a match is found
+            foundMatch=false;
+            
             for ( checkRectsIterator=checkRects.begin(); checkRectsIterator!=checkRects.end(); ++checkRectsIterator)
             {
                 //if the tags are not the same, this is not the correct rectangle so continue
@@ -187,8 +193,8 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
                         checkArea = (*checkRectsIterator)->getArea();
                         
                         //if the differences in area are close enough, then it is likely this
-                        //rectangle is the correct one. store it the match into the key
-                        //rectangle.
+                        //rectangle is the correct one. store the match into the key
+                        //rectangle. after checking against any previous match.
                         if( abs(keyArea-checkArea)<=(imageDimX*imageDimY*AREA_PERCENT_ERROR) )
                         {
                             //check if this new match is a better match than the current match
@@ -203,9 +209,17 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
                                                               abs(keyCenterY-checkCenterY),
                                                               abs(keyArea-checkArea) );
                             }
+                            foundMatch=true;
                         }
                     }
                 }
+            }
+            //if a match was found then add one to the score of that image. the total score will be
+            //number of matches over number of rectangles.
+            //this only happens once per rectangle in an image.
+            if (foundMatch)
+            {
+                (*keyImagesIterator)->increaseNumMatches();
             }
         }
     }

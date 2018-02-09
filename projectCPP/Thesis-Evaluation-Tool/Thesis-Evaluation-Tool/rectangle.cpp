@@ -142,6 +142,11 @@ void Rectangle::setMatch(Rectangle* newMatch, double newMatchCentXDiff, double n
 //use the sum of the differences to determine if the new rectangle is better.
 bool Rectangle::compareMatch(double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
 {
+    double centerDelta;
+    double areaDelta;
+    
+    double newCenterDelta;
+    double newAreaDelta;
     //if there is no current match then return true.
     if ( match_ == NULL)
     {
@@ -149,22 +154,34 @@ bool Rectangle::compareMatch(double newMatchCentXDiff, double newMatchCentYDiff,
     }
     else
     {
-        //TODO decide how to compare the two rectangles, is area or center more important?
-        if ( true )
+        //to calculate the deltas, acquire the distance of the check center from the key center
+        //divide by the distance to the corner of the key rectangle
+        centerDelta = sqrt(pow(matchCentXDiff_,2)+pow(matchCentYDiff_,2)) /
+                      sqrt(pow( abs( x0_ - x1_ )/2,2) + pow( abs( y0_ - y1_ )/2,2));
+        
+        //to calculate the deltas of the area, divide the difference in areas by the key area
+        
+        areaDelta = matchAreaDiff_/area_;
+        
+        newCenterDelta = sqrt(pow(newMatchCentXDiff,2)+pow(newMatchCentYDiff,2)) /
+                         sqrt( pow( abs( x0_ - x1_ ),2) + pow( abs( y0_ - y1_ ),2));
+        
+        newAreaDelta = newMatchAreaDiff/area_;
+        
+        //compare the delta of the current best match to the delta of the new match and determine
+        //if the new match is better.
+        //if the new match is better return true
+        //otherwise return false.
+        if ( (centerDelta+areaDelta) > (newCenterDelta+newAreaDelta) )
         {
-            if ( true )
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
         else
         {
             return false;
         }
+        
+    
     }
 }
 

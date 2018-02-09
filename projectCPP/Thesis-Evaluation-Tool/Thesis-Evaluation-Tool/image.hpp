@@ -32,6 +32,8 @@ private:
     
     int numRects_;
     
+    int numMatches_;
+    
     std::list<Rectangle*> rectangleList_;
     
 
@@ -62,6 +64,7 @@ public:
     int getYdim() const { return ydim_;}
     
     int getNumRects() const {return numRects_;}
+    int getNumMatches() const {return numMatches_;}
     
     std::list<Rectangle*> getAllRectangles() const { return rectangleList_; }
     
@@ -73,6 +76,7 @@ public:
     void setYdim(int);
     
     void addNewRectangle(int, int, int, int, std::string);
+    void increaseNumMatches();
     
     //helpers
     //
