@@ -15,7 +15,7 @@
 
 
 #define DEF_VAL 0
-#define DEF_TAG ""
+//#define DEF_TAG ""
 
 
 class Rectangle
@@ -31,17 +31,17 @@ private:
     int y0_;
     int y1_;
     
-    //x and y coordinates of the center of the rectangle
+    // x and y coordinates of the center of the rectangle
     double centerX_;
     double centerY_;
     
-    //area of the rectangle
+    // area of the rectangle
     double area_;
     
-    //the type of damage denoted by the rectangle
-    std::string tag_;
+    // the type of damage denoted by the rectangle, this will be read in as a number
+    int tag_;
     
-    //the attributes used to match a rectangle to another rectangle
+    // the attributes used to match a rectangle to another rectangle
     Rectangle* match_;
     double matchCentXDiff_;
     double matchCentYDiff_;
@@ -61,7 +61,7 @@ public:
               int=DEF_VAL,
               int=DEF_VAL,
               int=DEF_VAL,
-              std::string=DEF_TAG);
+              int=DEF_VAL);
     
     //destructors
     //
@@ -81,7 +81,7 @@ public:
     
     double getArea() const { return area_; }
     
-    std::string getTag () const { return tag_; }
+    int getTag () const { return tag_; }
     
     Rectangle* getMatch () const { return match_; }
     double getMatchCentXDiff () const { return matchCentXDiff_; }
@@ -104,7 +104,7 @@ public:
     
     void setArea();
     
-    void setTag(std::string);
+    void setTag(int);
     
     void setMatch(Rectangle*, double, double, double);
     

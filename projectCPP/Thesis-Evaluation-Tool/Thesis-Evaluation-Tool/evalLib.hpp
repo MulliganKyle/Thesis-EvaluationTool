@@ -17,8 +17,8 @@
 #include "rectangle.hpp"
 #include "image.hpp"
 
-#define CENTER_PERCENT_ERROR 0.05
-#define AREA_PERCENT_ERROR 0.002
+#define CENTER_PERCENT_ERROR 0.5
+#define AREA_PERCENT_ERROR 0.05
 
 
 

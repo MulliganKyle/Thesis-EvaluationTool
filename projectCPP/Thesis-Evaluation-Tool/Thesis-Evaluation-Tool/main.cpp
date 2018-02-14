@@ -16,6 +16,8 @@
 
 int main(int argc, const char * argv[])
 {
+    std::list<Image*>::const_iterator keyImagesIterator;
+    
     std::string keyPath="/Users/kyle/Documents/Thesis-EvaluationTool/ImageFiles/key.txt";
     std::string checkPath="/Users/kyle/Documents/Thesis-EvaluationTool/ImageFiles/test1.txt";
     
@@ -25,6 +27,14 @@ int main(int argc, const char * argv[])
     getImgData(keyPath, keyImages);
     getImgData(checkPath, test1Images);
     
-    std::cout << keyImages.front()->getName() << std::endl;
+    compareImages(keyImages,test1Images);
+    
+    //std::cout << keyImages.front()->getName() << std::endl;
+    
+    for ( keyImagesIterator= keyImages.begin(); keyImagesIterator!=keyImages.end(); ++keyImagesIterator)
+    {
+        std::cout << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+    }
+    
     return 0;
 }

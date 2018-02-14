@@ -23,6 +23,7 @@ Image::Image(std::string newName,
     xdim_ = newXDim;
     ydim_ = newYDim;
     numRects_=0;
+    numMatches_=0;
     numberOfImages_ ++;
 }
 
@@ -54,7 +55,7 @@ void Image::setYdim(int newYDim)
 }
 
 
-void Image::addNewRectangle(int x0, int x1, int y0, int y1, std::string tag)
+void Image::addNewRectangle(int x0, int x1, int y0, int y1, int tag)
 {
     Rectangle *newRectangle = new Rectangle(x0, x1, y0, y1, tag);
     rectangleList_.push_back(newRectangle);

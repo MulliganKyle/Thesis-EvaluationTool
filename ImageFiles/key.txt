@@ -1,18 +1,27 @@
 Anchorage1964_01.jpg 600x800
-rect:95 7 214 176 Shear/diagonal failure coupling beam 
-rect:81 380 234 234 Shear/diagonal failure coupling beam 
+rect:95 7 214 176 1
+rect:81 380 234 234 1 
 Anchorage1964_02.jpg 800x600
-rect:190 256 358 101 Concrete spalling structural wall 
-rect:218 74 91 76 Shear cracking structural wall 
-rect:437 202 89 59 Shear cracking structural wall 
-rect:38 24 157 44 Flexural cracking  beam 
-rect:31 205 149 44 Flexural cracking  beam 
-rect:100 220 24 21 Concrete spalling beam 
-rect:124 219 54 16 Concrete spalling beam 
-rect:76 37 88 15 Concrete spalling beam 
-rect:143 156 74 55 Shear cracking beam 
-rect:509 66 125 114 Shear cracking coupling beam 
+rect:190 256 358 101 2
+rect:233 277 25 68 3
+rect:270 279 27 68 3
+rect:306 276 26 59 3
+rect:350 269 27 61 3
+rect:394 271 25 62 3
+rect:442 265 21 53 3
+rect:489 267 16 54 3
+rect:526 271 15 58 3
+rect:218 74 91 76 4
+rect:437 202 89 59 4
+rect:252 34 252 86 4
+rect:38 24 157 44 5
+rect:31 205 149 44 5
+rect:100 220 24 21 6
+rect:124 219 54 16 6
+rect:76 37 88 15 6
+rect:143 156 74 55 7
+rect:509 66 125 114 8
 Anchorage1964_03.jpg 500x500
-rect:258 90 377 201 overturning core wall system 
-rect:2 224 229 79 overturning core wall system 
-rect:0 280 662 69 Partial/full collapse full/partial building 
+rect:258 90 377 201 9
+rect:2 224 229 79 9
+rect:0 280 662 69 10

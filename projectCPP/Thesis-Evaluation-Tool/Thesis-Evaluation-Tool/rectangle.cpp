@@ -19,7 +19,7 @@ Rectangle::Rectangle(int newX0,
                      int newX1,
                      int newY0,
                      int newY1,
-                     std::string newTag)
+                     int newTag)
 {
     if ( newX0 < newX1)
     {
@@ -118,7 +118,7 @@ void Rectangle::setArea()
     area_= (float) (abs( x0_ - x1_ ) * abs( y0_ - y1_ ));
 }
 
-void Rectangle::setTag(std::string newTag)
+void Rectangle::setTag(int newTag)
 {
     tag_=newTag;
 }

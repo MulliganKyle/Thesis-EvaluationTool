@@ -37,7 +37,7 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
     
     
     int coordinate;
-    int coordArray[4];
+    int valArray[5];
     
     
     inFile.open(filePath, std::ifstream::in);
@@ -55,7 +55,7 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
             if ( buff.compare(0,5,rec)==0)
             {
                 buffCount=5;
-                for (int j=0; j<4; j++)
+                for (int j=0; j<5; j++)
                 {
                     coordinate=0;
                     // at this point buffCount should denote the position in the buff right after "rect:"
@@ -70,15 +70,18 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
                     // at this point buffCount should be at a ' ' (space) in the buff
                     // so it must be incremented to the start of the next integer coordinate
                     buffCount++;
-                    coordArray[j]=coordinate;
+                    valArray[j]=coordinate;
                 }
                 
+                
                 // create substr starting after the last coordinate, this will be the tag
-                tag=buff.substr(buffCount+1);
+                // tag=buff.substr(buffCount);
+                
+                
                 
                 // add new rectangle to the most recent image. this will create a new rectangle and push
                 // it to the back of the list held in new image. it will also calculate the center and area.
-                newImage->addNewRectangle(coordArray[0], coordArray[2], coordArray[1], coordArray[3], tag);
+                newImage->addNewRectangle(valArray[0], valArray[2], valArray[1], valArray[3], valArray[4]);
                 
                 
             }
@@ -171,8 +174,9 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
             
             for ( checkRectsIterator=checkRects.begin(); checkRectsIterator!=checkRects.end(); ++checkRectsIterator)
             {
+
                 //if the tags are not the same, this is not the correct rectangle so continue
-                if ( (*keyRectsIterator)->getTag() != (*checkRectsIterator)->getTag() )
+                if ( ((*keyRectsIterator)->getTag()) != ((*checkRectsIterator)->getTag() ))
                 {
                     continue;
                 }

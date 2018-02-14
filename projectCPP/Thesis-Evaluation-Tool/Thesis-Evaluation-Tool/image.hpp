@@ -75,7 +75,7 @@ public:
     void setXdim(int);
     void setYdim(int);
     
-    void addNewRectangle(int, int, int, int, std::string);
+    void addNewRectangle(int, int, int, int, int);
     void increaseNumMatches();
     
     //helpers
