@@ -34,6 +34,8 @@ private:
     
     int numMatches_;
     
+    double totScore_;
+    
     std::list<Rectangle*> rectangleList_;
     
 
@@ -65,6 +67,7 @@ public:
     
     int getNumRects() const {return numRects_;}
     int getNumMatches() const {return numMatches_;}
+    double getNumMatches2() const { return totScore_; }
     
     std::list<Rectangle*> getAllRectangles() const { return rectangleList_; }
     
@@ -77,6 +80,7 @@ public:
     
     void addNewRectangle(int, int, int, int, int);
     void increaseNumMatches();
+    void increaseNumMatches2(double);
     
     //helpers
     //

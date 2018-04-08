@@ -25,5 +25,6 @@
 void getImgData(std::string, std::list<Image*>&);
 
 void compareImages(const std::list<Image*>&, const std::list<Image*>&);
+void compareImages2(const std::list<Image*>&, const std::list<Image*>&);
 
 #endif /* evalLib_hpp */

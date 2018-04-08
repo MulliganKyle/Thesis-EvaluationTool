@@ -47,6 +47,10 @@ private:
     double matchCentYDiff_;
     double matchAreaDiff_;
     
+    // the attributes used to match a rectangle to another rectangle using the second method
+    Rectangle* match2_;
+    double match2Score_;
+    
     //****************************//
     //class wide attributes       //
     //****************************//
@@ -88,6 +92,9 @@ public:
     double getMatchCentYDiff () const { return matchCentYDiff_; }
     double getMatchAreaDiff () const { return matchAreaDiff_; }
     
+    Rectangle* getMatch2 () const { return match2_; }
+    double getMatch2score () const { return match2Score_; }
+    
     int getNumberOfRects () const { return numberOfRects_; }
     
     
@@ -107,11 +114,13 @@ public:
     void setTag(int);
     
     void setMatch(Rectangle*, double, double, double);
+    void setMatch2(Rectangle*, double);
     
     
     //helpers
     //
     bool compareMatch(double, double, double);
+    bool compareMatch2(double);
 
 };
 

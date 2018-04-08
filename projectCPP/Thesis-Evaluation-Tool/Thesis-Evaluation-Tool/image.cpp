@@ -24,6 +24,7 @@ Image::Image(std::string newName,
     ydim_ = newYDim;
     numRects_=0;
     numMatches_=0;
+    totScore_=0;
     numberOfImages_ ++;
 }
 
@@ -66,6 +67,11 @@ void Image::addNewRectangle(int x0, int x1, int y0, int y1, int tag)
 void Image::increaseNumMatches()
 {
     numMatches_++;
+}
+
+void Image::increaseNumMatches2( double newScore)
+{
+    totScore_=totScore_+newScore;
 }
 
 //helpers

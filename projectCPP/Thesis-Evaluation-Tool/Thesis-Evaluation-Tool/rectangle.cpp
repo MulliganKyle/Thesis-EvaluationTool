@@ -131,6 +131,11 @@ void Rectangle::setMatch(Rectangle* newMatch, double newMatchCentXDiff, double n
     matchAreaDiff_=newMatchAreaDiff;
 }
 
+void Rectangle::setMatch2(Rectangle* newMatch, double newScore)
+{
+    match2_=newMatch;
+    match2Score_= newScore;
+}
 
 //helper
 //
@@ -157,14 +162,14 @@ bool Rectangle::compareMatch(double newMatchCentXDiff, double newMatchCentYDiff,
         //to calculate the deltas, acquire the distance of the check center from the key center
         //divide by the distance to the corner of the key rectangle
         centerDelta = sqrt(pow(matchCentXDiff_,2)+pow(matchCentYDiff_,2)) /
-                      sqrt(pow( abs( x0_ - x1_ )/2,2) + pow( abs( y0_ - y1_ )/2,2));
+        sqrt(pow( abs( x0_ - x1_ )/2,2) + pow( abs( y0_ - y1_ )/2,2));
         
         //to calculate the deltas of the area, divide the difference in areas by the key area
         
         areaDelta = matchAreaDiff_/area_;
         
         newCenterDelta = sqrt(pow(newMatchCentXDiff,2)+pow(newMatchCentYDiff,2)) /
-                         sqrt( pow( abs( x0_ - x1_ ),2) + pow( abs( y0_ - y1_ ),2));
+        sqrt( pow( abs( x0_ - x1_ ),2) + pow( abs( y0_ - y1_ ),2));
         
         newAreaDelta = newMatchAreaDiff/area_;
         
@@ -181,7 +186,27 @@ bool Rectangle::compareMatch(double newMatchCentXDiff, double newMatchCentYDiff,
             return false;
         }
         
-    
+        
+    }
+}
+
+
+bool Rectangle::compareMatch2(double newMatchScore)
+{
+    if ( match_ == NULL)
+    {
+        return true;
+    }
+    else
+    {
+        if (newMatchScore > match2Score_)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 

@@ -26,15 +26,24 @@ int main(int argc, const char * argv[])
     
     getImgData(keyPath, keyImages);
     getImgData(checkPath, test1Images);
-    
+ 
+#if 0
     compareImages(keyImages,test1Images);
-    
-    //std::cout << keyImages.front()->getName() << std::endl;
     
     for ( keyImagesIterator= keyImages.begin(); keyImagesIterator!=keyImages.end(); ++keyImagesIterator)
     {
         std::cout << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
+#endif
+    
+#if 1
+    compareImages2(keyImages,test1Images);
+    
+    for ( keyImagesIterator= keyImages.begin(); keyImagesIterator!=keyImages.end(); ++keyImagesIterator)
+    {
+        std::cout << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+    }
+#endif
     
     return 0;
 }
