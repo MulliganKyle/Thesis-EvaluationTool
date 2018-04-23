@@ -76,7 +76,9 @@ void Image::increaseNumMatches2( double newScore)
 
 //helpers
 //
+/* NOT USING THIS ANYMORE
 void Image::sortRectangles()
 {
     rectangleList_.sort(compareRec);
 }
+*/

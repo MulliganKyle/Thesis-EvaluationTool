@@ -16,6 +16,8 @@
 
 #include "rectangle.hpp"
 
+//this is not used anymore
+
 bool compareRec(Rectangle*,Rectangle*);
 
 #endif /* helperLib_hpp */

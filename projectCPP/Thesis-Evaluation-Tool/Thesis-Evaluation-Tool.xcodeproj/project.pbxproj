@@ -33,7 +33,7 @@
 		2739A0211FEAEED500AFA226 /* rectangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rectangle.hpp; sourceTree = "<group>"; };
 		2739A0231FEB043E00AFA226 /* image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = image.cpp; sourceTree = "<group>"; };
 		2739A0241FEB043E00AFA226 /* image.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = image.hpp; sourceTree = "<group>"; };
-		275208DA2017F15E001A42E4 /* evalLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evalLib.cpp; sourceTree = "<group>"; };
+		275208DA2017F15E001A42E4 /* evalLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evalLib.cpp; sourceTree = "<group>"; usesTabs = 0; };
 		275208DB2017F15E001A42E4 /* evalLib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = evalLib.hpp; sourceTree = "<group>"; };
 		279077DE201A583E00D5E176 /* helperLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helperLib.cpp; sourceTree = "<group>"; };
 		279077DF201A583E00D5E176 /* helperLib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = helperLib.hpp; sourceTree = "<group>"; };

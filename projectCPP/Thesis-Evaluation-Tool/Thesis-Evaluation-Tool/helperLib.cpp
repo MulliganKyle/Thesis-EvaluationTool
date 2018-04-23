@@ -8,7 +8,7 @@
 
 #include "helperLib.hpp"
 
-
+//this is not used anymore
 //compares two rectangles and outputs which is closer to the top left of image. currently not used.
 bool compareRec( Rectangle *first, Rectangle *second)
 {

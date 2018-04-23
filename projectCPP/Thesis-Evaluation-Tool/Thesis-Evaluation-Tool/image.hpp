@@ -6,8 +6,8 @@
 //  Copyright © 2017 Kyle Mulligan. All rights reserved.
 //
 
-#ifndef image_hpp
-#define image_hpp
+#ifndef Image_hpp
+#define Image_hpp
 
 #include <stdio.h>
 #include <list>
