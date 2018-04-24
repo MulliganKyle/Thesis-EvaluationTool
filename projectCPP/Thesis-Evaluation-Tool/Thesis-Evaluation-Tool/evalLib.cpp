@@ -8,6 +8,12 @@
 
 #include "evalLib.hpp"
 
+std::mutex mtxTag;
+std::mutex mtxArea;
+std::mutex mtxScore;
+std::mutex mtxPrint;
+
+
 //timing helper function
 double dtime()
 {
@@ -413,9 +419,12 @@ void compareImages2(const std::list<Image*>& keyImages, const std::list<Image*>&
 /*******************************************************************************/
 
 //parallel compare function
-void getRectScore(std::list<Image*>::const_iterator keyImagesIterator, std::list<Rectangle*>::iterator keyRectsIterator, std::list<Rectangle*>& checkRects)
+void getRectScore(Image* keyImagesIterator, Rectangle* keyRectsIterator, std::list<Rectangle*>& checkRects)
 {
     std::list<Rectangle*>::const_iterator checkRectsIterator;
+    
+    int checkRectTag;
+    int keyRectTag;
     
     double keyX0;
     double keyX1;
@@ -442,12 +451,13 @@ void getRectScore(std::list<Image*>::const_iterator keyImagesIterator, std::list
     
     //for a new rectangle in the key list, set the foundMatch to false until a match is found
     foundMatch=false;
-    
     for ( checkRectsIterator=checkRects.begin(); checkRectsIterator!=checkRects.end(); ++checkRectsIterator)
     {
-        
+        //lock the tag mutex
+        checkRectTag=((*checkRectsIterator)->getTag());
+        keyRectTag=((keyRectsIterator)->getTag());
         //if the tags are not the same, this is not the correct rectangle so continue
-        if ( ((*keyRectsIterator)->getTag()) != ((*checkRectsIterator)->getTag() ))
+        if ( keyRectTag != checkRectTag )
         {
             continue;
         }
@@ -455,17 +465,18 @@ void getRectScore(std::list<Image*>::const_iterator keyImagesIterator, std::list
         else
         {
             //get the corners of the rectangles and the areas
-            keyX0 = (*keyRectsIterator)->getX0();
-            keyX1 = (*keyRectsIterator)->getX1();
-            keyY0 = (*keyRectsIterator)->getY0();
-            keyY1 = (*keyRectsIterator)->getY1();
-            keyArea = (*keyRectsIterator)->getArea();
+            keyX0 = (keyRectsIterator)->getX0();
+            keyX1 = (keyRectsIterator)->getX1();
+            keyY0 = (keyRectsIterator)->getY0();
+            keyY1 = (keyRectsIterator)->getY1();
+            keyArea = (keyRectsIterator)->getArea();
             
             checkX0 = (*checkRectsIterator)->getX0();
             checkX1 = (*checkRectsIterator)->getX1();
             checkY0 = (*checkRectsIterator)->getY0();
             checkY1 = (*checkRectsIterator)->getY1();
             checkArea = (*checkRectsIterator)->getArea();
+
             
             //get intersection corners of the two rectangles
             
@@ -522,9 +533,9 @@ void getRectScore(std::list<Image*>::const_iterator keyImagesIterator, std::list
             {
                 inArea= (inX1-inX0) * (inY1-inY0);
                 rectScore= inArea/(keyArea+checkArea-inArea);
-                if ( (*keyRectsIterator)->compareMatch2( rectScore ) )
+                if ( (keyRectsIterator)->compareMatch2( rectScore ) )
                 {
-                    (*keyRectsIterator)->setMatch2( (*checkRectsIterator),rectScore );
+                    (keyRectsIterator)->setMatch2( (*checkRectsIterator),rectScore );
                 }
                 foundMatch=true;
             }
@@ -537,7 +548,9 @@ void getRectScore(std::list<Image*>::const_iterator keyImagesIterator, std::list
     //this only happens once per rectangle in an image.
     if (foundMatch)
     {
-        (*keyImagesIterator)->increaseNumMatches2( (*keyRectsIterator)->getMatch2score() );
+        mtxScore.lock();
+        (keyImagesIterator)->increaseNumMatches2( (keyRectsIterator)->getMatch2score() );
+        mtxScore.unlock();
     }
 }
 
@@ -574,21 +587,20 @@ void compareImagesParallel(const std::list<Image*>& keyImages, const std::list<I
         //get the dimensions of the image for use later
         
         
-        //for each rectangle in the key list, check against all rectangles in the check rectangles list
+        //for each rectangle in the key list, check against all rectangles in the check rectangles list by creating a new thread per rectangle in the key list.
+
         for ( keyRectsIterator=keyRects.begin(); keyRectsIterator!=keyRects.end(); ++keyRectsIterator)
         {
-            //getRectScore(keyImagesIterator, keyRectsIterator, checkRects);
-            threadVec.push_back(std::thread(getRectScore, std::ref(keyImagesIterator), std::ref(keyRectsIterator), std::ref(checkRects)));
+            threadVec.push_back(std::thread(getRectScore, *keyImagesIterator, (*keyRectsIterator), std::ref(checkRects) ));
         }
         
-        std::cout << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
-        
+        //join the threads
         while ( !threadVec.empty() )
         {
             (threadVec.back()).join();
             threadVec.pop_back();
         }
-        
+
         
     }
     

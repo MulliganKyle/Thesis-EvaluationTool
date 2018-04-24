@@ -16,6 +16,7 @@
 #include <sys/time.h>
 #include <thread>
 #include <vector>
+#include <mutex>
 
 
 #include "rectangle.hpp"
@@ -24,6 +25,8 @@
 #define CENTER_PERCENT_ERROR 0.5
 #define AREA_PERCENT_ERROR 0.05
 
+
+
 double dtime();
 
 void getImgData(std::string, std::list<Image*>&);
@@ -31,6 +34,8 @@ void getImgDataParallel(std::string, std::list<Image*>&);
 
 void compareImages(const std::list<Image*>&, const std::list<Image*>&);
 void compareImages2(const std::list<Image*>&, const std::list<Image*>&);
+void getRectScore(Image*, Rectangle*, std::list<Rectangle*>&);
 void compareImagesParallel(const std::list<Image*>&, const std::list<Image*>&);
+
 
 #endif /* evalLib_hpp */

@@ -51,7 +51,7 @@ int main(int argc, const char * argv[])
     
     
     //this section uses the new rectangle comparison method, jaccard index intersection/union
-#if 1
+#if 0
     tstart = dtime();
     compareImages2(keyImages,test1Images);
     tstop = dtime();
@@ -68,7 +68,7 @@ int main(int argc, const char * argv[])
     
     
     //this section will hold the new parallel comparison method
-#if 0
+#if 1
     tstart = dtime();
     compareImagesParallel(keyImages,test1Images);
     tstop = dtime();
