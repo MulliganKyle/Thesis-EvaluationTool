@@ -36,6 +36,8 @@ void compareImages(const std::list<Image*>&, const std::list<Image*>&);
 void compareImages2(const std::list<Image*>&, const std::list<Image*>&);
 void getRectScore(Image*, Rectangle*, std::list<Rectangle*>&);
 void compareImagesParallel(const std::list<Image*>&, const std::list<Image*>&);
+void compareImagesParallel2(const std::list<Image*>&, const std::list<Image*>&, int);
+void getRectScore2(std::vector<Image*>, std::vector<Image*> , int, int);
 
 
 #endif /* evalLib_hpp */

@@ -68,6 +68,7 @@ public:
     int getNumRects() const {return numRects_;}
     int getNumMatches() const {return numMatches_;}
     double getNumMatches2() const { return totScore_; }
+    int getNumImages() const { return numberOfImages_; }
     
     std::list<Rectangle*> getAllRectangles() const { return rectangleList_; }
     
