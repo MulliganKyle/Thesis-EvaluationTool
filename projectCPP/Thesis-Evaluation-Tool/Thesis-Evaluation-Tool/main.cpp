@@ -24,8 +24,14 @@ int main(int argc, const char * argv[])
     std::ofstream JPIFile;
     
         std::list<Image*>::const_iterator keyImagesIterator;
-    std::list<Image*> keyImages;
-    std::list<Image*> test1Images;
+    std::list<Image*> keyImagesSerial;
+    std::list<Image*> test1ImagesSerial;
+    
+    std::list<Image*> keyImagesParallelR;
+    std::list<Image*> test1ImagesParallelR;
+    
+    std::list<Image*> keyImagesParallelI;
+    std::list<Image*> test1ImagesParallelI;
     
     double tstart, tstop, ttime;
     
@@ -40,32 +46,34 @@ int main(int argc, const char * argv[])
     std::string jaccardParallelRects="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardParallelRectsOut.txt";
     std::string jaccardParallelImages="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardParallelImagesOut.txt";
     
-    //read in the image files and store them in the image lists.
-    tstart = dtime();
-    getImgData(keyPath, keyImages);
-    getImgData(checkPath, test1Images);
-    tstop = dtime();
-    ttime = tstop - tstart;
+
     
     
     //this section uses the old rectangle comparison method probably gonna delete this.
-#if 0
+/*#if 0
     tstart = dtime();
     compareImages(keyImages,test1Images);
     tstop = dtime();
     ttime = tstop - tstart;
     
-    std::cout << std::endl << std::endl;
+    //std::cout << std::endl << std::endl;
     for ( keyImagesIterator= keyImages.begin(); keyImagesIterator!=keyImages.end(); ++keyImagesIterator)
     {
         std::cout << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
     std::cout << "comparison using old method completed in: " << ttime << " seconds" << std::endl;
-#endif
+#endif*/
     
     
     //this section uses the new rectangle comparison method, jaccard index intersection/union
-#if 0
+#if 1
+    //read in the image files and store them in the image lists.
+    tstart = dtime();
+    getImgData(keyPath, keyImagesSerial);
+    getImgData(checkPath, test1ImagesSerial);
+    tstop = dtime();
+    ttime = tstop - tstart;
+    
     JSFile.open(jaccardSerial, std::ofstream::out);
     if (!JSFile.is_open())
     {
@@ -75,12 +83,12 @@ int main(int argc, const char * argv[])
     JSFile << "reading images completed in: " << ttime << " seconds." << std::endl;
 
     tstart = dtime();
-    compareImages2(keyImages,test1Images);
+    compareImages2(keyImagesSerial,test1ImagesSerial);
     tstop = dtime();
     ttime = tstop - tstart;
     
-    std::cout << std::endl << std::endl;
-    for ( keyImagesIterator= keyImages.begin(), i=1; keyImagesIterator!=keyImages.end(); ++keyImagesIterator, i++)
+    //std::cout << std::endl << std::endl;
+    for ( keyImagesIterator= keyImagesSerial.begin(), i=1; keyImagesIterator!=keyImagesSerial.end(); ++keyImagesIterator, i++)
     {
         JSFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
@@ -90,7 +98,12 @@ int main(int argc, const char * argv[])
     
 
     //compare images using the rectangle parallel method
-#if 0
+#if 1
+    tstart = dtime();
+    getImgData(keyPath, keyImagesParallelR);
+    getImgData(checkPath, test1ImagesParallelR);
+    tstop = dtime();
+    ttime = tstop - tstart;
     JPRFile.open(jaccardParallelRects, std::ofstream::out);
     if (!JPRFile.is_open())
     {
@@ -100,12 +113,12 @@ int main(int argc, const char * argv[])
     JPRFile << "reading images completed in: " << ttime << " seconds." << std::endl;
 
     tstart = dtime();
-    compareImagesParallel(keyImages,test1Images);
+    compareImagesParallel(keyImagesParallelR,test1ImagesParallelR);
     tstop = dtime();
     ttime = tstop - tstart;
     
-    std::cout << std::endl << std::endl;
-    for ( keyImagesIterator= keyImages.begin(), i=1; keyImagesIterator!=keyImages.end(); ++keyImagesIterator, i++)
+    //std::cout << std::endl << std::endl;
+    for ( keyImagesIterator= keyImagesParallelR.begin(), i=1; keyImagesIterator!=keyImagesParallelR.end(); ++keyImagesIterator, i++)
     {
         JPRFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
@@ -115,6 +128,11 @@ int main(int argc, const char * argv[])
     
     //compare images using the images parallel method
 #if 1
+    tstart = dtime();
+    getImgData(keyPath, keyImagesParallelI);
+    getImgData(checkPath, test1ImagesParallelI);
+    tstop = dtime();
+    ttime = tstop - tstart;
     JPIFile.open(jaccardParallelImages, std::ofstream::out);
     if (!JPIFile.is_open())
     {
@@ -123,16 +141,13 @@ int main(int argc, const char * argv[])
     }
     JPIFile << "reading images completed in: " << ttime << " seconds." << std::endl;
 
-    
-    
-    
     tstart = dtime();
-    compareImagesParallel2(keyImages,test1Images, NUM_THREADS);
+    compareImagesParallel2(keyImagesParallelI,test1ImagesParallelI, NUM_THREADS);
     tstop = dtime();
     ttime = tstop - tstart;
     
-    std::cout << std::endl << std::endl;
-    for ( keyImagesIterator= keyImages.begin(), i=1; keyImagesIterator!=keyImages.end(); ++keyImagesIterator, i++)
+    //std::cout << std::endl << std::endl;
+    for ( keyImagesIterator= keyImagesParallelI.begin(), i=1; keyImagesIterator!=keyImagesParallelI.end(); ++keyImagesIterator, i++)
     {
         JPIFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
