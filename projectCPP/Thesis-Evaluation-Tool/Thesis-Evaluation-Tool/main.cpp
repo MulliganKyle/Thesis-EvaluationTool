@@ -154,6 +154,6 @@ int main(int argc, const char * argv[])
     JPIFile << "comparison using jaccard index in parallel(images) completed in: " << ttime << " seconds" << std::endl;
     
 #endif
-    
+    std::cout << "success!" << std::endl;
     return 0;
 }
