@@ -88,8 +88,7 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
                 }
                 
                 
-                // create substr starting after the last coordinate, this will be the tag
-                // tag=buff.substr(buffCount);
+                
                 
                 
                 

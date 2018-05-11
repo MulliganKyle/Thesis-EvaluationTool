@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2703D65220A35EA900B914C6 /* compareLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2703D65020A35EA900B914C6 /* compareLib.cpp */; };
 		2739A01A1FEAEDF000AFA226 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2739A0191FEAEDF000AFA226 /* main.cpp */; };
 		2739A0221FEAEED500AFA226 /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2739A0201FEAEED500AFA226 /* rectangle.cpp */; };
 		2739A0251FEB043E00AFA226 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2739A0231FEB043E00AFA226 /* image.cpp */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2703D65020A35EA900B914C6 /* compareLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = compareLib.cpp; sourceTree = "<group>"; };
+		2703D65120A35EA900B914C6 /* compareLib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = compareLib.hpp; sourceTree = "<group>"; };
 		2739A0161FEAEDF000AFA226 /* Thesis-Evaluation-Tool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Thesis-Evaluation-Tool"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2739A0191FEAEDF000AFA226 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2739A0201FEAEED500AFA226 /* rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rectangle.cpp; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				2739A0191FEAEDF000AFA226 /* main.cpp */,
 				275208DA2017F15E001A42E4 /* evalLib.cpp */,
 				275208DB2017F15E001A42E4 /* evalLib.hpp */,
+				2703D65020A35EA900B914C6 /* compareLib.cpp */,
+				2703D65120A35EA900B914C6 /* compareLib.hpp */,
 				279077DE201A583E00D5E176 /* helperLib.cpp */,
 				279077DF201A583E00D5E176 /* helperLib.hpp */,
 				2739A0231FEB043E00AFA226 /* image.cpp */,
@@ -142,6 +147,7 @@
 				2739A01A1FEAEDF000AFA226 /* main.cpp in Sources */,
 				2739A0221FEAEED500AFA226 /* rectangle.cpp in Sources */,
 				279077E0201A583E00D5E176 /* helperLib.cpp in Sources */,
+				2703D65220A35EA900B914C6 /* compareLib.cpp in Sources */,
 				2739A0251FEB043E00AFA226 /* image.cpp in Sources */,
 				275208DC2017F15E001A42E4 /* evalLib.cpp in Sources */,
 			);
