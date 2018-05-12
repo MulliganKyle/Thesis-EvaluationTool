@@ -15,6 +15,15 @@
 //Compare two input lists of images
 
 
+/*******************************************************************************/
+/*******************************************************************************/
+/**                                                                           **/
+/**                                                                           **/
+/**                 functions for comparing images in serial                  **/
+/**                                                                           **/
+/**                                                                           **/
+/*******************************************************************************/
+/*******************************************************************************/
 //function to compare the rectangles
 void imageCompareSerial(std::list<Image*> traineeImages, std::list<Image*> expertImages)
 {
@@ -28,65 +37,6 @@ void imageCompareSerial(std::list<Image*> traineeImages, std::list<Image*> exper
         rectangleCompareSerial( (*traineeImagesIterator), (*expertImagesIterator));
     }
 }
-
-//creates threads to compare images
-void imageCompareParallelWrapper(std::vector<Image*> traineeImages, std::vector<Image*> expertImages, int numThreads)
-{
-    std::vector<std::thread> threadVec;
-    
-    int threadCount;
-
-    
-    
-    threadVec.reserve(numThreads);
-    
-    for (threadCount=0; threadCount < numThreads; ++threadCount)
-    {
-        threadVec.push_back(std::thread(imageCompareParallel, traineeImages, expertImages, numThreads, threadCount));
-        
-    }
-    
-    for ( threadCount=0; threadCount < numThreads; ++threadCount)
-    {
-        (threadVec.back()).join();
-        threadVec.pop_back();
-    }
-}
-
-//threaded function that compares threads
-void imageCompareParallel(std::vector<Image*> traineeImages, std::vector<Image*> expertImages, int numThreads, int threadNumber)
-{
-    
-    
-    std::list<Rectangle*> keyRects;
-    std::list<Rectangle*> checkRects;
-    
-    
-    
-    size_t numImgs =expertImages.size();
-    
-    size_t blockSize=numImgs/numThreads;
-    size_t start=threadNumber*(blockSize);
-    size_t end;
-    size_t img;
-    
-    if (threadNumber!=(numThreads-1))
-    {
-        end=start+blockSize;
-    }
-    else
-    {
-        end=numImgs;
-    }
-    
-    for ( img=start ; img<end; img++)
-    {
-        rectangleCompareSerial( traineeImages[img], expertImages[img]);
-    }
-        
-
-}
-
 
 //function to compare the expert rectangles
 void rectangleCompareSerial( Image* traineeImage, Image* expertImage)
@@ -107,48 +57,7 @@ void rectangleCompareSerial( Image* traineeImage, Image* expertImage)
     
 }
 
-//threaded function to compare the rectangles
-void rectangleCompareParallel( Image* traineeImage, Image* expertImage)
-{
-    std::list<Rectangle*> expertRectangles = expertImage->getAllRectangles();
-    std::list<Rectangle*>::iterator expertRectanglesIterator;
-    
-    std::vector<std::thread> threadVec;
-    
-    
-    int numExpertRectangles;
-    
-    numExpertRectangles=expertImage->getNumRects();
-    
-    threadVec.reserve(numExpertRectangles);
-    
-    for ( expertRectanglesIterator=expertRectangles.begin();
-         expertRectanglesIterator!=expertRectangles.end();
-         ++expertRectanglesIterator)
-    {
-        
-        //for each rectangle in the key list, check against all rectangles in the check rectangles list by creating a new thread per rectangle in the key list.
-        
-        
-        threadVec.push_back(std::thread(traineeRectangleCompare, traineeImage, (*expertRectanglesIterator) ));
-    }
-    
-    
-    //join the threads
-    while ( !threadVec.empty() )
-    {
-        (threadVec.back()).join();
-        threadVec.pop_back();
-    }
-    
-    for ( expertRectanglesIterator=expertRectangles.begin();
-         expertRectanglesIterator!=expertRectangles.end();
-         ++expertRectanglesIterator)
-    {
-        expertImage->increaseNumMatches2((*expertRectanglesIterator)->getMatch2score());
-    }
-    
-}
+
 
 
 //function that actually does the comparisons
@@ -263,5 +172,179 @@ void traineeRectangleCompare( Image* traineeImage, Rectangle* expertRectangle)
             }
             
         }
+    }
+}
+
+
+/*******************************************************************************/
+/*******************************************************************************/
+/**                                                                           **/
+/**                                                                           **/
+/**   functions for comparing images in parallel using thread per some        **/
+/**                             number of images                              **/
+/**                                                                           **/
+/*******************************************************************************/
+/*******************************************************************************/
+
+//creates threads to compare images
+void imageCompareParallelWrapper(std::vector<Image*> traineeImages, std::vector<Image*> expertImages, int numThreads)
+{
+    std::vector<std::thread> threadVec;
+    
+    int threadCount;
+    
+    
+    
+    threadVec.reserve(numThreads);
+    
+    for (threadCount=0; threadCount < numThreads; ++threadCount)
+    {
+        threadVec.push_back(std::thread(imageCompareParallel, traineeImages, expertImages, numThreads, threadCount));
+        
+    }
+    
+    for ( threadCount=0; threadCount < numThreads; ++threadCount)
+    {
+        (threadVec.back()).join();
+        threadVec.pop_back();
+    }
+}
+
+//threaded function that compares threads
+void imageCompareParallel(std::vector<Image*> traineeImages, std::vector<Image*> expertImages, int numThreads, int threadNumber)
+{
+    
+    
+    std::list<Rectangle*> keyRects;
+    std::list<Rectangle*> checkRects;
+    
+    
+    
+    size_t numImgs =expertImages.size();
+    
+    size_t blockSize=numImgs/numThreads;
+    size_t start=threadNumber*(blockSize);
+    size_t end;
+    size_t img;
+    
+    if (threadNumber!=(numThreads-1))
+    {
+        end=start+blockSize;
+    }
+    else
+    {
+        end=numImgs;
+    }
+    
+    for ( img=start ; img<end; img++)
+    {
+        //uses the serial rectangle comparison
+        rectangleCompareSerial( traineeImages[img], expertImages[img]);
+    }
+    
+    
+}
+
+
+/*******************************************************************************/
+/*******************************************************************************/
+/**                                                                           **/
+/**                                                                           **/
+/**   functions for comparing images in parallel using thread per rectangle   **/
+/**                                                                           **/
+/**                                                                           **/
+/*******************************************************************************/
+/*******************************************************************************/
+
+void imageCompareSerialRectangleParallel(std::list<Image*> traineeImages, std::list<Image*> expertImages)
+{
+    std::list<Image*>::const_iterator traineeImagesIterator;
+    std::list<Image*>::const_iterator expertImagesIterator;
+    
+    for ( expertImagesIterator=expertImages.begin(), traineeImagesIterator=traineeImages.begin();
+         expertImagesIterator!=expertImages.end() && traineeImagesIterator!=traineeImages.end();
+         ++expertImagesIterator, ++traineeImagesIterator)
+    {
+        rectangleCompareParallel( (*traineeImagesIterator), (*expertImagesIterator));
+    }
+}
+
+//threaded function to compare the rectangles
+void rectangleCompareParallel( Image* traineeImage, Image* expertImage)
+{
+    std::list<Rectangle*> expertRectangles = expertImage->getAllRectangles();
+    std::list<Rectangle*>::iterator expertRectanglesIterator;
+    
+    std::vector<std::thread> threadVec;
+    
+    
+    int numExpertRectangles;
+    
+    numExpertRectangles=expertImage->getNumRects();
+    
+    threadVec.reserve(numExpertRectangles);
+    
+    for ( expertRectanglesIterator=expertRectangles.begin();
+         expertRectanglesIterator!=expertRectangles.end();
+         ++expertRectanglesIterator)
+    {
+        
+        //for each rectangle in the key list, check against all rectangles in the check rectangles list by creating a new thread per rectangle in the key list.
+        
+        
+        threadVec.push_back(std::thread(traineeRectangleCompare, traineeImage, (*expertRectanglesIterator) ));
+    }
+    
+    
+    //join the threads
+    while ( !threadVec.empty() )
+    {
+        (threadVec.back()).join();
+        threadVec.pop_back();
+    }
+    
+    for ( expertRectanglesIterator=expertRectangles.begin();
+         expertRectanglesIterator!=expertRectangles.end();
+         ++expertRectanglesIterator)
+    {
+        expertImage->increaseNumMatches2((*expertRectanglesIterator)->getMatch2score());
+    }
+    
+}
+
+/*******************************************************************************/
+/*******************************************************************************/
+/**                                                                           **/
+/**                                                                           **/
+/**   functions for comparing images in parallel using thread per Image to    **/
+/**                     spawn a thread per rectangle                          **/
+/**                                                                           **/
+/*******************************************************************************/
+/*******************************************************************************/
+
+void imageRectangleCompareParallel(std::list<Image*> traineeImages, std::list<Image*> expertImages)
+{
+    std::list<Image*>::iterator expertImagesIterator;
+    std::list<Image*>::iterator traineeImagesIterator;
+    std::vector<std::thread> threadVec;
+    
+    size_t numImgs =expertImages.size();
+    
+    threadVec.reserve(numImgs);
+    
+    for (expertImagesIterator=expertImages.begin(), traineeImagesIterator=traineeImages.begin();
+         expertImagesIterator!=expertImages.end() && traineeImagesIterator!=traineeImages.end();
+         ++expertImagesIterator, ++traineeImagesIterator)
+    {
+        //for each image spawn thread that runs rectangleCompareParallel above which
+        //in turn spanws a thread per rectangle in the expert image.
+        threadVec.push_back(std::thread(rectangleCompareParallel, (*traineeImagesIterator), (*expertImagesIterator)));
+        
+    }
+    
+    while ( !threadVec.empty() )
+    {
+        (threadVec.back()).join();
+        threadVec.pop_back();
     }
 }
