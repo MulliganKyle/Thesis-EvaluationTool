@@ -24,17 +24,16 @@
 
 
 void imageCompareSerial(std::list<Image*>, std::list<Image*>);
+void rectangleCompareSerial( Image*, Image*);
+void traineeRectangleCompare( Image*, Rectangle*);
 
 void imageCompareParallelWrapper(std::vector<Image*>, std::vector<Image*>, int);
 void imageCompareParallel(std::vector<Image*>, std::vector<Image*>, int, int);
-void imageCompareSerialRectangleParallel(std::list<Image*>, std::list<Image*>);
 
-void imageRectangleCompareParallel(std::list<Image*>, std::list<Image*>);
+void rectangleCompareParallel(std::list<Image*>, std::list<Image*>);
 
-void traineeRectangleCompare( Image*, Rectangle*);
-void rectangleCompareSerial( Image*, Image*);
-void rectangleCompareParallel( Image*, Image*);
-
+//void imageCompareSerialRectangleParallel(std::list<Image*>, std::list<Image*>);
+//void imageRectangleCompareParallel(std::list<Image*>, std::list<Image*>);
 
 
 

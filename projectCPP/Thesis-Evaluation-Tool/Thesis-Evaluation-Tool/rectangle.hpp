@@ -113,14 +113,14 @@ public:
     
     void setTag(int);
     
-    void setMatch(Rectangle*, double, double, double);
-    void setMatch2(Rectangle*, double);
+    void setMatch2(Rectangle*, double, double, double);
+    void setMatch(Rectangle*, double);
     
     
     //helpers
     //
-    bool compareMatch(double, double, double);
-    bool compareMatch2(double);
+    bool compareMatch2(double, double, double);
+    bool compareMatch(double);
 
 };
 

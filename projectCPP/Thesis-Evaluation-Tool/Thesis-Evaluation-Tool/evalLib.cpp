@@ -139,7 +139,7 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
 }
 
 //Compare two input lists of images
-
+/*
 void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& checkImages)
 {
     std::list<Image*>::const_iterator keyImagesIterator;
@@ -241,13 +241,13 @@ void compareImages(const std::list<Image*>& keyImages, const std::list<Image*>& 
         }
     }
 }
-
+*/
 /*******************************************************************************/
 /* other compare images function: using Jaccard Index*/
 /*******************************************************************************/
 
 //Compare two input lists of images
-
+/*
 void compareImages2(const std::list<Image*>& keyImages, const std::list<Image*>& checkImages)
 {
     std::list<Image*>::const_iterator keyImagesIterator;
@@ -405,7 +405,7 @@ void compareImages2(const std::list<Image*>& keyImages, const std::list<Image*>&
         }
     }
 }
-
+*/
 
 /*******************************************************************************/
 /*******************************************************************************/
@@ -416,7 +416,7 @@ void compareImages2(const std::list<Image*>& keyImages, const std::list<Image*>&
 /**                                                                           **/
 /*******************************************************************************/
 /*******************************************************************************/
-
+/*
 //parallel compare function
 void getRectScore(Image* keyImagesIterator, Rectangle* keyRectsIterator, std::list<Rectangle*>& checkRects)
 {
@@ -605,7 +605,7 @@ void compareImagesParallel(const std::list<Image*>& keyImages, const std::list<I
     
     
 }
-
+*/
 /*******************************************************************************/
 /*******************************************************************************/
 /**                                                                           **/
@@ -615,7 +615,7 @@ void compareImagesParallel(const std::list<Image*>& keyImages, const std::list<I
 /**                                                                           **/
 /*******************************************************************************/
 /*******************************************************************************/
-
+/*
 void compareImagesParallel2(const std::list<Image*>& keyImages, const std::list<Image*>& checkImages,  int numThreads)
 {
     std::vector<std::thread> threadVec;
@@ -824,4 +824,4 @@ void getRectScore2( std::vector<Image*> keyImages,  std::vector<Image*> checkIma
 
     
 }
-
+*/
