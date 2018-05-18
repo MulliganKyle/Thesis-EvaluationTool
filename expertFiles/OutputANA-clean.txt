@@ -1,0 +1,110 @@
+cropAnchorage1964_01a.jpg
+rect:126 39 237 149 Shear/diagonal failure Beam Almost Certain
+cropBingol2003_02.JPG
+rect:156 108 235 206 Shear/diagonal failure Slender column Almost Certain
+cropBingolTurkey2003_03.jpg
+rect:85 49 265 234 Shear/diagonal failure Slender column Almost Certain
+cropBucharestRomania1977_03.jpg
+rect:67 113 298 273 Shear/diagonal failure Slender column Definitelly 
+cropCanterburyNZSeries2010_01.JPG
+rect:131 150 245 444 Global buckling/instability Structural wall Almost Certain
+cropCanterburyNZSeries2010_04a.JPG
+rect:105 138 253 346 Shear/diagonal failure Short/captive column Almost Certain
+cropCanterburyNZSeries2010_09a.JPG
+rect:131 180 253 376 Shear/diagonal failure Short/captive column Definitelly 
+cropCanterburyNZSeries2010_11.JPG
+rect:99 80 248 203 Flexural cracking Beam Almost Certain
+cropCanterburyNZSeries2010_13.JPG
+rect:89 79 324 405 Global buckling/instability Structural wall Almost Certain
+cropCaracas1967_06.jpg
+rect:147 39 292 157 Shear/diagonal failure Beam Almost Certain
+cropCaracas1967_08.jpg
+rect:141 78 221 145 Shear/diagonal failure Scissor stairs or ramp Probably
+cropCaracas1967_13.jpg
+rect:103 247 216 493 Unseating/collapse of stairs Scissor stairs or ramp Definitelly 
+cropCaracas1967_14.jpg
+rect:67 43 331 175 Shear/diagonal failure Beam Definitelly 
+cropChiChi1991_01.jpg
+rect:256 58 332 196 Failure of confining hoops/ties Slender column Definitelly 
+cropCaracas1967_06.jpg
+rect:134 36 274 152 Shear cracking Beam Definitelly 
+cropCanterburyNZSeries2010_11.JPG
+rect:95 88 220 198 Concentrated flexural cracking Beam Definitelly 
+cropChiChi1991_01.jpg
+rect:243 29 331 205 Shear/diagonal failure Short/captive column Almost Certain
+cropChichi1999_28.jpg
+rect:113 46 223 190 Longitudinal bar buckling Beam Almost Certain
+cropChichi1999_29a.jpg
+rect:99 146 249 340 Shear/diagonal failure Short/captive column Definitelly 
+cropChile2010B_04.JPG
+rect:53 129 311 212 Soft story failure Partial/full building Definitelly 
+cropChile2010_01.jpg
+rect:112 40 265 165 Longitudinal bar buckling Structural wall Definitelly 
+cropChile2010_10.jpg
+rect:96 64 243 176 Failure of confining hoops/ties Structural wall Definitelly 
+cropChile2010_16.jpg
+rect:127 33 199 152 Global buckling/instability Structural wall Definitelly 
+cropChile2010_24.jpg
+rect:133 67 281 126 Longitudinal bar buckling Structural wall Definitelly 
+cropChile2010_54.JPG
+rect:94 46 322 170 Compression failure Structural wall Probably
+cropChile2010_91.JPG
+rect:79 35 248 205 Shear/diagonal failure Structural wall Almost Certain
+cropChile2010_01.jpg
+rect:113 39 251 156 Concrete core crushing Structural wall Definitelly 
+cropChile2010_10.jpg
+rect:82 64 174 182 Concrete core crushing Structural wall Almost Certain
+cropChristchurch2011_05.jpg
+rect:135 227 217 406 Global buckling/instability Structural wall Definitelly 
+cropDSCN0792.JPG
+rect:138 72 218 198 Pounding Partial/full building Almost Certain
+cropDSC_0298.JPG
+rect:122 58 217 160 Distributed plastic hinging Slender column Almost Certain
+cropEastJapan2011_07.JPG
+rect:81 23 159 121 Shear/diagonal failure Structural wall Almost Certain
+cropHaiti2010_02.JPG
+rect:79 61 282 182 Unseating/collapse of stairs Scissor stairs or ramp Definitelly 
+cropImperialValley1979_02.jpg
+rect:82 66 265 200 Concrete core crushing Slender column Definitelly 
+cropIzmit1999_01.JPG
+rect:75 141 221 362 Shear/diagonal failure Short/captive column Definitelly 
+cropIzmit1999_03.jpg
+rect:94 46 258 198 Failure of confining hoops/ties Slender column Definitelly 
+cropIzmitTurkey1999_31.jpg
+rect:99 91 222 201 Partial/full collapse of building Scissor stairs or ramp Definitelly 
+cropIzmitTurkey1999_34.jpg
+rect:149 234 197 366 Unseating/collapse of stairs Scissor stairs or ramp Definitelly 
+rect:30 84 173 187 Shear/diagonal failure Beam Definitelly 
+rect:194 164 281 286 Concrete core crushing Slender column Definitelly 
+cropKobe1995_09.jpg
+rect:77 332 135 492 Unseating/collapse of stairs Scissor stairs or ramp Almost Certain
+rect:205 394 286 460 Compression failure Structural wall Almost Certain
+cropKumamoto2016_01.png
+rect:56 134 271 215 Soft story failure Partial/full building Definitelly 
+cropKumamoto2016_03.png
+rect:172 77 244 138 Failure of confining hoops/ties Joint-column connection Definitelly 
+rect:149 160 78 86 Shear/diagonal failure Beam Definitelly 
+cropKumamoto2016_14.png
+rect:219 28 299 80 Anchorage/connection failure Joint-column connection Almost Certain
+cropManagua1972_01.jpg
+rect:239 342 112 20 Interaction b/w infill and frame Short/captive column Almost Certain
+cropMexicoCity1985_04.jpg
+rect:181 36 345 106 Punching shear failure Floor diaphragm/slab Almost Certain
+cropMuisne2016_03.png
+rect:115 86 311 235 Partial/full collapse of building Partial/full building Definitelly 
+cropNepal2015_51.JPG
+rect:215 35 288 101 Loss of slab cross-section Floor diaphragm/slab Almost Certain
+cropNewZealand2011_12.JPG
+rect:283 220 70 25 Shear/diagonal failure Structural wall Almost Certain
+cropNorthridge1994_05.JPG
+rect:195 160 33 52 Shear/diagonal failure Short/captive column Almost Certain
+cropPeru2007_01.JPG
+rect:281 106 331 166 Failure of confining hoops/ties Short/captive column Almost Certain
+rect:81 154 18 71 Shear/diagonal failure Short/captive column Almost Certain
+cropSanFernando1970_06a.jpg
+rect:99 42 207 148 Shear/diagonal failure Short/captive column Definitelly 
+rect:258 494 101 240 Soft story failure Partial/full building Definitelly 
+cropSanFernando1970_07.jpg
+rect:291 418 73 63 Soft story failure Partial/full building Definitelly 
+cropSanFernando1970_08.jpg
+rect:118 92 287 394 Failure of confining hoops/ties Slender column Definitelly 

@@ -1,0 +1,32 @@
+cropAnchorage1964_01a.jpg
+rect:73 9 254 137 Shear cracking Infill wall/pier Almost Certain
+rect:56 299 281 511 Shear cracking Infill wall/pier Almost Certain
+cropBingol2003_02.JPG
+rect:96 93 351 257 Loss of masonry units Infill wall/pier Definitelly 
+rect:36 201 89 259 Longitudinal bar buckling Infill wall/pier Definitelly 
+cropBingolTurkey2003_03.jpg
+rect:116 70 214 281 Flexural cracking Infill wall/pier Definitelly 
+rect:114 72 217 282 Longitudinal bar buckling Infill wall/pier Definitelly 
+rect:6 68 117 285 Shear/diagonal failure Infill wall/pier Definitelly 
+cropBingol2003_02.JPG
+rect:38 202 90 262 Longitudinal bar buckling Slender column Definitelly 
+rect:96 99 343 256 Loss of masonry units Infill wall/pier Definitelly 
+cropBucharestRomania1977_03.jpg
+rect:26 126 296 265 Longitudinal bar buckling Slender column Definitelly 
+cropCanterburyNZSeries2010_01.JPG
+rect:123 324 229 444 Compression failure Infill wall/pier Definitelly 
+cropCanterburyNZSeries2010_04a.JPG
+rect:107 135 237 324 Longitudinal bar buckling Short/captive column Definitelly 
+cropCanterburyNZSeries2010_09a.JPG
+rect:137 188 254 353 Shear cracking Short/captive column Definitelly 
+cropCanterburyNZSeries2010_13.JPG
+rect:85 188 290 315 Longitudinal bar buckling Structural wall Maybe
+rect:85 18 337 396 Compression failure Structural wall Maybe
+cropCaracas1967_06.jpg
+rect:155 36 257 154 Shear cracking Beam Probably
+cropCaracas1967_08.jpg
+rect:11 13 243 230 Unseating/collapse of stairs Floor diaphragm/slab Probably
+cropCaracas1967_13.jpg
+rect:115 270 218 426 Unseating/collapse of stairs Floor diaphragm/slab Definitelly 
+cropCaracas1967_14.jpg
+rect:73 16 340 151 Shear/diagonal failure Beam Definitelly 

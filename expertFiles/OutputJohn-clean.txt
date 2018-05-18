@@ -1,0 +1,139 @@
+cropAnchorage1964_01a.jpg
+rect:81 8 254 150 Shear/diagonal failure Coupling beam Definitelly 
+rect:67 311 271 512 Shear/diagonal failure Coupling beam Definitelly 
+cropBingol2003_02.JPG
+rect:38 170 243 263 Interaction b/w infill and frame Infill wall/pier Definitelly 
+rect:172 118 213 158 Concrete spalling Joint-column connection Definitelly 
+rect:163 111 220 163 Failure of confining hoops/ties Joint-column connection Maybe
+cropBingolTurkey2003_03.jpg
+rect:7 56 228 285 Interaction b/w infill and frame Infill wall/pier Probably
+cropBucharestRomania1977_03.jpg
+rect:28 125 295 276 Failure of confining hoops/ties Joint-column connection Almost Certain
+rect:39 115 295 281 Longitudinal bar buckling Joint-column connection Probably
+cropCanterburyNZSeries2010_09a.JPG
+rect:139 149 241 460 Compression failure Structural wall Maybe
+cropCanterburyNZSeries2010_11.JPG
+rect:82 98 244 198 Flexural cracking Beam Maybe
+cropCanterburyNZSeries2010_13.JPG
+rect:107 40 313 383 Concrete core crushing Structural wall Maybe
+cropCaracas1967_06.jpg
+rect:144 33 279 163 Shear cracking Beam Maybe
+cropCaracas1967_08.jpg
+rect:7 5 245 224 Unseating/collapse of stairs Scissor stairs or ramp Almost Certain
+cropCaracas1967_13.jpg
+rect:120 280 329 523 Unseating/collapse of stairs Scissor stairs or ramp Probably
+cropCaracas1967_14.jpg
+rect:74 45 306 143 Shear cracking Beam Maybe
+cropChiChi1991_01.jpg
+rect:14 41 71 261 Failure of confining hoops/ties Short/captive column Almost Certain
+rect:271 7 331 255 Failure of confining hoops/ties Short/captive column Almost Certain
+cropChichi1999_28.jpg
+rect:104 47 246 174 Flexural cracking Beam Maybe
+cropChichi1999_29a.jpg
+rect:108 150 242 400 Failure of confining hoops/ties Short/captive column Almost Certain
+cropChile2010B_04.JPG
+rect:201 141 269 225 Soft story failure Slender column Almost Certain
+rect:32 126 335 229 Soft story failure Slender column Almost Certain
+cropChile2010_01.jpg
+rect:124 35 237 132 Longitudinal bar buckling Structural wall Almost Certain
+cropChile2010_10.jpg
+rect:67 48 327 178 Distributed plastic hinging Structural wall Probably
+cropChile2010_16.jpg
+rect:129 15 204 257 Compression failure Structural wall Maybe
+cropChile2010_24.jpg
+rect:64 30 319 154 Flexural cracking Structural wall Maybe
+cropChile2010_54.JPG
+rect:80 41 321 203 Concrete spalling Structural wall Maybe
+rect:57 41 311 191 Concrete spalling Structural wall Definitelly 
+rect:106 43 301 202 Shear cracking Structural wall Maybe
+cropChile2010_91.JPG
+rect:157 40 228 115 Shear cracking Structural wall Definitelly 
+rect:87 85 145 197 Shear cracking Structural wall Probably
+rect:87 131 148 200 Concrete spalling Structural wall Definitelly 
+cropChristchurch2011_05.jpg
+rect:118 236 225 386 Longitudinal bar buckling Structural wall Definitelly 
+cropDSCN0792.JPG
+rect:153 66 244 204 Concrete spalling Infill wall/pier Maybe
+cropDSC_0298.JPG
+rect:125 43 219 155 Flexural cracking Joint-column connection Maybe
+cropEastJapan2011_07.JPG
+rect:76 7 159 115 Shear cracking Structural wall Definitelly 
+rect:86 21 156 93 Concrete spalling Structural wall Definitelly 
+cropHaiti2010_02.JPG
+rect:46 58 274 174 Unseating/collapse of stairs Scissor stairs or ramp Definitelly 
+cropImperialValley1979_02.jpg
+rect:84 53 266 200 Failure of confining hoops/ties Joint-column connection Definitelly 
+cropIzmit1999_01.JPG
+rect:65 142 211 376 Shear/diagonal failure Short/captive column Probably
+cropIzmit1999_03.jpg
+rect:69 29 261 208 Failure of confining hoops/ties Joint-column connection Almost Certain
+rect:74 48 134 196 Longitudinal bar buckling Joint-column connection Definitelly 
+rect:212 54 262 170 Longitudinal bar buckling Joint-column connection Definitelly 
+rect:60 44 269 203 Concrete spalling Joint-column connection Definitelly 
+cropIzmitTurkey1999_31.jpg
+rect:100 108 231 188 Unseating/collapse of stairs Scissor stairs or ramp Almost Certain
+rect:68 46 116 94 Distributed plastic hinging Joint-column connection Almost Certain
+rect:244 39 294 83 Distributed plastic hinging Joint-column connection Probably
+cropIzmitTurkey1999_34.jpg
+rect:28 91 137 183 Shear cracking Beam Almost Certain
+rect:171 175 269 276 Failure of confining hoops/ties Joint-column connection Almost Certain
+rect:176 178 266 260 Concrete spalling Joint-column connection Definitelly 
+rect:24 291 85 378 Concrete spalling Joint-column connection Definitelly 
+rect:26 293 86 378 Failure of confining hoops/ties Joint-column connection Almost Certain
+rect:153 258 204 360 Unseating/collapse of stairs Scissor stairs or ramp Almost Certain
+cropKobe1995_01.jpg
+rect:89 142 253 319 Shear/diagonal failure Short/captive column Definitelly 
+rect:118 461 257 524 Shear/diagonal failure Short/captive column Definitelly 
+cropKobe1995_09.jpg
+rect:137 385 283 456 Flexural cracking Structural wall Probably
+rect:67 278 137 494 Pounding Partial/full building Maybe
+cropKumamoto2016_01.png
+rect:28 144 283 199 Soft story failure Partial/full building Almost Certain
+rect:60 81 167 158 Flexural cracking Beam Maybe
+rect:162 90 252 218 Concrete spalling Joint-column connection Definitelly 
+rect:156 21 267 257 Residual displacement Partial/full building Almost Certain
+cropKumamoto2016_03.png
+rect:60 81 167 158 Flexural cracking Beam Maybe
+rect:162 90 252 218 Concrete spalling Joint-column connection Definitelly 
+rect:156 21 267 257 Residual displacement Partial/full building Almost Certain
+cropKumamoto2016_14.png
+rect:232 12 300 72 Concrete spalling Joint-column connection Definitelly 
+rect:130 126 197 172 Concrete spalling Joint-column connection Definitelly 
+cropManagua1972_01.jpg
+rect:129 11 234 478 Residual displacement Partial/full building Definitelly 
+rect:149 33 232 122 Flexural cracking Joint-column connection Probably
+rect:135 273 206 352 Flexural cracking Joint-column connection Probably
+rect:113 15 226 481 Shear cracking Short/captive column Maybe
+cropMexicoCity1985_04.jpg
+rect:87 6 353 95 Partial/full collapse of building Partial/full building Definitelly 
+cropMuisne2016_03.png
+rect:12 119 310 251 Partial/full collapse of building Partial/full building Almost Certain
+cropNepal2015_51.JPG
+rect:216 14 350 99 Loss of slab cross-section Floor diaphragm/slab Probably
+rect:140 26 321 142 Loss of masonry units Infill wall/pier Probably
+rect:130 179 193 251 Shear cracking Structural wall Probably
+cropNewZealand2011_12.JPG
+rect:84 27 274 261 Shear/diagonal failure Structural wall Almost Certain
+rect:87 36 262 182 Concrete spalling Structural wall Almost Certain
+cropNorthridge1994_05.JPG
+rect:32 85 77 153 Shear cracking Structural wall Almost Certain
+rect:122 83 168 148 Shear cracking Structural wall Almost Certain
+rect:242 84 318 149 Shear cracking Structural wall Almost Certain
+cropPeru2007_01.JPG
+rect:7 81 345 243 Soft story failure Partial/full building Maybe
+rect:38 8 314 56 Shear cracking Structural wall Maybe
+rect:272 86 330 170 Shear cracking Short/captive column Maybe
+rect:17 87 71 157 Shear cracking Short/captive column Maybe
+rect:262 102 332 161 Failure of confining hoops/ties Joint-column connection Maybe
+rect:80 91 11 146 Failure of confining hoops/ties Joint-column connection Maybe
+cropSanFernando1970_06a.jpg
+rect:117 234 235 500 Residual displacement Partial/full building Definitelly 
+rect:119 242 219 490 Concrete spalling Slender column Definitelly 
+rect:97 49 182 143 Shear cracking Short/captive column Definitelly 
+cropSanFernando1970_07.jpg
+rect:59 50 213 436 Residual displacement Partial/full building Definitelly 
+rect:133 199 213 422 Concrete spalling Slender column Definitelly 
+rect:56 63 165 196 Concrete spalling Joint-column connection Definitelly 
+cropSanFernando1970_08.jpg
+rect:95 41 283 421 Failure of confining hoops/ties Slender column Definitelly 
+rect:96 43 298 424 Residual displacement Partial/full building Definitelly 

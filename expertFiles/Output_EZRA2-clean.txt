@@ -1,0 +1,452 @@
+cropAnchorage1964_01a.jpg
+rect:81 4 247 153 Shear cracking Coupling beam Definitelly 
+rect:69 314 271 513 Shear cracking Coupling beam Definitelly 
+rect:88 10 238 143 Concrete spalling Coupling beam Definitelly 
+rect:71 317 266 511 Concrete spalling Coupling beam Definitelly 
+rect:131 35 219 126 Failure of confining hoops/ties Coupling beam Probably
+cropBingol2003_02.JPG
+rect:33 171 100 264 Concrete spalling Slender column Definitelly 
+rect:39 5 98 110 Concrete spalling Slender column Definitelly 
+rect:70 87 103 265 Longitudinal bar buckling Slender column Almost Certain
+rect:162 117 190 200 Concrete spalling Slender column Almost Certain
+rect:162 114 215 157 Distributed plastic hinging Slender column Probably
+rect:92 90 343 262 Loss of masonry units Infill wall/pier Definitelly 
+rect:79 5 274 38 Loss of masonry units Infill wall/pier Definitelly 
+rect:93 92 350 259 Out-of-plane infill wall/pier failure Infill wall/pier Definitelly 
+rect:79 6 273 41 Out-of-plane infill wall/pier failure Infill wall/pier Almost Certain
+rect:116 119 157 153 Concrete spalling Beam Almost Certain
+rect:76 83 118 266 Interaction b/w infill and frame Infill wall/pier Maybe
+rect:241 211 270 235 Distributed plastic hinging Slender column Almost Certain
+cropBingolTurkey2003_03.jpg
+rect:105 58 224 225 Concrete spalling Slender column Definitelly 
+rect:109 90 219 187 Concrete core crushing Slender column Definitelly 
+rect:113 66 224 238 Longitudinal bar buckling Slender column Definitelly 
+rect:122 89 217 203 Longitudinal bar fracture Slender column Maybe
+rect:99 71 228 179 Failure of confining hoops/ties Slender column Probably
+rect:115 61 3 287 Out-of-plane infill wall/pier failure Slender column Probably
+rect:119 60 5 286 Loss of masonry units Slender column Definitelly 
+rect:211 72 338 232 Out-of-plane infill wall/pier failure Infill wall/pier Definitelly 
+rect:212 73 336 231 Loss of masonry units Infill wall/pier Definitelly 
+rect:112 63 0 285 Loss of masonry units Infill wall/pier Definitelly 
+rect:112 65 -1 288 Out-of-plane infill wall/pier failure Infill wall/pier Probably
+cropBucharestRomania1977_03.jpg
+rect:34 124 281 290 Concrete spalling Slender column Definitelly 
+rect:32 124 285 274 Concrete core crushing Slender column Definitelly 
+rect:28 121 273 279 Longitudinal bar buckling Slender column Definitelly 
+rect:29 122 282 273 Longitudinal bar fracture Slender column Probably
+rect:39 124 273 264 Failure of confining hoops/ties Slender column Definitelly 
+rect:47 127 256 515 Compression failure Slender column Definitelly 
+cropCanterburyNZSeries2010_01.JPG
+rect:97 332 282 449 Flexural cracking Structural wall Almost Certain
+rect:101 322 249 461 Concrete spalling Structural wall Definitelly 
+rect:133 25 234 113 Concrete spalling Structural wall Definitelly 
+rect:109 18 237 117 Flexural cracking Structural wall Probably
+rect:132 17 234 97 Anchorage/connection failure Structural wall Probably
+rect:97 18 237 452 Global buckling/instability Structural wall Almost Certain
+cropCanterburyNZSeries2010_04a.JPG
+rect:89 137 254 319 Concrete spalling Slender column Definitelly 
+rect:102 185 231 288 Concrete core crushing Slender column Definitelly 
+rect:114 161 236 297 Longitudinal bar buckling Slender column Definitelly 
+rect:99 182 243 297 Failure of confining hoops/ties Slender column Definitelly 
+rect:103 169 251 290 Compression failure Slender column Definitelly 
+rect:98 163 244 333 Shear cracking Slender column Almost Certain
+cropCanterburyNZSeries2010_09a.JPG
+rect:136 78 219 180 Shear cracking Joint-column connection Definitelly 
+rect:124 152 251 399 Shear cracking Short/captive column Definitelly 
+rect:165 249 237 337 Concrete spalling Short/captive column Definitelly 
+rect:160 101 193 135 Concrete spalling Joint-column connection Definitelly 
+rect:132 206 250 354 Shear/diagonal failure Short/captive column Probably
+cropCanterburyNZSeries2010_11.JPG
+rect:75 65 231 203 Flexural cracking Beam Probably
+cropCanterburyNZSeries2010_13.JPG
+rect:32 18 317 387 Concrete spalling Structural wall Definitelly 
+rect:53 26 297 373 Concrete core crushing Structural wall Definitelly 
+rect:199 28 308 376 Longitudinal bar buckling Structural wall Definitelly 
+rect:81 33 299 376 Failure of confining hoops/ties Structural wall Maybe
+rect:30 263 307 394 Anchorage/connection failure Structural wall Maybe
+rect:55 18 306 388 Global buckling/instability Structural wall Almost Certain
+rect:54 24 293 376 Shear/diagonal failure Structural wall Maybe
+rect:62 20 300 377 Compression failure Structural wall Maybe
+cropCaracas1967_06.jpg
+rect:133 21 279 158 Shear cracking Beam Definitelly 
+rect:156 132 196 154 Concrete spalling Beam Definitelly 
+cropCaracas1967_08.jpg
+rect:71 144 177 196 Shear cracking Scissor stairs or ramp Probably
+rect:71 141 136 199 Concrete spalling Scissor stairs or ramp Definitelly 
+rect:84 83 186 115 Concrete spalling Scissor stairs or ramp Definitelly 
+rect:157 90 219 170 Concrete spalling Scissor stairs or ramp Definitelly 
+rect:271 103 341 163 Loss of masonry units Infill wall/pier Almost Certain
+cropCaracas1967_13.jpg
+rect:102 258 201 440 Shear cracking Scissor stairs or ramp Almost Certain
+rect:119 278 191 475 Anchorage/connection failure Scissor stairs or ramp Almost Certain
+rect:132 273 189 473 Unseating/collapse of stairs Scissor stairs or ramp Almost Certain
+rect:114 323 157 394 Concrete spalling Floor diaphragm/slab Almost Certain
+cropCaracas1967_14.jpg
+rect:331 8 65 143 Shear cracking Beam Definitelly 
+rect:269 9 349 57 Concrete spalling Beam Definitelly 
+cropChiChi1991_01.jpg
+rect:15 193 56 243 Flexural cracking Slender column Definitelly 
+rect:24 47 72 117 Concrete spalling Slender column Definitelly 
+rect:255 22 332 214 Concrete spalling Slender column Definitelly 
+rect:18 52 79 112 Concrete core crushing Slender column Definitelly 
+rect:266 61 337 184 Concrete core crushing Slender column Definitelly 
+rect:20 50 80 117 Longitudinal bar buckling Slender column Definitelly 
+rect:257 64 335 193 Longitudinal bar buckling Slender column Definitelly 
+rect:261 62 331 195 Longitudinal bar fracture Slender column Maybe
+rect:24 58 72 116 Longitudinal bar fracture Slender column Maybe
+rect:264 70 332 196 Failure of confining hoops/ties Slender column Almost Certain
+rect:23 62 75 115 Failure of confining hoops/ties Slender column Almost Certain
+rect:9 58 82 108 Distributed plastic hinging Slender column Definitelly 
+rect:266 153 360 217 Distributed plastic hinging Slender column Definitelly 
+rect:251 46 312 118 Distributed plastic hinging Slender column Definitelly 
+rect:247 22 336 205 Global buckling/instability Slender column Definitelly 
+rect:261 34 337 212 Compression failure Slender column Definitelly 
+rect:14 49 79 120 Compression failure Slender column Definitelly 
+rect:297 220 39 32 Out-of-plane infill wall/pier failure Infill wall/pier Definitelly 
+rect:291 218 49 38 Loss of masonry units Infill wall/pier Definitelly 
+rect:78 17 108 50 Flexural cracking Beam Maybe
+cropChichi1999_28.jpg
+rect:41 28 113 167 Flexural cracking Beam Definitelly 
+rect:128 44 225 172 Flexural cracking Beam Definitelly 
+rect:206 104 -25 37 Concrete spalling Beam Definitelly 
+rect:248 181 88 52 Anchorage/connection failure Beam Maybe
+rect:261 187 109 52 Lap splice failure Beam Maybe
+rect:278 183 100 45 Longitudinal bar fracture Beam Maybe
+rect:239 174 70 52 Distributed plastic hinging Beam Maybe
+rect:223 153 343 217 Flexural cracking Slender column Maybe
+rect:258 79 11 8 Loss of masonry units Infill wall/pier Definitelly 
+rect:272 172 -24 40 Global buckling/instability Beam Definitelly 
+rect:225 156 324 234 Shear cracking Slender column Maybe
+rect:282 37 349 82 Concrete spalling Beam Definitelly 
+cropChichi1999_29a.jpg
+rect:96 141 223 367 Shear cracking Short/captive column Maybe
+rect:86 150 219 365 Concrete spalling Short/captive column Definitelly 
+rect:45 112 -7 224 Flexural cracking Beam Probably
+rect:190 115 354 225 Flexural cracking Beam Probably
+rect:110 171 208 340 Concrete core crushing Short/captive column Definitelly 
+rect:114 162 211 361 Longitudinal bar buckling Short/captive column Definitelly 
+rect:107 163 218 340 Longitudinal bar fracture Short/captive column Probably
+rect:102 158 212 348 Failure of confining hoops/ties Short/captive column Definitelly 
+rect:97 135 238 231 Anchorage/connection failure Short/captive column Definitelly 
+rect:112 174 205 351 Global buckling/instability Short/captive column Definitelly 
+rect:108 174 208 360 Shear/diagonal failure Short/captive column Probably
+rect:120 171 208 340 Compression failure Short/captive column Definitelly 
+rect:8 39 345 475 Partial/full collapse of building Partial/full building Definitelly 
+cropChile2010B_04.JPG
+rect:150 157 91 129 Flexural cracking Slender column Definitelly 
+rect:98 151 56 131 Flexural cracking Slender column Definitelly 
+rect:74 151 43 127 Flexural cracking Slender column Definitelly 
+rect:39 141 5 124 Flexural cracking Slender column Definitelly 
+rect:80 94 54 66 Flexural cracking Slender column Definitelly 
+rect:244 167 196 139 Flexural cracking Slender column Definitelly 
+rect:271 200 206 236 Flexural cracking Slender column Definitelly 
+rect:267 210 219 244 Concrete spalling Slender column Definitelly 
+rect:145 154 97 126 Concrete spalling Slender column Definitelly 
+rect:94 151 58 127 Concrete spalling Slender column Definitelly 
+rect:36 141 -1 120 Concrete spalling Slender column Definitelly 
+rect:243 169 201 134 Longitudinal bar buckling Slender column Almost Certain
+rect:278 228 227 202 Longitudinal bar buckling Slender column Almost Certain
+rect:251 170 192 141 Anchorage/connection failure Slender column Definitelly 
+rect:145 155 92 126 Anchorage/connection failure Slender column Definitelly 
+rect:99 149 56 129 Anchorage/connection failure Slender column Definitelly 
+rect:38 141 6 125 Anchorage/connection failure Slender column Definitelly 
+rect:277 198 210 233 Anchorage/connection failure Slender column Definitelly 
+rect:201 143 241 175 Concentrated flexural cracking Slender column Definitelly 
+rect:195 13 251 117 Out-of-plane infill wall/pier failure Infill wall/pier Maybe
+rect:343 14 5 228 Soft story failure Partial/full building Almost Certain
+rect:29 97 100 203 Compression failure Slender column Maybe
+rect:84 112 159 231 Compression failure Slender column Maybe
+rect:199 130 280 233 Compression failure Slender column Definitelly 
+rect:58 108 99 197 Global buckling/instability Slender column Definitelly 
+rect:96 109 151 209 Global buckling/instability Slender column Definitelly 
+rect:196 125 276 235 Global buckling/instability Slender column Definitelly 
+rect:220 205 271 233 Concentrated flexural cracking Slender column Definitelly 
+rect:39 121 57 154 Concentrated flexural cracking Slender column Definitelly 
+rect:60 125 93 145 Concentrated flexural cracking Slender column Definitelly 
+rect:94 117 140 158 Concentrated flexural cracking Slender column Definitelly 
+cropChile2010_01.jpg
+rect:96 33 348 142 Concrete spalling Structural wall Definitelly 
+rect:118 32 240 160 Longitudinal bar buckling Structural wall Definitelly 
+rect:97 34 259 161 Failure of confining hoops/ties Structural wall Definitelly 
+rect:67 61 347 132 Anchorage/connection failure Structural wall Almost Certain
+rect:57 65 344 130 Interface sliding Structural wall Maybe
+cropChile2010_10.jpg
+rect:58 48 345 184 Concrete spalling Structural wall Definitelly 
+rect:60 56 154 170 Concrete core crushing Structural wall Definitelly 
+rect:64 45 342 190 Longitudinal bar buckling Structural wall Definitelly 
+rect:64 56 302 153 Failure of confining hoops/ties Structural wall Maybe
+rect:69 54 265 177 Distributed plastic hinging Structural wall Almost Certain
+cropChile2010_16.jpg
+rect:113 28 186 146 Concrete spalling Structural wall Definitelly 
+rect:109 9 189 243 Longitudinal bar buckling Structural wall Definitelly 
+rect:109 15 196 216 Failure of confining hoops/ties Structural wall Definitelly 
+rect:116 21 191 247 Global buckling/instability Structural wall Definitelly 
+rect:154 10 207 65 Flexural cracking Beam Maybe
+rect:123 26 180 255 Compression failure Structural wall Almost Certain
+cropChile2010_24.jpg
+rect:66 29 321 235 Concrete spalling Structural wall Definitelly 
+rect:38 20 228 58 Shear cracking Floor diaphragm/slab Definitelly 
+rect:286 26 333 73 Concrete spalling Floor diaphragm/slab Definitelly 
+rect:30 20 232 56 Concrete spalling Floor diaphragm/slab Definitelly 
+rect:82 31 306 224 Longitudinal bar buckling Structural wall Probably
+rect:85 38 292 143 Concrete core crushing Structural wall Definitelly 
+rect:92 41 294 164 Failure of confining hoops/ties Structural wall Almost Certain
+rect:100 50 278 131 Compression failure Structural wall Definitelly 
+cropChile2010_54.JPG
+rect:26 33 340 217 Concrete spalling Structural wall Definitelly 
+rect:80 44 227 140 Concrete core crushing Structural wall Definitelly 
+rect:50 27 330 223 Shear cracking Structural wall Definitelly 
+rect:51 28 318 217 Shear/diagonal failure Structural wall Definitelly 
+rect:153 31 252 198 Longitudinal bar buckling Structural wall Maybe
+rect:172 16 270 47 Concrete spalling Floor diaphragm/slab Definitelly 
+rect:254 13 336 72 Shear cracking Beam Definitelly 
+cropChile2010_91.JPG
+rect:179 28 239 118 Shear cracking Short/captive column Definitelly 
+rect:247 48 293 117 Shear cracking Short/captive column Definitelly 
+rect:177 26 230 109 Concrete spalling Short/captive column Definitelly 
+rect:258 80 284 110 Concrete spalling Short/captive column Definitelly 
+rect:176 44 228 91 Concrete core crushing Short/captive column Definitelly 
+rect:178 37 226 110 Longitudinal bar buckling Short/captive column Definitelly 
+rect:255 76 284 116 Longitudinal bar buckling Short/captive column Definitelly 
+rect:195 49 231 100 Longitudinal bar fracture Short/captive column Probably
+rect:182 41 232 96 Failure of confining hoops/ties Short/captive column Almost Certain
+rect:260 86 282 107 Failure of confining hoops/ties Short/captive column Almost Certain
+rect:72 96 211 233 Shear/diagonal failure Structural wall Almost Certain
+rect:72 117 157 207 Concrete spalling Structural wall Definitelly 
+rect:95 77 144 131 Concrete spalling Structural wall Definitelly 
+rect:89 119 158 196 Longitudinal bar buckling Structural wall Definitelly 
+rect:107 129 153 178 Concrete core crushing Structural wall Definitelly 
+rect:153 64 204 122 Shear/diagonal failure Short/captive column Definitelly 
+cropChristchurch2011_05.jpg
+rect:60 221 235 401 Concrete spalling Structural wall Definitelly 
+rect:168 247 231 401 Concrete core crushing Structural wall Definitelly 
+rect:173 218 228 404 Longitudinal bar buckling Structural wall Definitelly 
+rect:178 238 226 408 Longitudinal bar fracture Structural wall Maybe
+rect:172 245 236 409 Failure of confining hoops/ties Structural wall Almost Certain
+rect:68 311 258 398 Anchorage/connection failure Structural wall Probably
+rect:204 412 283 446 Anchorage/connection failure Slender column Maybe
+rect:207 411 267 443 Concentrated flexural cracking Slender column Maybe
+rect:63 109 234 390 Global buckling/instability Structural wall Probably
+cropDSCN0792.JPG
+rect:92 45 267 134 Concrete spalling Beam Almost Certain
+rect:144 25 339 108 Flexural cracking Beam Almost Certain
+rect:125 55 213 158 Anchorage/connection failure Beam Almost Certain
+rect:142 132 225 252 Concrete spalling Structural wall Almost Certain
+cropDSC_0298.JPG
+rect:105 71 216 166 Concentrated flexural cracking Slender column Definitelly 
+rect:117 85 225 161 Flexural cracking Slender column Definitelly 
+rect:111 75 209 153 Concrete spalling Slender column Definitelly 
+cropEastJapan2011_07.JPG
+rect:70 25 168 114 Concrete spalling Short/captive column Definitelly 
+rect:176 137 45 6 Shear cracking Short/captive column Definitelly 
+rect:182 136 59 3 Shear/diagonal failure Short/captive column Definitelly 
+rect:166 98 71 42 Concrete core crushing Short/captive column Definitelly 
+rect:164 93 98 41 Longitudinal bar buckling Short/captive column Probably
+rect:73 35 163 95 Failure of confining hoops/ties Short/captive column Probably
+rect:128 86 186 228 Interaction b/w infill and frame Infill wall/pier Almost Certain
+cropHaiti2010_02.JPG
+rect:26 50 301 184 Partial/full collapse of building Scissor stairs or ramp Definitelly 
+rect:45 47 179 141 Unseating/collapse of stairs Scissor stairs or ramp Definitelly 
+rect:209 93 304 214 Unseating/collapse of stairs Scissor stairs or ramp Definitelly 
+rect:59 54 192 136 Longitudinal bar buckling Scissor stairs or ramp Definitelly 
+rect:68 53 187 132 Failure of confining hoops/ties Scissor stairs or ramp Probably
+rect:138 8 213 80 Concrete spalling Structural wall Probably
+rect:128 9 251 56 Flexural cracking Structural wall Probably
+rect:40 193 193 258 Flexural cracking Structural wall Probably
+cropImperialValley1979_02.jpg
+rect:30 24 343 215 Concrete spalling Slender column Probably
+rect:92 63 257 197 Concrete core crushing Slender column Probably
+rect:88 53 254 208 Concrete spalling Slender column Definitelly 
+rect:79 57 245 205 Concrete core crushing Slender column Definitelly 
+rect:86 64 257 205 Longitudinal bar buckling Slender column Definitelly 
+rect:75 65 247 205 Longitudinal bar fracture Slender column Probably
+rect:76 53 250 215 Failure of confining hoops/ties Slender column Definitelly 
+rect:52 151 256 202 Anchorage/connection failure Slender column Maybe
+rect:74 63 262 207 Compression failure Slender column Almost Certain
+cropIzmit1999_01.JPG
+rect:49 128 225 397 Shear cracking Short/captive column Definitelly 
+rect:57 97 202 382 Concrete spalling Short/captive column Definitelly 
+rect:143 448 278 555 Concrete spalling Beam Definitelly 
+rect:49 136 225 371 Failure of confining hoops/ties Short/captive column Almost Certain
+rect:46 138 235 418 Shear/diagonal failure Short/captive column Definitelly 
+rect:37 415 88 552 Anchorage/connection failure Beam Maybe
+cropIzmit1999_03.jpg
+rect:61 19 267 221 Concrete spalling Slender column Definitelly 
+rect:47 24 277 234 Longitudinal bar buckling Slender column Definitelly 
+rect:52 25 277 232 Failure of confining hoops/ties Slender column Definitelly 
+rect:75 27 258 218 Concrete core crushing Slender column Almost Certain
+cropIzmitTurkey1999_31.jpg
+rect:60 10 119 69 Shear cracking Joint-column connection Definitelly 
+rect:59 9 118 71 Shear/diagonal failure Joint-column connection Definitelly 
+rect:56 9 117 71 Concrete spalling Joint-column connection Definitelly 
+rect:237 6 288 45 Shear cracking Joint-column connection Definitelly 
+rect:52 56 115 105 Concentrated flexural cracking Slender column Definitelly 
+rect:53 180 115 202 Concentrated flexural cracking Slender column Definitelly 
+rect:228 169 290 193 Concentrated flexural cracking Slender column Definitelly 
+rect:234 38 299 78 Concentrated flexural cracking Slender column Definitelly 
+rect:241 31 290 74 Longitudinal bar buckling Slender column Definitelly 
+rect:243 173 307 196 Anchorage/connection failure Slender column Maybe
+rect:236 37 305 62 Anchorage/connection failure Slender column Maybe
+rect:47 51 133 81 Anchorage/connection failure Slender column Maybe
+rect:50 184 118 202 Anchorage/connection failure Slender column Maybe
+rect:88 25 273 202 Out-of-plane infill wall/pier failure Infill wall/pier Almost Certain
+rect:96 105 228 195 Concrete spalling Floor diaphragm/slab Almost Certain
+rect:82 87 156 139 Shear/diagonal failure Floor diaphragm/slab Almost Certain
+cropIzmitTurkey1999_34.jpg
+rect:15 77 167 188 Shear cracking Beam Definitelly 
+rect:86 89 -3 143 Concrete spalling Beam Definitelly 
+rect:66 5 116 101 Flexural cracking Slender column Definitelly 
+rect:95 209 157 294 Concrete spalling Slender column Definitelly 
+rect:60 374 150 432 Concentrated flexural cracking Slender column Definitelly 
+rect:310 245 255 204 Concentrated flexural cracking Slender column Definitelly 
+rect:169 162 263 284 Concrete spalling Slender column Definitelly 
+rect:171 168 265 258 Concrete core crushing Slender column Definitelly 
+rect:164 165 259 259 Longitudinal bar buckling Slender column Definitelly 
+rect:166 165 260 260 Failure of confining hoops/ties Slender column Definitelly 
+rect:299 173 352 459 Global buckling/instability Structural wall Maybe
+cropKobe1995_01.jpg
+rect:85 127 263 306 Shear/diagonal failure Short/captive column Definitelly 
+rect:122 461 256 531 Shear/diagonal failure Short/captive column Definitelly 
+rect:87 131 245 328 Longitudinal bar buckling Short/captive column Definitelly 
+rect:96 131 252 310 Longitudinal bar fracture Short/captive column Maybe
+rect:95 136 243 319 Failure of confining hoops/ties Short/captive column Definitelly 
+rect:108 142 250 319 Concrete spalling Short/captive column Definitelly 
+rect:119 465 242 523 Concrete spalling Short/captive column Definitelly 
+rect:92 130 261 327 Global buckling/instability Short/captive column Almost Certain
+cropKobe1995_09.jpg
+rect:130 391 283 459 Shear cracking Structural wall Definitelly 
+rect:207 393 284 456 Concrete core crushing Structural wall Definitelly 
+rect:137 379 191 457 Concrete core crushing Structural wall Definitelly 
+rect:130 384 193 455 Longitudinal bar buckling Structural wall Definitelly 
+rect:203 386 287 454 Longitudinal bar buckling Structural wall Definitelly 
+rect:205 385 287 458 Failure of confining hoops/ties Structural wall Almost Certain
+rect:139 376 184 450 Failure of confining hoops/ties Structural wall Almost Certain
+rect:135 384 285 458 Shear/diagonal failure Structural wall Definitelly 
+rect:71 328 87 372 Anchorage/connection failure Scissor stairs or ramp Probably
+rect:62 378 81 421 Anchorage/connection failure Scissor stairs or ramp Probably
+rect:54 428 68 477 Anchorage/connection failure Scissor stairs or ramp Probably
+rect:123 295 164 338 Flexural cracking Scissor stairs or ramp Probably
+rect:123 293 166 331 Concentrated flexural cracking Scissor stairs or ramp Probably
+rect:126 6 304 485 Global buckling/instability Partial/full building Probably
+cropKumamoto2016_01.png
+rect:350 257 4 2 Soft story failure Partial/full building Almost Certain
+rect:351 259 2 2 Partial/full collapse of building Partial/full building Definitelly 
+rect:50 153 85 186 Concrete core crushing Slender column Definitelly 
+rect:159 155 194 193 Concrete core crushing Slender column Definitelly 
+rect:47 153 89 187 Longitudinal bar buckling Slender column Definitelly 
+rect:159 159 196 197 Longitudinal bar buckling Slender column Definitelly 
+rect:50 148 87 190 Longitudinal bar fracture Slender column Definitelly 
+rect:159 157 194 192 Longitudinal bar fracture Slender column Definitelly 
+rect:49 153 89 193 Failure of confining hoops/ties Slender column Definitelly 
+rect:156 154 200 196 Failure of confining hoops/ties Slender column Definitelly 
+rect:44 149 82 191 Compression failure Slender column Definitelly 
+rect:152 147 200 198 Compression failure Slender column Definitelly 
+rect:168 24 188 72 Shear cracking Slender column Almost Certain
+rect:166 77 187 111 Shear cracking Slender column Almost Certain
+rect:196 67 160 19 Concrete spalling Slender column Definitelly 
+rect:164 63 193 118 Concrete spalling Slender column Definitelly 
+rect:159 112 185 147 Concrete spalling Slender column Definitelly 
+rect:232 146 248 164 Concrete spalling Beam Definitelly 
+rect:192 128 252 148 Concrete spalling Floor diaphragm/slab Definitelly 
+rect:270 83 310 115 Out-of-plane infill wall/pier failure Infill wall/pier Maybe
+rect:318 61 258 93 Concrete spalling Beam Maybe
+rect:217 65 259 86 Concrete spalling Floor diaphragm/slab Maybe
+rect:290 174 235 206 Flexural cracking Slender column Maybe
+rect:236 134 280 188 Failure of confining hoops/ties Slender column Maybe
+rect:236 130 281 200 Concrete spalling Slender column Definitelly 
+cropKumamoto2016_03.png
+rect:179 17 0 94 Concrete spalling Floor diaphragm/slab Almost Certain
+rect:233 56 348 145 Shear cracking Beam Almost Certain
+rect:29 84 175 160 Shear cracking Beam Almost Certain
+rect:44 76 173 162 Shear/diagonal failure Beam Almost Certain
+rect:54 81 168 170 Concrete spalling Beam Definitelly 
+rect:151 103 260 232 Flexural cracking Slender column Definitelly 
+rect:142 116 270 233 Concentrated flexural cracking Slender column Definitelly 
+rect:151 82 250 185 Longitudinal bar buckling Slender column Almost Certain
+rect:139 106 253 198 Failure of confining hoops/ties Slender column Maybe
+cropKumamoto2016_14.png
+rect:308 75 215 5 Shear cracking Joint-column connection Almost Certain
+rect:122 102 200 172 Shear cracking Joint-column connection Almost Certain
+rect:219 12 309 82 Concrete spalling Joint-column connection Definitelly 
+rect:123 104 197 165 Concrete spalling Joint-column connection Definitelly 
+cropManagua1972_01.jpg
+rect:129 270 210 347 Concrete spalling Short/captive column Definitelly 
+rect:148 15 254 134 Concrete spalling Short/captive column Definitelly 
+rect:152 36 242 124 Distributed plastic hinging Short/captive column Definitelly 
+rect:134 270 201 344 Distributed plastic hinging Short/captive column Definitelly 
+rect:116 14 239 352 Global buckling/instability Short/captive column Definitelly 
+rect:339 11 10 518 Soft story failure Partial/full building Definitelly 
+rect:18 275 209 388 Interaction b/w infill and frame Infill wall/pier Almost Certain
+rect:150 38 233 146 Longitudinal bar buckling Short/captive column Maybe
+cropMexicoCity1985_04.jpg
+rect:351 3 4 236 Partial/full collapse of building Partial/full building Definitelly 
+rect:62 35 111 236 Pounding Partial/full building Definitelly 
+cropMuisne2016_03.png
+rect:5 9 348 264 Partial/full collapse of building Partial/full building Definitelly 
+rect:24 117 334 233 Soft story failure Partial/full building Definitelly 
+rect:344 10 1 193 Residual displacement Partial/full building Definitelly 
+cropNepal2015_51.JPG
+rect:143 261 102 154 Concrete spalling Slender column Definitelly 
+rect:139 41 173 155 Concrete spalling Slender column Definitelly 
+rect:329 44 295 0 Concrete spalling Slender column Definitelly 
+rect:278 177 312 264 Concrete spalling Slender column Definitelly 
+rect:316 140 123 175 Concrete spalling Beam Definitelly 
+rect:304 147 357 202 Concrete spalling Beam Definitelly 
+rect:327 50 132 2 Concrete spalling Beam Definitelly 
+rect:122 170 306 269 Shear cracking Structural wall Maybe
+rect:169 16 345 88 Concrete spalling Floor diaphragm/slab Definitelly 
+rect:252 79 354 119 Concrete spalling Floor diaphragm/slab Definitelly 
+cropNewZealand2011_12.JPG
+rect:42 22 344 268 Shear/diagonal failure Structural wall Definitelly 
+rect:50 23 289 234 Concrete spalling Structural wall Definitelly 
+rect:54 23 261 196 Concrete core crushing Structural wall Definitelly 
+rect:49 22 276 209 Longitudinal bar buckling Structural wall Definitelly 
+rect:69 29 278 160 Failure of confining hoops/ties Structural wall Probably
+rect:35 13 344 269 Global buckling/instability Structural wall Almost Certain
+cropNorthridge1994_05.JPG
+rect:23 79 75 152 Shear cracking Short/captive column Definitelly 
+rect:104 77 179 161 Shear cracking Short/captive column Definitelly 
+rect:29 78 75 155 Shear/diagonal failure Short/captive column Almost Certain
+rect:105 80 178 161 Shear/diagonal failure Short/captive column Almost Certain
+rect:31 79 80 161 Longitudinal bar buckling Short/captive column Almost Certain
+rect:114 80 171 156 Longitudinal bar buckling Short/captive column Almost Certain
+rect:227 76 331 163 Shear cracking Structural wall Definitelly 
+rect:233 80 327 166 Concrete spalling Structural wall Definitelly 
+rect:218 78 330 159 Concrete core crushing Structural wall Definitelly 
+rect:229 82 326 159 Longitudinal bar buckling Structural wall Definitelly 
+rect:23 78 81 158 Concrete spalling Short/captive column Definitelly 
+rect:111 81 177 161 Concrete spalling Short/captive column Definitelly 
+rect:237 82 328 162 Shear/diagonal failure Structural wall Definitelly 
+cropPeru2007_01.JPG
+rect:14 70 84 164 Shear/diagonal failure Short/captive column Definitelly 
+rect:264 92 338 183 Shear/diagonal failure Short/captive column Definitelly 
+rect:270 80 338 232 Residual displacement Short/captive column Definitelly 
+rect:17 70 73 179 Residual displacement Short/captive column Definitelly 
+rect:17 68 78 177 Concrete core crushing Short/captive column Definitelly 
+rect:254 80 341 181 Concrete core crushing Short/captive column Definitelly 
+rect:24 69 79 173 Longitudinal bar buckling Short/captive column Definitelly 
+rect:269 73 331 196 Longitudinal bar buckling Short/captive column Definitelly 
+rect:271 89 333 168 Failure of confining hoops/ties Short/captive column Definitelly 
+rect:18 68 77 163 Failure of confining hoops/ties Short/captive column Definitelly 
+rect:323 9 3 57 Shear cracking Structural wall Maybe
+cropSanFernando1970_06a.jpg
+rect:87 35 190 192 Shear cracking Slender column Definitelly 
+rect:90 27 181 197 Shear/diagonal failure Slender column Definitelly 
+rect:89 20 191 179 Longitudinal bar buckling Slender column Probably
+rect:77 179 200 263 Shear cracking Joint-column connection Maybe
+rect:102 237 238 508 Concrete spalling Slender column Definitelly 
+rect:94 239 231 507 Global buckling/instability Slender column Definitelly 
+cropSanFernando1970_07.jpg
+rect:41 29 215 475 Concrete spalling Slender column Definitelly 
+rect:71 43 164 163 Concrete spalling Joint-column connection Definitelly 
+rect:58 39 155 161 Shear/diagonal failure Joint-column connection Maybe
+rect:174 105 74 463 Residual displacement Slender column Definitelly 
+rect:186 121 43 451 Global buckling/instability Slender column Definitelly 
+rect:141 189 196 454 Lap splice failure Slender column Definitelly 
+cropSanFernando1970_08.jpg
+rect:63 32 302 447 Concrete spalling Slender column Definitelly 
+rect:73 23 289 464 Concrete core crushing Slender column Definitelly 
+rect:69 29 299 462 Longitudinal bar buckling Slender column Definitelly 
+rect:72 25 278 448 Failure of confining hoops/ties Slender column Definitelly 
+rect:87 34 281 446 Global buckling/instability Slender column Definitelly 
+rect:9 9 347 514 Soft story failure Partial/full building Maybe

@@ -4,7 +4,7 @@ from datetime import datetime
 """ ENTER THE CONFIG INFO BELOW """
 
 # input file path
-_INPUT_FILE_PATH_ = './in.txt'
+_INPUT_FILE_PATH_ = '../expertFiles/Output_EZRA1-clean.txt'
 
 # output file path (trailing slash required)
 _OUTPUT_FILE_PATH_ = './'
@@ -13,7 +13,7 @@ _OUTPUT_FILE_PATH_ = './'
 _FUZZ_FACTOR_ = 0 #0.0333
 
 # How many output files do you want?
-_NUM_OUTPUTS_ = 10
+_NUM_OUTPUTS_ = 1
 
 # Shuffle the output list?
 _SHUFFLE_ON_ = False
