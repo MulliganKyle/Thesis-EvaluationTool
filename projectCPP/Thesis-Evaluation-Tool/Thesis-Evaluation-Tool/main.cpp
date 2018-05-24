@@ -15,8 +15,8 @@
 #include "evalLib.hpp"
 #include "compareLib.hpp"
 
-#define NUM_THREADS 2
-#define NUM_FILES 10
+#define NUM_THREADS 4
+#define NUM_FILES 201
 
 int main(int argc, const char * argv[])
 {
@@ -53,7 +53,7 @@ int main(int argc, const char * argv[])
     std::string traineeFileName;
     std::string resultsName;
     std::string reportFilePath;
-    std::string reportFileName="report.txt";
+    std::string reportFileName="AAA_report.txt";
     
     //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
     
@@ -467,7 +467,7 @@ int main(int argc, const char * argv[])
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel images." << std::endl;
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel images, using " << NUM_THREADS << "threads." << std::endl;
     outputFile << "Output provided in " << ttime << " seconds." << std::endl;
     outputFile << "Comparison not including file output and not including time to copy to vector completed in " << ttimeA << " seconds." <<std::endl;
     outputFile << "Comparison does not include the vector copy because this method could be done without this copy by having the file read go directly to a vector instead. This was not implemented here because a list was sufficient for the other parallel methods." << std::endl;
@@ -585,7 +585,7 @@ int main(int argc, const char * argv[])
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel rectangles." << std::endl;
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel rectangles, using " << NUM_THREADS << "threads." << std::endl;
     outputFile << "Output provided in " << ttime << " seconds." << std::endl;
     outputFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
     outputFile.close();
@@ -638,7 +638,7 @@ int main(int argc, const char * argv[])
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel files." << std::endl;
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel files, using " << NUM_THREADS << "threads." << std::endl;
     outputFile << "Output provided in " << ttime << " seconds." << std::endl;
     
     outputFile.close();

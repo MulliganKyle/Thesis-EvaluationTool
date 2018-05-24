@@ -4,28 +4,32 @@ from datetime import datetime
 """ ENTER THE CONFIG INFO BELOW """
 
 # input file names
+#_INPUT_FILE_NAMES_ = [
+#    'Output_EZRA1-clean.txt',
+#    'Output_EZRA2-clean.txt',
+#    'OutputANA-clean.txt',
+#    'OutputErika-clean.txt',
+#    'OutputJohn-clean.txt'
+#]
+
 _INPUT_FILE_NAMES_ = [
-    'Output_EZRA1-clean.txt',
-    'Output_EZRA2-clean.txt',
-    'OutputANA-clean.txt',
-    'OutputErika-clean.txt',
-    'OutputJohn-clean.txt'
+    'originalExpertData.txt'
 ]
 
 # directory containing input files (trailing slash required)
-_INPUT_FILE_DIR_ = '../expertFiles/'
+_INPUT_FILE_DIR_ = '' #'../expertFiles/'
 
 # output file path (trailing slash required)
-_OUTPUT_FILE_PATH_ = '../expertFiles/'
+_OUTPUT_FILE_PATH_ = 'extraData00/' #'../expertFiles/'
 
 # what's the max variance student submissions should have?
-_FUZZ_FACTOR_ = 0 #0.0333
+_FUZZ_FACTOR_ = 0.0333 #0
 
 # How many output files do you want?
-_NUM_OUTPUTS_ = 1
+_NUM_OUTPUTS_ = 200
 
 # Shuffle the output list?
-_SHUFFLE_ON_ = False
+_SHUFFLE_ON_ = True
 
 """""""""""""""""""""CONFIG END"""
 
@@ -58,13 +62,14 @@ def main():
         input_file_path  = _INPUT_FILE_DIR_ + in_file_name
         images, counter = read_images(input_file_path, tag_dict, counter)
 
-        for output_ndx in range(1, _NUM_OUTPUTS_ + 1):
-            out_file_name = '{}out_{:03d}_{:03d}_{}'.format(
-                _OUTPUT_FILE_PATH_, 
-                in_file_ndx, 
-                output_ndx, 
-                in_file_name
-            )
+        for output_ndx in range(0, _NUM_OUTPUTS_):
+            #out_file_name = '{}out_{:03d}_{:03d}_{}'.format(
+            #    _OUTPUT_FILE_PATH_, 
+            #    in_file_ndx, 
+            #    output_ndx, 
+            #    in_file_name
+            #)
+            out_file_name = '{}out{:03d}.txt'.format(_OUTPUT_FILE_PATH_, output_ndx)
             write_submission(out_file_name, images, 0.333, datetime.now())
 
 
