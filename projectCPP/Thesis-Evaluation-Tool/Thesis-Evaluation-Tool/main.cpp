@@ -21,14 +21,18 @@ int main(int argc, const char * argv[])
 {
     
     std::ofstream JSFile;
+    std::ofstream JSFFile;
     std::ofstream JPRFile;
     std::ofstream JPIFile;
     std::ofstream JPIRFile;
 
     
-        std::list<Image*>::const_iterator keyImagesIterator;
+    std::list<Image*>::const_iterator keyImagesIterator;
     std::list<Image*> keyImagesSerial;
     std::list<Image*> test1ImagesSerial;
+    
+    std::list<Image*> keyImagesSerialF;
+    std::list<Image*> test1ImagesSerialF;
     
     std::list<Image*> keyImagesParallelR;
     std::list<Image*> test1ImagesParallelR;
@@ -42,20 +46,46 @@ int main(int argc, const char * argv[])
     std::vector<Image*> keyImgVec;
     std::vector<Image*> checkImgVec;
     
+    Image* imagePTR;
+    
     double tstart, tstop, ttime;
     
     int i;
     
 
     
-    std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertData01.txt";
-    std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/traineeData01.txt";
+    std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
+    std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/traineeDataExtended01.txt";
+    
+    std::string filesPath="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/extraData/";
+    
+    std::string expertFileInPath;
+    std::string traineeFileInPath;
+    std::string resultsFileOutPath;
+    std::string traineeFileName;
+    std::string resultsName;
+    
+    //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
+    
+    //std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/ImageFiles/key.txt";
+    //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/ImageFiles/key.txt";
+    
+    //std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_001_001_Output_EZRA1-clean.txt";
+    //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_002_001_Output_EZRA2-clean.txt";
     
     std::string jaccardSerial="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardSerialOut.txt";
     std::string jaccardParallelRects="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardParallelRectsOut.txt";
     std::string jaccardParallelImages="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardParallelImagesOut.txt";
     
-    
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                             Serial test                                   **/
+    /**                                                                           **/
+    /**                                                                           **/
+    /*******************************************************************************/
+    /*******************************************************************************/
 #if 1
     //read in the image files and store them in the image lists.
     tstart = dtime();
@@ -80,13 +110,24 @@ int main(int argc, const char * argv[])
     //std::cout << std::endl << std::endl;
     for ( keyImagesIterator= keyImagesSerial.begin(), i=1; keyImagesIterator!=keyImagesSerial.end(); ++keyImagesIterator, i++)
     {
-        JSFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        JSFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
     
     JSFile << "comparison using jaccard index completed in: " << ttime << " seconds" << std::endl;
     
 #endif
 
+    
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                             Parallel test                                 **/
+    /**                         Images are parallel                               **/
+    /**                                                                           **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+    
 #if 1
     //compare images using the rectangle parallel method
     tstart = dtime();
@@ -120,12 +161,21 @@ int main(int argc, const char * argv[])
     //std::cout << std::endl << std::endl;
     for ( keyImagesIterator= keyImagesParallelR.begin(), i=1; keyImagesIterator!=keyImagesParallelR.end(); ++keyImagesIterator, i++)
     {
-        JPRFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        JPRFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
     JPRFile << "comparison using jaccard index in parallel(rects) completed in: " << ttime << " seconds" << std::endl;
     
 #endif
     
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                             Parallel test                                 **/
+    /**                       Rectangles are parallel                             **/
+    /**                                                                           **/
+    /*******************************************************************************/
+    /*******************************************************************************/
     
 #if 1
     //compare images using the images parallel method
@@ -157,11 +207,86 @@ int main(int argc, const char * argv[])
     //std::cout << std::endl << std::endl;
     for ( keyImagesIterator= keyImagesParallelI.begin(), i=1; keyImagesIterator!=keyImagesParallelI.end(); ++keyImagesIterator, i++)
     {
-        JPIFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches2() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        JPIFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
     }
     JPIFile << "comparison using jaccard index in parallel(images) completed in: " << ttime << " seconds" << std::endl;
     
 #endif
+    
+    
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                              Serial test                                  **/
+    /**                            several files                                  **/
+    /**                                                                           **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+    
+#if 1
+    
+    expertFileInPath=filesPath+"expert.txt";
+    getImgData(expertFileInPath, keyImagesSerialF);
+    
+    
+    for (i = 1; i<=10; i++)
+    {
+        
+        if (i<10)
+        {
+            traineeFileName ="out00"+std::to_string(i)+".txt";
+            resultsName="results00"+std::to_string(i)+".txt";
+        }
+        else if (i < 100)
+        {
+            traineeFileName ="out0"+std::to_string(i)+".txt";
+            resultsName="results0"+std::to_string(i)+".txt";
+        }
+        else
+        {
+            traineeFileName ="out"+std::to_string(i)+".txt";
+            resultsName="results"+std::to_string(i)+".txt";
+        }
+        
+        traineeFileInPath = filesPath+traineeFileName;
+        resultsFileOutPath = filesPath+resultsName;
+        getImgData(traineeFileInPath, test1ImagesSerialF);
+        
+        JSFFile.open(resultsFileOutPath, std::ofstream::out);
+        if (!JSFFile.is_open())
+        {
+            std::cout << "Error opening file" <<std::endl;
+            return 1;
+        }
+        
+        //compare images
+        imageCompareSerial(test1ImagesSerialF, keyImagesSerialF);
+        for ( keyImagesIterator= keyImagesSerialF.begin(), i=1; keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator, i++)
+        {
+            JSFFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        }
+        
+        JSFFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        JSFFile.close();
+
+        for ( keyImagesIterator= keyImagesSerialF.begin(), i=1; keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator, i++)
+        {
+            (*keyImagesIterator)->clean();
+        }
+        while ( !test1ImagesSerialF.empty() )
+        {
+            imagePTR = test1ImagesSerialF.back();
+            test1ImagesSerialF.pop_back();
+            imagePTR->~Image();
+        }
+        
+    }
+
+    
+#endif
+    
     
     std::cout << "success!" << std::endl;
     return 0;

@@ -49,7 +49,7 @@ Rectangle::Rectangle(int newX0,
     
     tag_=newTag;
     
-    setMatch2(NULL, 0.0, 0.0, 0.0);
+    setMatch(NULL, 0.0);
     
     numberOfRects_++;
 }
@@ -123,19 +123,20 @@ void Rectangle::setTag(int newTag)
     tag_=newTag;
 }
 
-void Rectangle::setMatch2(Rectangle* newMatch, double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
+/*void Rectangle::setMatch2(Rectangle* newMatch, double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
 {
-    match_=newMatch;
+    match2_=newMatch;
     matchCentXDiff_=newMatchCentXDiff;
     matchCentYDiff_=newMatchCentYDiff;
     matchAreaDiff_=newMatchAreaDiff;
-}
+}*/
 
 void Rectangle::setMatch(Rectangle* newMatch, double newScore)
 {
-    match2_=newMatch;
-    match2Score_= newScore;
+    match_=newMatch;
+    matchScore_= newScore;
 }
+
 
 //helper
 //
@@ -145,7 +146,7 @@ void Rectangle::setMatch(Rectangle* newMatch, double newScore)
 //if the new match is better returns true.
 //if there is no new match returns true.
 //use the sum of the differences to determine if the new rectangle is better.
-bool Rectangle::compareMatch2(double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
+/*bool Rectangle::compareMatch2(double newMatchCentXDiff, double newMatchCentYDiff, double newMatchAreaDiff)
 {
     double centerDelta;
     double areaDelta;
@@ -188,7 +189,7 @@ bool Rectangle::compareMatch2(double newMatchCentXDiff, double newMatchCentYDiff
         
         
     }
-}
+}*/
 
 
 bool Rectangle::compareMatch(double newMatchScore)
@@ -199,7 +200,7 @@ bool Rectangle::compareMatch(double newMatchScore)
     }
     else
     {
-        if (newMatchScore > match2Score_)
+        if (newMatchScore > matchScore_)
         {
             return true;
         }
@@ -209,6 +210,8 @@ bool Rectangle::compareMatch(double newMatchScore)
         }
     }
 }
+
+
 
 
 

@@ -42,14 +42,13 @@ private:
     int tag_;
     
     // the attributes used to match a rectangle to another rectangle
-    Rectangle* match_;
-    double matchCentXDiff_;
+    /*double matchCentXDiff_;
     double matchCentYDiff_;
-    double matchAreaDiff_;
+    double matchAreaDiff_;*/
     
     // the attributes used to match a rectangle to another rectangle using the second method
-    Rectangle* match2_;
-    double match2Score_;
+    Rectangle* match_;
+    double matchScore_;
     
     //****************************//
     //class wide attributes       //
@@ -88,12 +87,12 @@ public:
     int getTag () const { return tag_; }
     
     Rectangle* getMatch () const { return match_; }
-    double getMatchCentXDiff () const { return matchCentXDiff_; }
+    /*double getMatchCentXDiff () const { return matchCentXDiff_; }
     double getMatchCentYDiff () const { return matchCentYDiff_; }
     double getMatchAreaDiff () const { return matchAreaDiff_; }
     
-    Rectangle* getMatch2 () const { return match2_; }
-    double getMatch2score () const { return match2Score_; }
+    Rectangle* getMatch2 () const { return match2_; }*/
+    double getMatchscore () const { return matchScore_; }
     
     int getNumberOfRects () const { return numberOfRects_; }
     

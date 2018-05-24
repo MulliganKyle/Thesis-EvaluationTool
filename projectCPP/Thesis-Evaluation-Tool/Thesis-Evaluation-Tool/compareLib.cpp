@@ -51,7 +51,7 @@ void rectangleCompareSerial( Image* traineeImage, Image* expertImage)
          ++expertRectanglesIterator)
     {
         traineeRectangleCompare(traineeImage, (*expertRectanglesIterator));
-        expertImage->increaseNumMatches2((*expertRectanglesIterator)->getMatch2score());
+        expertImage->increaseNumMatches2((*expertRectanglesIterator)->getMatchscore());
     }
     
     
@@ -90,13 +90,13 @@ void traineeRectangleCompare( Image* traineeImage, Rectangle* expertRectangle)
     {
         
         //if the tags are not the same, this is not the correct rectangle so continue
-        if ( (expertRectangle->getTag()) != ((*traineeRectanglesIterator)->getTag() ))
+       /* if ( (expertRectangle->getTag()) != ((*traineeRectanglesIterator)->getTag() ))
         {
             continue;
         }
         //if the tags are the same, this may be the correct rectangle.
         else
-        {
+        {*/
             //get the edges of the rectangles and the areas
             expertX0 = expertRectangle->getX0();
             expertX1 = expertRectangle->getX1();
@@ -163,7 +163,7 @@ void traineeRectangleCompare( Image* traineeImage, Rectangle* expertRectangle)
                 inArea= (inX1-inX0) * (inY1-inY0);
                 
                 //jaccard's index
-                rectScore= inArea/(expertArea+traineeArea-inArea);
+                rectScore= inArea/((expertArea+traineeArea)-inArea);
                 
                 //check if a match already exists and compare the two if they do.
                 if ( expertRectangle->compareMatch( rectScore ) )
@@ -172,7 +172,7 @@ void traineeRectangleCompare( Image* traineeImage, Rectangle* expertRectangle)
                 }
             }
             
-        }
+        //}
     }
 }
 
@@ -375,7 +375,7 @@ void rectangleCompareParallel(std::list<Image*> traineeImages, std::list<Image*>
         {
             //for each image spawn thread that runs rectangleCompareParallel above which
             //in turn spanws a thread per rectangle in the expert image.
-            (*expertImagesIterator)->increaseNumMatches2((*expertRectsIterator)->getMatch2score());
+            (*expertImagesIterator)->increaseNumMatches2((*expertRectsIterator)->getMatchscore());
         }
         
     }

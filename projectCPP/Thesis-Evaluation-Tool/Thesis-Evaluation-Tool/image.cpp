@@ -34,6 +34,14 @@ Image::Image(std::string newName,
 
 Image::~Image()
 {
+    Rectangle* rectanglePtr;
+    
+    while (!rectangleList_.empty())
+    {
+        rectanglePtr=rectangleList_.back();
+        rectangleList_.pop_back();
+        rectanglePtr->~Rectangle();
+    }
     numberOfImages_ --;
 }
 
@@ -72,6 +80,17 @@ void Image::increaseNumMatches()
 void Image::increaseNumMatches2( double newScore)
 {
     totScore_=totScore_+newScore;
+}
+
+void Image::clean()
+{
+    std::list<Rectangle*>::iterator rectangleIterator;
+    
+    for (rectangleIterator=rectangleList_.begin(); rectangleIterator!=rectangleList_.end(); ++rectangleIterator)
+    {
+        (*rectangleIterator)->setMatch(NULL,0.0);
+    }
+    
 }
 
 //helpers

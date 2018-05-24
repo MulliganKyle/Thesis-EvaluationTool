@@ -3,11 +3,20 @@ from datetime import datetime
 
 """ ENTER THE CONFIG INFO BELOW """
 
-# input file path
-_INPUT_FILE_PATH_ = '../expertFiles/Output_EZRA1-clean.txt'
+# input file names
+_INPUT_FILE_NAMES_ = [
+    'Output_EZRA1-clean.txt',
+    'Output_EZRA2-clean.txt',
+    'OutputANA-clean.txt',
+    'OutputErika-clean.txt',
+    'OutputJohn-clean.txt'
+]
+
+# directory containing input files (trailing slash required)
+_INPUT_FILE_DIR_ = '../expertFiles/'
 
 # output file path (trailing slash required)
-_OUTPUT_FILE_PATH_ = './'
+_OUTPUT_FILE_PATH_ = '../expertFiles/'
 
 # what's the max variance student submissions should have?
 _FUZZ_FACTOR_ = 0 #0.0333
@@ -44,10 +53,19 @@ class Rectangle():
 def main():
     counter = 0
     tag_dict = {}
-    images, counter = read_images(_INPUT_FILE_PATH_, tag_dict, counter)
 
-    for i in range(1, _NUM_OUTPUTS_ + 1):
-        write_submission('{}out{:03d}.txt'.format(_OUTPUT_FILE_PATH_, i), images, 0.333, datetime.now())
+    for in_file_ndx, in_file_name in enumerate(_INPUT_FILE_NAMES_, start=1):
+        input_file_path  = _INPUT_FILE_DIR_ + in_file_name
+        images, counter = read_images(input_file_path, tag_dict, counter)
+
+        for output_ndx in range(1, _NUM_OUTPUTS_ + 1):
+            out_file_name = '{}out_{:03d}_{:03d}_{}'.format(
+                _OUTPUT_FILE_PATH_, 
+                in_file_ndx, 
+                output_ndx, 
+                in_file_name
+            )
+            write_submission(out_file_name, images, 0.333, datetime.now())
 
 
 def read_images(file_path, tag_dict, counter):
@@ -82,7 +100,7 @@ def read_images(file_path, tag_dict, counter):
 
         else:
             image_spec_split = line.split()
-            dim_split = image_spec_split[1].split('x')
+            dim_split = ['0', '0'] # image_spec_split[1].split('x')
 
             if image:
                 images.append(image)

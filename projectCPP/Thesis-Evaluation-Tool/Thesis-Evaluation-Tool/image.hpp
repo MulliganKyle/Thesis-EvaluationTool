@@ -66,8 +66,8 @@ public:
     int getYdim() const { return ydim_;}
     
     int getNumRects() const {return numRects_;}
-    int getNumMatches() const {return numMatches_;}
-    double getNumMatches2() const { return totScore_; }
+    /*int getNumMatches() const {return numMatches_;}*/
+    double getNumMatches() const { return totScore_; }
     int getNumImages() const { return numberOfImages_; }
     
     std::list<Rectangle*> getAllRectangles() const { return rectangleList_; }
@@ -82,6 +82,7 @@ public:
     void addNewRectangle(int, int, int, int, int);
     void increaseNumMatches();
     void increaseNumMatches2(double);
+    void clean();
     
     //helpers
     //
