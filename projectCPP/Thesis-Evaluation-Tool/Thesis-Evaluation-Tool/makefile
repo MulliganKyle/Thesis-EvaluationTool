@@ -9,6 +9,7 @@ LINK_TARGET = eval
 OBJS =  \
  main.o \
 	evalLib.o \
+	compareLib.o \
 	helperLib.o \
 	image.o \
 	rectangle.o \
@@ -63,7 +64,8 @@ $(LINK_TARGET) : $(OBJS)
 # The commands for making an out-of-date target up-to-date may be found elsewhere
 # (in this case, by the Pattern Rule above).
 # Dependency Rules are often used to capture header file dependencies.
-main.cpp : evalLib.hpp helperLib.hpp image.hpp rectangle.hpp
+main.cpp : evalLib.hpp helperLib.hpp compareLib.hpp image.hpp rectangle.hpp 
+compareLib.cpp: compareLib.hpp image.hpp rectangle.hpp
 helperLib.cpp : helperLib.hpp rectangle.hpp
 evalLib.cpp : evalLib.hpp image.hpp rectangle.hpp
 image.cpp : image.hpp rectangle.hpp helperLib.hpp

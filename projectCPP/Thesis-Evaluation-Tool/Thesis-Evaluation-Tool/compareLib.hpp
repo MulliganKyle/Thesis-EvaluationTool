@@ -18,7 +18,7 @@
 #include <vector>
 #include <mutex>
 
-
+#include "evalLib.hpp"
 #include "rectangle.hpp"
 #include "image.hpp"
 
@@ -31,6 +31,8 @@ void imageCompareParallelWrapper(std::vector<Image*>, std::vector<Image*>, int);
 void imageCompareParallel(std::vector<Image*>, std::vector<Image*>, int, int);
 
 void rectangleCompareParallel(std::list<Image*>, std::list<Image*>);
+
+void multiFileTest(std::string, int, int, int);
 
 //void imageCompareSerialRectangleParallel(std::list<Image*>, std::list<Image*>);
 //void imageRectangleCompareParallel(std::list<Image*>, std::list<Image*>);

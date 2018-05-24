@@ -15,50 +15,37 @@
 #include "evalLib.hpp"
 #include "compareLib.hpp"
 
-#define NUM_THREADS 4
+#define NUM_THREADS 2
+#define NUM_FILES 10
 
 int main(int argc, const char * argv[])
 {
     
-    std::ofstream JSFile;
-    std::ofstream JSFFile;
-    std::ofstream JPRFile;
-    std::ofstream JPIFile;
-    std::ofstream JPIRFile;
+    std::ofstream outputFile;
+    
+    std::list<Image*>::const_iterator imagesIterator;
+    std::list<Image*> expertImages;
+    std::list<Image*> traineeImages;
+    
+    std::vector<std::thread> threadVec;
 
     
-    std::list<Image*>::const_iterator keyImagesIterator;
-    std::list<Image*> keyImagesSerial;
-    std::list<Image*> test1ImagesSerial;
-    
-    std::list<Image*> keyImagesSerialF;
-    std::list<Image*> test1ImagesSerialF;
-    
-    std::list<Image*> keyImagesParallelR;
-    std::list<Image*> test1ImagesParallelR;
-    
-    std::list<Image*> keyImagesParallelI;
-    std::list<Image*> test1ImagesParallelI;
-    
-    std::list<Image*> keyImagesParallelIR;
-    std::list<Image*> test1ImagesParallelIR;
-    
-    std::vector<Image*> keyImgVec;
-    std::vector<Image*> checkImgVec;
+    std::vector<Image*> expertImagesVector;
+    std::vector<Image*> traineeImagesVector;
     
     Image* imagePTR;
     
     double tstart, tstop, ttime;
     double tstartA, tstopA, ttimeA;
     
-    int i, j;
+    int i, j, threadCount;
     
 
     
     std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
     std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/traineeDataExtended01.txt";
     
-    std::string filesPath="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/extraData/";
+    std::string filesPath="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/extraData0";
     
     std::string expertFileInPath;
     std::string traineeFileInPath;
@@ -92,83 +79,48 @@ int main(int argc, const char * argv[])
 #if 1
     //read in the image files and store them in the image lists.
     tstart = dtime();
-    getImgData(expertFileIn, keyImagesSerial);
-    getImgData(traineeFileIn, test1ImagesSerial);
+    getImgData(expertFileIn, expertImages);
+    getImgData(traineeFileIn, traineeImages);
     tstop = dtime();
     ttime = tstop - tstart;
     
-    JSFile.open(jaccardSerial, std::ofstream::out);
-    if (!JSFile.is_open())
+    outputFile.open(jaccardSerial, std::ofstream::out);
+    if (!outputFile.is_open())
     {
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    JSFile << "reading images completed in: " << ttime << " seconds." << std::endl;
+    outputFile << "reading images completed in: " << ttime << " seconds." << std::endl;
     
     tstart = dtime();
-    imageCompareSerial(test1ImagesSerial, keyImagesSerial);
+    imageCompareSerial(traineeImages, expertImages);
     tstop = dtime();
     ttime = tstop - tstart;
     
     //std::cout << std::endl << std::endl;
-    for ( keyImagesIterator= keyImagesSerial.begin(), i=1; keyImagesIterator!=keyImagesSerial.end(); ++keyImagesIterator, i++)
+    for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
     {
-        JSFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
     }
     
-    JSFile << "comparison using jaccard index completed in: " << ttime << " seconds" << std::endl;
+    outputFile << "comparison using jaccard index completed in: " << ttime << " seconds" << std::endl;
+
+    outputFile.close();
     
 #endif
-
-    
-    /*******************************************************************************/
-    /*******************************************************************************/
-    /**                                                                           **/
-    /**                                                                           **/
-    /**                             Parallel test                                 **/
-    /**                         Images are parallel                               **/
-    /**                                                                           **/
-    /*******************************************************************************/
-    /*******************************************************************************/
-    
-#if 1
-    //compare images using the rectangle parallel method
-    tstart = dtime();
-    getImgData(expertFileIn, keyImagesParallelR);
-    getImgData(traineeFileIn, test1ImagesParallelR);
-    tstop = dtime();
-    ttime = tstop - tstart;
-    JPRFile.open(jaccardParallelRects, std::ofstream::out);
-    if (!JPRFile.is_open())
+//delete all images from the two lists before next test
+    while ( !expertImages.empty() )
     {
-        std::cout << "Error opening file" <<std::endl;
-        return 1;
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        imagePTR->~Image();
     }
-    JPRFile << "reading images completed in: " << ttime << " seconds." << std::endl;
-    
-    std::vector<std::thread> threadVec;
-    
-
-    
-    
-    
-    //in order to do parallel by images, need to put the imageList into a vector
-
-    
-    
-    tstart = dtime();
-    rectangleCompareParallel(test1ImagesParallelR, keyImagesParallelR);
-    tstop = dtime();
-    ttime = tstop - tstart;
-    
-    //std::cout << std::endl << std::endl;
-    for ( keyImagesIterator= keyImagesParallelR.begin(), i=1; keyImagesIterator!=keyImagesParallelR.end(); ++keyImagesIterator, i++)
+    while ( !traineeImages.empty() )
     {
-        JPRFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        imagePTR->~Image();
     }
-    JPRFile << "comparison using jaccard index in parallel(rects) completed in: " << ttime << " seconds" << std::endl;
-    
-#endif
     
     /*******************************************************************************/
     /*******************************************************************************/
@@ -181,41 +133,111 @@ int main(int argc, const char * argv[])
     /*******************************************************************************/
     
 #if 1
-    //compare images using the images parallel method
+    //compare images using the rectangle parallel method
     tstart = dtime();
-    getImgData(expertFileIn, keyImagesParallelI);
-    getImgData(traineeFileIn, test1ImagesParallelI);
+    getImgData(expertFileIn, expertImages);
+    getImgData(traineeFileIn, traineeImages);
     tstop = dtime();
     ttime = tstop - tstart;
-    JPIFile.open(jaccardParallelImages, std::ofstream::out);
-    if (!JPIFile.is_open())
+    outputFile.open(jaccardParallelRects, std::ofstream::out);
+    if (!outputFile.is_open())
     {
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    JPIFile << "reading images completed in: " << ttime << " seconds." << std::endl;
+    outputFile << "reading images completed in: " << ttime << " seconds." << std::endl;
     
-    //convert list to vector for this method.
-    keyImgVec.reserve(keyImagesParallelI.size());
-    checkImgVec.reserve(test1ImagesParallelI.size());
+
     
-    keyImgVec.insert(keyImgVec.end(),keyImagesParallelI.begin(),keyImagesParallelI.end());
-    checkImgVec.insert(checkImgVec.end(), test1ImagesParallelI.begin(), test1ImagesParallelI.end());
     
     tstart = dtime();
-    imageCompareParallelWrapper(checkImgVec, keyImgVec, NUM_THREADS);
+    rectangleCompareParallel(traineeImages, expertImages);
     tstop = dtime();
     ttime = tstop - tstart;
     
     //std::cout << std::endl << std::endl;
-    for ( keyImagesIterator= keyImagesParallelI.begin(), i=1; keyImagesIterator!=keyImagesParallelI.end(); ++keyImagesIterator, i++)
+    for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
     {
-        JPIFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+        outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
     }
-    JPIFile << "comparison using jaccard index in parallel(images) completed in: " << ttime << " seconds" << std::endl;
+    outputFile << "comparison using jaccard index in parallel(rects) completed in: " << ttime << " seconds" << std::endl;
+    outputFile.close();
     
 #endif
+    //delete all images from the two lists before next test
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        imagePTR->~Image();
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        imagePTR->~Image();
+    }
     
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                             Parallel test                                 **/
+    /**                         Images are parallel                               **/
+    /**                                                                           **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+    
+#if 1
+    //compare images using the images parallel method
+    tstart = dtime();
+    getImgData(expertFileIn, expertImages);
+    getImgData(traineeFileIn, traineeImages);
+    tstop = dtime();
+    ttime = tstop - tstart;
+    outputFile.open(jaccardParallelImages, std::ofstream::out);
+    if (!outputFile.is_open())
+    {
+        std::cout << "Error opening file" <<std::endl;
+        return 1;
+    }
+    outputFile << "reading images completed in: " << ttime << " seconds." << std::endl;
+    
+    //convert list to vector for this method.
+    expertImagesVector.reserve(expertImages.size());
+    traineeImagesVector.reserve(traineeImages.size());
+    
+    expertImagesVector.insert(expertImagesVector.end(),expertImages.begin(),expertImages.end());
+    traineeImagesVector.insert(traineeImagesVector.end(), traineeImages.begin(), traineeImages.end());
+    
+    tstart = dtime();
+    imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, NUM_THREADS);
+    tstop = dtime();
+    ttime = tstop - tstart;
+    
+    //std::cout << std::endl << std::endl;
+    for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+    {
+        outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+    }
+    outputFile << "comparison using jaccard index in parallel(images) completed in: " << ttime << " seconds" << std::endl;
+    
+    outputFile.close();
+    
+#endif
+    //delete all images from the two lists before next test
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        imagePTR->~Image();
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        imagePTR->~Image();
+    }
     
     /*******************************************************************************/
     /*******************************************************************************/
@@ -231,12 +253,12 @@ int main(int argc, const char * argv[])
     ttimeA=0.0;
     tstart = dtime();
     tstartA = dtime();
-    expertFileInPath=filesPath+"expert.txt";
-    getImgData(expertFileInPath, keyImagesSerialF);
+    expertFileInPath=filesPath+"1/"+"expert.txt";
+    getImgData(expertFileInPath, expertImages);
     tstopA = dtime();
     ttimeA = ttimeA + (tstopA - tstartA);
     
-    for (j = 1; j<=10; j++)
+    for (j = 0; j<NUM_FILES; j++)
     {
         
         if (j<10)
@@ -255,17 +277,17 @@ int main(int argc, const char * argv[])
             resultsName="results"+std::to_string(j)+".txt";
         }
         
-        traineeFileInPath = filesPath+traineeFileName;
-        resultsFileOutPath = filesPath+resultsName;
+        traineeFileInPath = filesPath+"1/"+traineeFileName;
+        resultsFileOutPath = filesPath+"1/"+resultsName;
         
         tstartA = dtime();
-        getImgData(traineeFileInPath, test1ImagesSerialF);
+        getImgData(traineeFileInPath, traineeImages);
         tstopA = dtime();
         ttimeA = ttimeA + (tstopA - tstartA);
         
         
-        JSFFile.open(resultsFileOutPath, std::ofstream::out);
-        if (!JSFFile.is_open())
+        outputFile.open(resultsFileOutPath, std::ofstream::out);
+        if (!outputFile.is_open())
         {
             std::cout << "Error opening file" <<std::endl;
             return 1;
@@ -273,29 +295,30 @@ int main(int argc, const char * argv[])
         
         tstartA = dtime();
         //compare images
-        imageCompareSerial(test1ImagesSerialF, keyImagesSerialF);
+        imageCompareSerial(traineeImages, expertImages);
         tstopA = dtime();
         ttimeA = ttimeA + (tstopA - tstartA);
         
         //output data to file
-        for ( keyImagesIterator= keyImagesSerialF.begin(), i=1; keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator, i++)
+        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
         {
-            JSFFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
+            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
         }
         
-        JSFFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
         
-        JSFFile.close();
+        outputFile.close();
 
+        //clean the expert images and delete the trainee images
         tstartA = dtime();
-        for ( keyImagesIterator= keyImagesSerialF.begin(); keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator)
+        for ( imagesIterator= expertImages.begin(); imagesIterator!=expertImages.end(); ++imagesIterator)
         {
-            (*keyImagesIterator)->clean();
+            (*imagesIterator)->clean();
         }
-        while ( !test1ImagesSerialF.empty() )
+        while ( !traineeImages.empty() )
         {
-            imagePTR = test1ImagesSerialF.back();
-            test1ImagesSerialF.pop_back();
+            imagePTR = traineeImages.back();
+            traineeImages.pop_back();
             imagePTR->~Image();
         }
         tstopA = dtime();
@@ -305,21 +328,322 @@ int main(int argc, const char * argv[])
     tstop = dtime();
     ttime = tstop - tstart;
     
-    reportFilePath=filesPath+reportFileName;
-    JSFFile.open(reportFilePath, std::ofstream::out);
-    if (!JSFFile.is_open())
+    //output the report
+    reportFilePath=filesPath+"1/"+reportFileName;
+    outputFile.open(reportFilePath, std::ofstream::out);
+    if (!outputFile.is_open())
     {
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    JSFFile << "Comparison of " << j-1 << " files completed successfully using jaccard index." << std::endl;
-    JSFFile << "Output provided in " << ttime << " seconds." << std::endl;
-    JSFFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index." << std::endl;
+    outputFile << "Output provided in " << ttime << " seconds." << std::endl;
+    outputFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
     
-    
+    outputFile.close();
     
 #endif
+    //delete all images from the two lists before next test
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        imagePTR->~Image();
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        imagePTR->~Image();
+    }
     
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                         Parallel Image test                               **/
+    /**                            several files                                  **/
+    /**                         vvvvvvvvvvvvvvvvvvv                               **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+    
+    //parallel image test
+#if 1
+    ttimeA=0.0;
+    tstart = dtime();
+    tstartA = dtime();
+    expertFileInPath=filesPath+"2/"+"expert.txt";
+    getImgData(expertFileInPath, expertImages);
+    tstopA = dtime();
+    ttimeA = ttimeA + (tstopA - tstartA);
+    
+    for (j = 0; j<NUM_FILES; j++)
+    {
+        
+        if (j<10)
+        {
+            traineeFileName ="out00"+std::to_string(j)+".txt";
+            resultsName="results00"+std::to_string(j)+".txt";
+        }
+        else if (j < 100)
+        {
+            traineeFileName ="out0"+std::to_string(j)+".txt";
+            resultsName="results0"+std::to_string(j)+".txt";
+        }
+        else
+        {
+            traineeFileName ="out"+std::to_string(j)+".txt";
+            resultsName="results"+std::to_string(j)+".txt";
+        }
+        
+        traineeFileInPath = filesPath+"2/"+traineeFileName;
+        resultsFileOutPath = filesPath+"2/"+resultsName;
+        
+        tstartA = dtime();
+        getImgData(traineeFileInPath, traineeImages);
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+        
+        outputFile.open(resultsFileOutPath, std::ofstream::out);
+        if (!outputFile.is_open())
+        {
+            std::cout << "Error opening file" <<std::endl;
+            return 1;
+        }
+        
+        //convert list to vector for this method.
+        expertImagesVector.reserve(expertImages.size());
+        traineeImagesVector.reserve(traineeImages.size());
+        
+        expertImagesVector.insert(expertImagesVector.end(),expertImages.begin(),expertImages.end());
+        traineeImagesVector.insert(traineeImagesVector.end(), traineeImages.begin(), traineeImages.end());
+
+        
+        tstartA = dtime();
+        //compare images
+        imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, NUM_THREADS);
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+        //output data to file
+        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+        {
+            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        }
+        
+        outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        outputFile.close();
+        
+        //clean the expert images and delete the trainee images
+        tstartA = dtime();
+        for ( imagesIterator= expertImages.begin(); imagesIterator!=expertImages.end(); ++imagesIterator)
+        {
+            (*imagesIterator)->clean();
+        }
+        while ( !traineeImages.empty() )
+        {
+            imagePTR = traineeImages.back();
+            traineeImages.pop_back();
+            imagePTR->~Image();
+        }
+        
+        traineeImagesVector.clear();
+        expertImagesVector.clear();
+        
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+    }
+    tstop = dtime();
+    ttime = tstop - tstart;
+    
+    //output the report
+    reportFilePath=filesPath+"2/"+reportFileName;
+    outputFile.open(reportFilePath, std::ofstream::out);
+    if (!outputFile.is_open())
+    {
+        std::cout << "Error opening file" <<std::endl;
+        return 1;
+    }
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel images." << std::endl;
+    outputFile << "Output provided in " << ttime << " seconds." << std::endl;
+    outputFile << "Comparison not including file output and not including time to copy to vector completed in " << ttimeA << " seconds." <<std::endl;
+    outputFile << "Comparison does not include the vector copy because this method could be done without this copy by having the file read go directly to a vector instead. This was not implemented here because a list was sufficient for the other parallel methods." << std::endl;
+    outputFile.close();
+
+#endif
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        imagePTR->~Image();
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        imagePTR->~Image();
+    }
+    
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                       Parallel rectangle test                             **/
+    /**                            several files                                  **/
+    /**                         vvvvvvvvvvvvvvvvvvv                               **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+    
+    //delete all images in the trainee and expert image list before next test
+
+#if 1
+    ttimeA=0.0;
+    tstart = dtime();
+    tstartA = dtime();
+    expertFileInPath=filesPath+"3/"+"expert.txt";
+    getImgData(expertFileInPath, expertImages);
+    tstopA = dtime();
+    ttimeA = ttimeA + (tstopA - tstartA);
+    
+    for (j = 0; j<NUM_FILES; j++)
+    {
+        
+        if (j<10)
+        {
+            traineeFileName ="out00"+std::to_string(j)+".txt";
+            resultsName="results00"+std::to_string(j)+".txt";
+        }
+        else if (j < 100)
+        {
+            traineeFileName ="out0"+std::to_string(j)+".txt";
+            resultsName="results0"+std::to_string(j)+".txt";
+        }
+        else
+        {
+            traineeFileName ="out"+std::to_string(j)+".txt";
+            resultsName="results"+std::to_string(j)+".txt";
+        }
+        
+        traineeFileInPath = filesPath+"3/"+traineeFileName;
+        resultsFileOutPath = filesPath+"3/"+resultsName;
+        
+        tstartA = dtime();
+        getImgData(traineeFileInPath, traineeImages);
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+        
+        outputFile.open(resultsFileOutPath, std::ofstream::out);
+        if (!outputFile.is_open())
+        {
+            std::cout << "Error opening file" <<std::endl;
+            return 1;
+        }
+        
+        tstartA = dtime();
+        //compare images
+        rectangleCompareParallel(traineeImages, expertImages);
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+        //output data to file
+        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+        {
+            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        }
+        
+        outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        outputFile.close();
+        
+        tstartA = dtime();
+        for ( imagesIterator= expertImages.begin(); imagesIterator!=expertImages.end(); ++imagesIterator)
+        {
+            (*imagesIterator)->clean();
+        }
+        while ( !traineeImages.empty() )
+        {
+            imagePTR = traineeImages.back();
+            traineeImages.pop_back();
+            imagePTR->~Image();
+        }
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+    }
+    tstop = dtime();
+    ttime = tstop - tstart;
+    
+    //output the report
+    reportFilePath=filesPath+"3/"+reportFileName;
+    outputFile.open(reportFilePath, std::ofstream::out);
+    if (!outputFile.is_open())
+    {
+        std::cout << "Error opening file" <<std::endl;
+        return 1;
+    }
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel rectangles." << std::endl;
+    outputFile << "Output provided in " << ttime << " seconds." << std::endl;
+    outputFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
+    outputFile.close();
+
+#endif
+    
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        imagePTR->~Image();
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        imagePTR->~Image();
+    }
+    
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                         Parallel Files test                               **/
+    /**                            several files                                  **/
+    /**                         vvvvvvvvvvvvvvvvvvv                               **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+    
+#if 1
+    tstart = dtime();
+    for (threadCount=0; threadCount< NUM_THREADS; threadCount++)
+    {
+        threadVec.push_back(std::thread(multiFileTest, filesPath, threadCount, NUM_THREADS, NUM_FILES));
+    }
+    
+    for ( threadCount=0; threadCount < NUM_THREADS; ++threadCount)
+    {
+        (threadVec.back()).join();
+        threadVec.pop_back();
+    }
+    tstop = dtime();
+    ttime = tstop - tstart;
+    
+    //output the report
+    reportFilePath=filesPath+"4/"+reportFileName;
+    outputFile.open(reportFilePath, std::ofstream::out);
+    if (!outputFile.is_open())
+    {
+        std::cout << "Error opening file" <<std::endl;
+        return 1;
+    }
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel files." << std::endl;
+    outputFile << "Output provided in " << ttime << " seconds." << std::endl;
+    
+    outputFile.close();
+    
+#endif
     
     std::cout << "success!" << std::endl;
     return 0;
