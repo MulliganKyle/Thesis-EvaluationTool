@@ -89,6 +89,8 @@ void Image::clean()
     for (rectangleIterator=rectangleList_.begin(); rectangleIterator!=rectangleList_.end(); ++rectangleIterator)
     {
         (*rectangleIterator)->setMatch(NULL,0.0);
+        numMatches_=0;
+        totScore_=0;
     }
     
 }

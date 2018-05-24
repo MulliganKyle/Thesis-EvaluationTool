@@ -49,8 +49,9 @@ int main(int argc, const char * argv[])
     Image* imagePTR;
     
     double tstart, tstop, ttime;
+    double tstartA, tstopA, ttimeA;
     
-    int i;
+    int i, j;
     
 
     
@@ -64,6 +65,8 @@ int main(int argc, const char * argv[])
     std::string resultsFileOutPath;
     std::string traineeFileName;
     std::string resultsName;
+    std::string reportFilePath;
+    std::string reportFileName="report.txt";
     
     //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
     
@@ -225,33 +228,41 @@ int main(int argc, const char * argv[])
     /*******************************************************************************/
     
 #if 1
-    
+    ttimeA=0.0;
+    tstart = dtime();
+    tstartA = dtime();
     expertFileInPath=filesPath+"expert.txt";
     getImgData(expertFileInPath, keyImagesSerialF);
+    tstopA = dtime();
+    ttimeA = ttimeA + (tstopA - tstartA);
     
-    
-    for (i = 1; i<=10; i++)
+    for (j = 1; j<=10; j++)
     {
         
-        if (i<10)
+        if (j<10)
         {
-            traineeFileName ="out00"+std::to_string(i)+".txt";
-            resultsName="results00"+std::to_string(i)+".txt";
+            traineeFileName ="out00"+std::to_string(j)+".txt";
+            resultsName="results00"+std::to_string(j)+".txt";
         }
-        else if (i < 100)
+        else if (j < 100)
         {
-            traineeFileName ="out0"+std::to_string(i)+".txt";
-            resultsName="results0"+std::to_string(i)+".txt";
+            traineeFileName ="out0"+std::to_string(j)+".txt";
+            resultsName="results0"+std::to_string(j)+".txt";
         }
         else
         {
-            traineeFileName ="out"+std::to_string(i)+".txt";
-            resultsName="results"+std::to_string(i)+".txt";
+            traineeFileName ="out"+std::to_string(j)+".txt";
+            resultsName="results"+std::to_string(j)+".txt";
         }
         
         traineeFileInPath = filesPath+traineeFileName;
         resultsFileOutPath = filesPath+resultsName;
+        
+        tstartA = dtime();
         getImgData(traineeFileInPath, test1ImagesSerialF);
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
         
         JSFFile.open(resultsFileOutPath, std::ofstream::out);
         if (!JSFFile.is_open())
@@ -260,8 +271,13 @@ int main(int argc, const char * argv[])
             return 1;
         }
         
+        tstartA = dtime();
         //compare images
         imageCompareSerial(test1ImagesSerialF, keyImagesSerialF);
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
+        
+        //output data to file
         for ( keyImagesIterator= keyImagesSerialF.begin(), i=1; keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator, i++)
         {
             JSFFile << "img " << i << ": " << (*keyImagesIterator)->getName() << " score: " << (*keyImagesIterator)->getNumMatches() << " / " << (*keyImagesIterator)->getNumRects() << std::endl;
@@ -271,7 +287,8 @@ int main(int argc, const char * argv[])
         
         JSFFile.close();
 
-        for ( keyImagesIterator= keyImagesSerialF.begin(), i=1; keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator, i++)
+        tstartA = dtime();
+        for ( keyImagesIterator= keyImagesSerialF.begin(); keyImagesIterator!=keyImagesSerialF.end(); ++keyImagesIterator)
         {
             (*keyImagesIterator)->clean();
         }
@@ -281,9 +298,25 @@ int main(int argc, const char * argv[])
             test1ImagesSerialF.pop_back();
             imagePTR->~Image();
         }
+        tstopA = dtime();
+        ttimeA = ttimeA + (tstopA - tstartA);
         
     }
-
+    tstop = dtime();
+    ttime = tstop - tstart;
+    
+    reportFilePath=filesPath+reportFileName;
+    JSFFile.open(reportFilePath, std::ofstream::out);
+    if (!JSFFile.is_open())
+    {
+        std::cout << "Error opening file" <<std::endl;
+        return 1;
+    }
+    JSFFile << "Comparison of " << j-1 << " files completed successfully using jaccard index." << std::endl;
+    JSFFile << "Output provided in " << ttime << " seconds." << std::endl;
+    JSFFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
+    
+    
     
 #endif
     
