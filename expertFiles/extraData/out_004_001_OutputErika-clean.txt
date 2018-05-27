@@ -1,0 +1,30 @@
+cropAnchorage1964_01a.jpg 0x0
+rect:73 9 254 137 219
+rect:56 299 281 511 219
+cropBingol2003_02.JPG 0x0
+rect:96 93 351 257 10
+rect:36 201 89 259 220
+cropBingolTurkey2003_03.jpg 0x0
+rect:116 70 214 281 221
+rect:114 72 217 282 220
+rect:6 68 117 285 58
+cropBingol2003_02.JPG 0x0
+rect:38 202 90 262 17
+rect:96 99 343 256 10
+cropBucharestRomania1977_03.jpg 0x0
+rect:26 126 296 265 17
+cropCanterburyNZSeries2010_01.JPG 0x0
+rect:123 324 229 444 222
+cropCanterburyNZSeries2010_04a.JPG 0x0
+rect:107 135 237 324 113
+cropCanterburyNZSeries2010_09a.JPG 0x0
+rect:137 188 254 353 29
+cropCanterburyNZSeries2010_13.JPG 0x0
+rect:85 188 290 315 181
+rect:85 18 337 396 156
+cropCaracas1967_06.jpg 0x0
+rect:155 36 257 154 223
+cropCaracas1967_08.jpg 0x0
+rect:11 13 243 230 224
+cropCaracas1967_13.jpg 0x0
+rect:115 270 218 426 225

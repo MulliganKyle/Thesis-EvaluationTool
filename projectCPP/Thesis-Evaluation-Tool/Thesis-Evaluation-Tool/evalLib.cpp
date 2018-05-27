@@ -136,7 +136,7 @@ void getImgData(std::string filePath, std::list<Image*>& imageList)
             }
         }
     }
-    
+    inFile.close();
 }
 
 //Compare two input lists of images

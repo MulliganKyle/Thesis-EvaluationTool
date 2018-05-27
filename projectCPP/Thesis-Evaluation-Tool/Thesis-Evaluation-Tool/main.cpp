@@ -16,7 +16,7 @@
 #include "compareLib.hpp"
 
 #define NUM_THREADS 4
-#define NUM_FILES 201
+#define NUM_FILES 500
 
 int main(int argc, const char * argv[])
 {
@@ -28,6 +28,8 @@ int main(int argc, const char * argv[])
     std::list<Image*> traineeImages;
     
     std::vector<std::thread> threadVec;
+    std::vector<std::string> expertsFilesIn;
+    std::vector<std::string> expertsFilesOut;
 
     
     std::vector<Image*> expertImagesVector;
@@ -38,7 +40,11 @@ int main(int argc, const char * argv[])
     double tstart, tstop, ttime;
     double tstartA, tstopA, ttimeA;
     
-    int i, j, threadCount;
+    double imageScore, fileScore, filePercent;
+    
+    
+    
+    int i, j, k, threadCount;
     
 
     
@@ -54,6 +60,23 @@ int main(int argc, const char * argv[])
     std::string resultsName;
     std::string reportFilePath;
     std::string reportFileName="AAA_report.txt";
+    
+    std::string expertOut;
+    
+    std::string expertsPath="/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/";
+    
+    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_001_001_Output_EZRA1-clean.txt");
+    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_002_001_Output_EZRA2-clean.txt");
+    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_003_001_OutputANA-clean.txt");
+    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_004_001_OutputErika-clean.txt");
+    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_005_001_OutputJohn-clean.txt");
+    
+    expertsFilesOut.push_back("EZRA1");
+    expertsFilesOut.push_back("EZRA2");
+    expertsFilesOut.push_back("ANA");
+    expertsFilesOut.push_back("Erika");
+    expertsFilesOut.push_back("John");
+    
     
     //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
     
@@ -97,13 +120,21 @@ int main(int argc, const char * argv[])
     tstop = dtime();
     ttime = tstop - tstart;
     
-    //std::cout << std::endl << std::endl;
-    for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+    //output data to file
+    for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
     {
-        outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        
+        imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+        fileScore+=imageScore;
+        
     }
-    
+    filePercent=fileScore/(k-1);
     outputFile << "comparison using jaccard index completed in: " << ttime << " seconds" << std::endl;
+
+    
+    outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
+    
 
     outputFile.close();
     
@@ -113,13 +144,13 @@ int main(int argc, const char * argv[])
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     while ( !traineeImages.empty() )
     {
         imagePTR = traineeImages.back();
         traineeImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     
     /*******************************************************************************/
@@ -131,7 +162,6 @@ int main(int argc, const char * argv[])
     /**                                                                           **/
     /*******************************************************************************/
     /*******************************************************************************/
-    
 #if 1
     //compare images using the rectangle parallel method
     tstart = dtime();
@@ -155,12 +185,20 @@ int main(int argc, const char * argv[])
     tstop = dtime();
     ttime = tstop - tstart;
     
-    //std::cout << std::endl << std::endl;
-    for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+    //output data to file
+    for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
     {
-        outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        
+        imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+        fileScore+=imageScore;
+        
     }
+    filePercent=fileScore/(k-1);
     outputFile << "comparison using jaccard index in parallel(rects) completed in: " << ttime << " seconds" << std::endl;
+    
+    outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
+    
     outputFile.close();
     
 #endif
@@ -169,13 +207,13 @@ int main(int argc, const char * argv[])
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     while ( !traineeImages.empty() )
     {
         imagePTR = traineeImages.back();
         traineeImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     
     /*******************************************************************************/
@@ -187,7 +225,6 @@ int main(int argc, const char * argv[])
     /**                                                                           **/
     /*******************************************************************************/
     /*******************************************************************************/
-    
 #if 1
     //compare images using the images parallel method
     tstart = dtime();
@@ -215,12 +252,20 @@ int main(int argc, const char * argv[])
     tstop = dtime();
     ttime = tstop - tstart;
     
-    //std::cout << std::endl << std::endl;
-    for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+    //output data to file
+    for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
     {
-        outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+        
+        imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+        fileScore+=imageScore;
+        
     }
+    filePercent=fileScore/(k-1);
     outputFile << "comparison using jaccard index in parallel(images) completed in: " << ttime << " seconds" << std::endl;
+    
+    outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
+    
     
     outputFile.close();
     
@@ -230,14 +275,16 @@ int main(int argc, const char * argv[])
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     while ( !traineeImages.empty() )
     {
         imagePTR = traineeImages.back();
         traineeImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
+    traineeImagesVector.clear();
+    expertImagesVector.clear();
     
     /*******************************************************************************/
     /*******************************************************************************/
@@ -248,7 +295,6 @@ int main(int argc, const char * argv[])
     /**                                                                           **/
     /*******************************************************************************/
     /*******************************************************************************/
-    
 #if 1
     ttimeA=0.0;
     tstart = dtime();
@@ -300,12 +346,18 @@ int main(int argc, const char * argv[])
         ttimeA = ttimeA + (tstopA - tstartA);
         
         //output data to file
-        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+        for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
         {
-            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            
+            imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+            fileScore+=imageScore;
+            
         }
-        
+        filePercent=fileScore/(k-1);
         outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
         
         outputFile.close();
 
@@ -319,7 +371,7 @@ int main(int argc, const char * argv[])
         {
             imagePTR = traineeImages.back();
             traineeImages.pop_back();
-            imagePTR->~Image();
+            delete imagePTR;
         }
         tstopA = dtime();
         ttimeA = ttimeA + (tstopA - tstartA);
@@ -348,13 +400,13 @@ int main(int argc, const char * argv[])
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     while ( !traineeImages.empty() )
     {
         imagePTR = traineeImages.back();
         traineeImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     
     /*******************************************************************************/
@@ -366,7 +418,6 @@ int main(int argc, const char * argv[])
     /**                         vvvvvvvvvvvvvvvvvvv                               **/
     /*******************************************************************************/
     /*******************************************************************************/
-    
     //parallel image test
 #if 1
     ttimeA=0.0;
@@ -419,20 +470,26 @@ int main(int argc, const char * argv[])
         expertImagesVector.insert(expertImagesVector.end(),expertImages.begin(),expertImages.end());
         traineeImagesVector.insert(traineeImagesVector.end(), traineeImages.begin(), traineeImages.end());
 
-        
         tstartA = dtime();
         //compare images
         imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, NUM_THREADS);
         tstopA = dtime();
         ttimeA = ttimeA + (tstopA - tstartA);
+
         
         //output data to file
-        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+        for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
         {
-            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            
+            imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+            fileScore+=imageScore;
+            
         }
-        
+        filePercent=fileScore/(k-1);
         outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
         
         outputFile.close();
         
@@ -446,7 +503,7 @@ int main(int argc, const char * argv[])
         {
             imagePTR = traineeImages.back();
             traineeImages.pop_back();
-            imagePTR->~Image();
+            delete imagePTR;
         }
         
         traineeImagesVector.clear();
@@ -478,14 +535,16 @@ int main(int argc, const char * argv[])
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     while ( !traineeImages.empty() )
     {
         imagePTR = traineeImages.back();
         traineeImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
+    traineeImagesVector.clear();
+    expertImagesVector.clear();
     
     /*******************************************************************************/
     /*******************************************************************************/
@@ -496,7 +555,6 @@ int main(int argc, const char * argv[])
     /**                         vvvvvvvvvvvvvvvvvvv                               **/
     /*******************************************************************************/
     /*******************************************************************************/
-    
     //delete all images in the trainee and expert image list before next test
 
 #if 1
@@ -550,12 +608,18 @@ int main(int argc, const char * argv[])
         ttimeA = ttimeA + (tstopA - tstartA);
         
         //output data to file
-        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+        for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
         {
-            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            
+            imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+            fileScore+=imageScore;
+            
         }
-        
+        filePercent=fileScore/(k-1);
         outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
         
         outputFile.close();
         
@@ -568,7 +632,7 @@ int main(int argc, const char * argv[])
         {
             imagePTR = traineeImages.back();
             traineeImages.pop_back();
-            imagePTR->~Image();
+            delete imagePTR;
         }
         tstopA = dtime();
         ttimeA = ttimeA + (tstopA - tstartA);
@@ -596,13 +660,13 @@ int main(int argc, const char * argv[])
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     while ( !traineeImages.empty() )
     {
         imagePTR = traineeImages.back();
         traineeImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
     
     /*******************************************************************************/
@@ -614,7 +678,6 @@ int main(int argc, const char * argv[])
     /**                         vvvvvvvvvvvvvvvvvvv                               **/
     /*******************************************************************************/
     /*******************************************************************************/
-    
 #if 1
     tstart = dtime();
     for (threadCount=0; threadCount< NUM_THREADS; threadCount++)
@@ -644,6 +707,106 @@ int main(int argc, const char * argv[])
     outputFile.close();
     
 #endif
+    
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        delete imagePTR;
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        delete imagePTR;
+    }
+    
+    /*******************************************************************************/
+    /*******************************************************************************/
+    /**                                                                           **/
+    /**                                                                           **/
+    /**                           Expert Files test                               **/
+    /**                                                                           **/
+    /**                         vvvvvvvvvvvvvvvvvvv                               **/
+    /*******************************************************************************/
+    /*******************************************************************************/
+
+    
+#if 1
+    for(i=0; i<expertsFilesIn.size(); i++)
+    {
+        getImgData(expertsFilesIn[i], expertImages);
+        for (j=0; j<expertsFilesIn.size(); j++)
+        {
+            //skip comparison with self
+            
+            if(j!=i)
+            {
+                //read in the files and compare
+                
+                getImgData(expertsFilesIn[j], traineeImages);
+                imageCompareSerial(traineeImages, expertImages);
+                
+                expertOut=expertsPath+"results"+std::to_string(i)+std::to_string(j)+expertsFilesOut[i]+"_to_"+expertsFilesOut[j]+".txt";
+                
+                outputFile.open(expertOut, std::ofstream::out);
+                if (!outputFile.is_open())
+                {
+                    std::cout << "Error opening file" <<std::endl;
+                    return 1;
+                }
+                //output data to file
+                for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
+                {
+                    outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+                    
+                    imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+                    fileScore+=imageScore;
+                    
+                }
+                filePercent=fileScore/(k-1);
+                outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+                
+                outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
+                
+                outputFile.close();
+                
+                
+                
+            }
+            for ( imagesIterator= expertImages.begin(); imagesIterator!=expertImages.end(); ++imagesIterator)
+            {
+                (*imagesIterator)->clean();
+            }
+            while ( !traineeImages.empty() )
+            {
+                imagePTR = traineeImages.back();
+                traineeImages.pop_back();
+                delete imagePTR;
+            }
+        }
+        while ( !expertImages.empty() )
+        {
+            imagePTR = expertImages.back();
+            expertImages.pop_back();
+            delete imagePTR;
+        }
+    }
+    
+#endif
+    
+    while ( !expertImages.empty() )
+    {
+        imagePTR = expertImages.back();
+        expertImages.pop_back();
+        delete imagePTR;
+    }
+    while ( !traineeImages.empty() )
+    {
+        imagePTR = traineeImages.back();
+        traineeImages.pop_back();
+        delete imagePTR;
+    }
     
     std::cout << "success!" << std::endl;
     return 0;

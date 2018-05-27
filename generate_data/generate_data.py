@@ -26,7 +26,7 @@ _OUTPUT_FILE_PATH_ = 'extraData00/' #'../expertFiles/'
 _FUZZ_FACTOR_ = 0.0333 #0
 
 # How many output files do you want?
-_NUM_OUTPUTS_ = 200
+_NUM_OUTPUTS_ = 499
 
 # Shuffle the output list?
 _SHUFFLE_ON_ = True

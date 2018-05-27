@@ -1,0 +1,16 @@
+img 1: cropAnchorage1964_01a.jpg score: 1.71704 / 2
+img 2: cropBingol2003_02.JPG score: 0.420121 / 2
+img 3: cropBingolTurkey2003_03.jpg score: 1.30562 / 3
+img 4: cropBingol2003_02.JPG score: 0.604653 / 2
+img 5: cropBucharestRomania1977_03.jpg score: 0.206061 / 1
+img 6: cropCanterburyNZSeries2010_01.JPG score: 0 / 1
+img 7: cropCanterburyNZSeries2010_04a.JPG score: 0.347731 / 1
+img 8: cropCanterburyNZSeries2010_09a.JPG score: 0 / 1
+img 9: cropCanterburyNZSeries2010_13.JPG score: 0.367628 / 2
+img 10: cropCaracas1967_06.jpg score: 0 / 1
+img 11: cropCaracas1967_08.jpg score: 0.293039 / 1
+img 12: cropCaracas1967_13.jpg score: 0 / 1
+
+
+Comparison completed successfully using jaccard index.
+The total score for the submission is: 2.83676 / 12 or 23.6397%

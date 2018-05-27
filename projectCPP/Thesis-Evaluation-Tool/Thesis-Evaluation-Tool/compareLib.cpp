@@ -197,19 +197,21 @@ void imageCompareParallelWrapper(std::vector<Image*> traineeImages, std::vector<
     
     
     threadVec.reserve(numThreads);
-    
     //spawn the designated number of threads
     for (threadCount=0; threadCount < numThreads; ++threadCount)
     {
         threadVec.push_back(std::thread(imageCompareParallel, traineeImages, expertImages, numThreads, threadCount));
         
     }
+    
     //join the threads
     for ( threadCount=0; threadCount < numThreads; ++threadCount)
     {
         (threadVec.back()).join();
         threadVec.pop_back();
+        
     }
+    
 }
 
 //threaded function that compares threads
@@ -425,14 +427,8 @@ void multiFileTest(std::string filesPath, int threadID, int numThreads, int numF
         end=numFiles;
     }
     
-    
     expertFileInPath=filesPath+"4/"+"expert.txt";
     getImgData(expertFileInPath, expertImages);
-    
-    
-
-    
-
     
     for (j = start; j<end; j++)
     {
@@ -489,7 +485,7 @@ void multiFileTest(std::string filesPath, int threadID, int numThreads, int numF
         {
             imagePTR = traineeImages.back();
             traineeImages.pop_back();
-            imagePTR->~Image();
+            delete imagePTR;
         }
     }
     
@@ -498,9 +494,9 @@ void multiFileTest(std::string filesPath, int threadID, int numThreads, int numF
     {
         imagePTR = expertImages.back();
         expertImages.pop_back();
-        imagePTR->~Image();
+        delete imagePTR;
     }
-
+    
     
 }
 

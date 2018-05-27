@@ -1,0 +1,108 @@
+cropAnchorage1964_01a.jpg 0x0
+rect:126 39 237 149 198
+cropBingol2003_02.JPG 0x0
+rect:156 108 235 206 208
+cropBingolTurkey2003_03.jpg 0x0
+rect:85 49 265 234 208
+cropBucharestRomania1977_03.jpg 0x0
+rect:67 113 298 273 112
+cropCanterburyNZSeries2010_01.JPG 0x0
+rect:131 150 245 444 153
+cropCanterburyNZSeries2010_04a.JPG 0x0
+rect:105 138 253 346 31
+cropCanterburyNZSeries2010_09a.JPG 0x0
+rect:131 180 253 376 103
+cropCanterburyNZSeries2010_11.JPG 0x0
+rect:99 80 248 203 184
+cropCanterburyNZSeries2010_13.JPG 0x0
+rect:89 79 324 405 153
+cropCaracas1967_06.jpg 0x0
+rect:147 39 292 157 198
+cropCaracas1967_08.jpg 0x0
+rect:141 78 221 145 209
+cropCaracas1967_13.jpg 0x0
+rect:103 247 216 493 100
+cropCaracas1967_14.jpg 0x0
+rect:67 43 331 175 210
+cropChiChi1991_01.jpg 0x0
+rect:256 58 332 196 22
+cropCaracas1967_06.jpg 0x0
+rect:134 36 274 152 42
+cropCanterburyNZSeries2010_11.JPG 0x0
+rect:95 88 220 198 59
+cropChiChi1991_01.jpg 0x0
+rect:243 29 331 205 31
+cropChichi1999_28.jpg 0x0
+rect:113 46 223 190 211
+cropChichi1999_29a.jpg 0x0
+rect:99 146 249 340 103
+cropChile2010B_04.JPG 0x0
+rect:53 129 311 212 119
+cropChile2010_01.jpg 0x0
+rect:112 40 265 165 37
+cropChile2010_10.jpg 0x0
+rect:96 64 243 176 176
+cropChile2010_16.jpg 0x0
+rect:127 33 199 152 28
+cropChile2010_24.jpg 0x0
+rect:133 67 281 126 37
+cropChile2010_54.JPG 0x0
+rect:94 46 322 170 212
+cropChile2010_91.JPG 0x0
+rect:79 35 248 205 182
+cropChile2010_01.jpg 0x0
+rect:113 39 251 156 36
+cropChile2010_10.jpg 0x0
+rect:82 64 174 182 213
+cropChristchurch2011_05.jpg 0x0
+rect:135 227 217 406 28
+cropDSCN0792.JPG 0x0
+rect:138 72 218 198 214
+cropDSC_0298.JPG 0x0
+rect:122 58 217 160 144
+cropEastJapan2011_07.JPG 0x0
+rect:81 23 159 121 182
+cropHaiti2010_02.JPG 0x0
+rect:79 61 282 182 100
+cropImperialValley1979_02.jpg 0x0
+rect:82 66 265 200 16
+cropIzmit1999_01.JPG 0x0
+rect:75 141 221 362 103
+cropIzmit1999_03.jpg 0x0
+rect:94 46 258 198 22
+cropIzmitTurkey1999_31.jpg 0x0
+rect:99 91 222 201 99
+cropIzmitTurkey1999_34.jpg 0x0
+rect:149 234 197 366 100
+rect:30 84 173 187 210
+rect:194 164 281 286 16
+cropKobe1995_09.jpg 0x0
+rect:77 332 135 492 160
+rect:205 394 286 460 85
+cropKumamoto2016_01.png 0x0
+rect:56 134 271 215 119
+cropKumamoto2016_03.png 0x0
+rect:172 77 244 138 215
+rect:149 160 78 86 210
+cropKumamoto2016_14.png 0x0
+rect:219 28 299 80 13
+cropManagua1972_01.jpg 0x0
+rect:239 342 112 20 216
+cropMexicoCity1985_04.jpg 0x0
+rect:181 36 345 106 217
+cropMuisne2016_03.png 0x0
+rect:115 86 311 235 120
+cropNepal2015_51.JPG 0x0
+rect:215 35 288 101 218
+cropNewZealand2011_12.JPG 0x0
+rect:283 220 70 25 182
+cropNorthridge1994_05.JPG 0x0
+rect:195 160 33 52 31
+cropPeru2007_01.JPG 0x0
+rect:281 106 331 166 104
+rect:81 154 18 71 31
+cropSanFernando1970_06a.jpg 0x0
+rect:99 42 207 148 103
+rect:258 494 101 240 119
+cropSanFernando1970_07.jpg 0x0
+rect:291 418 73 63 119
