@@ -48,7 +48,7 @@ clean :
 # $^ expands to the rule's dependencies, in this case the three files
 # main.o, test1.o, and  test2.o.
 $(LINK_TARGET) : $(OBJS)
-	g++ -g -Wall -o $@ $^
+	g++ -g -Wall -o $@ $^ -std=c++11 -pthread -pg
 
 # Here is a Pattern Rule, often used for compile-line.
 # It says how to create a file with a .o suffix, given a file with a .cpp suffix.
@@ -56,7 +56,7 @@ $(LINK_TARGET) : $(OBJS)
 # $@ for the pattern-matched target
 # $< for the pattern-matched dependency
 %.o : %.cpp
-	g++ -g -Wall -pg -std=c++11 -o $@ -c $< -pthread
+	g++ -g -Wall -pg -std=c++11 -o $@ -c $<
 
 # These are Dependency Rules, which are rules without any command.
 # Dependency Rules indicate that if any file to the right of the colon changes,

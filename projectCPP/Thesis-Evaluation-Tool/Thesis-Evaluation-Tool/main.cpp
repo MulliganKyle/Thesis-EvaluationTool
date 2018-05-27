@@ -15,7 +15,7 @@
 #include "evalLib.hpp"
 #include "compareLib.hpp"
 
-#define NUM_THREADS 4
+#define NUM_THREADS 20
 #define NUM_FILES 500
 
 int main(int argc, const char * argv[])
@@ -133,6 +133,8 @@ int main(int argc, const char * argv[])
     filePercent=fileScore/(k-1);
     outputFile << "comparison using jaccard index completed in: " << ttime << " seconds" << std::endl;
 
+    std::cout << "single-file serial complete in: " << ttime << " seconds" << std::endl;
+
     
     outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
     
@@ -153,7 +155,6 @@ int main(int argc, const char * argv[])
         traineeImages.pop_back();
         delete imagePTR;
     }
-    
     /*******************************************************************************/
     /*******************************************************************************/
     /**                                                                           **/
@@ -197,6 +198,9 @@ int main(int argc, const char * argv[])
     }
     filePercent=fileScore/(k-1);
     outputFile << "comparison using jaccard index in parallel(rects) completed in: " << ttime << " seconds" << std::endl;
+
+
+    std::cout << "single-file parallel rects complete in: " << ttime << " seconds" << std::endl;
     
     outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
     
@@ -264,6 +268,9 @@ int main(int argc, const char * argv[])
     }
     filePercent=fileScore/(k-1);
     outputFile << "comparison using jaccard index in parallel(images) completed in: " << ttime << " seconds" << std::endl;
+
+
+    std::cout << "single-file parallel images complete in: " << ttime << " seconds" << std::endl;
     
     outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
     
@@ -299,11 +306,8 @@ int main(int argc, const char * argv[])
 #if 1
     ttimeA=0.0;
     tstart = dtime();
-    tstartA = dtime();
     expertFileInPath=filesPath+"1/"+"expert.txt";
     getImgData(expertFileInPath, expertImages);
-    tstopA = dtime();
-    ttimeA = ttimeA + (tstopA - tstartA);
     
     for (j = 0; j<NUM_FILES; j++)
     {
@@ -327,10 +331,7 @@ int main(int argc, const char * argv[])
         traineeFileInPath = filesPath+"1/"+traineeFileName;
         resultsFileOutPath = filesPath+"1/"+resultsName;
         
-        tstartA = dtime();
         getImgData(traineeFileInPath, traineeImages);
-        tstopA = dtime();
-        ttimeA = ttimeA + (tstopA - tstartA);
         
         
         outputFile.open(resultsFileOutPath, std::ofstream::out);
@@ -394,6 +395,9 @@ int main(int argc, const char * argv[])
     outputFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
     
     outputFile.close();
+
+
+    std::cout << "multi-file serial complete in: " << ttimeA << " seconds" << std::endl;
     
 #endif
     //delete all images from the two lists before next test
@@ -423,11 +427,8 @@ int main(int argc, const char * argv[])
 #if 1
     ttimeA=0.0;
     tstart = dtime();
-    tstartA = dtime();
     expertFileInPath=filesPath+"2/"+"expert.txt";
     getImgData(expertFileInPath, expertImages);
-    tstopA = dtime();
-    ttimeA = ttimeA + (tstopA - tstartA);
     
     for (j = 0; j<NUM_FILES; j++)
     {
@@ -451,10 +452,7 @@ int main(int argc, const char * argv[])
         traineeFileInPath = filesPath+"2/"+traineeFileName;
         resultsFileOutPath = filesPath+"2/"+resultsName;
         
-        tstartA = dtime();
         getImgData(traineeFileInPath, traineeImages);
-        tstopA = dtime();
-        ttimeA = ttimeA + (tstopA - tstartA);
         
         
         outputFile.open(resultsFileOutPath, std::ofstream::out);
@@ -493,6 +491,8 @@ int main(int argc, const char * argv[])
         outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
         
         outputFile.close();
+
+
         
         //clean the expert images and delete the trainee images
         tstartA = dtime();
@@ -531,6 +531,9 @@ int main(int argc, const char * argv[])
     outputFile << "Comparison does not include the vector copy because this method could be done without this copy by having the file read go directly to a vector instead. This was not implemented here because a list was sufficient for the other parallel methods." << std::endl;
     outputFile.close();
 
+
+    std::cout << "multi-file parallel images complete in: " << ttimeA << " seconds" << std::endl;
+
 #endif
     while ( !expertImages.empty() )
     {
@@ -561,11 +564,8 @@ int main(int argc, const char * argv[])
 #if 1
     ttimeA=0.0;
     tstart = dtime();
-    tstartA = dtime();
     expertFileInPath=filesPath+"3/"+"expert.txt";
     getImgData(expertFileInPath, expertImages);
-    tstopA = dtime();
-    ttimeA = ttimeA + (tstopA - tstartA);
     
     for (j = 0; j<NUM_FILES; j++)
     {
@@ -589,10 +589,7 @@ int main(int argc, const char * argv[])
         traineeFileInPath = filesPath+"3/"+traineeFileName;
         resultsFileOutPath = filesPath+"3/"+resultsName;
         
-        tstartA = dtime();
         getImgData(traineeFileInPath, traineeImages);
-        tstopA = dtime();
-        ttimeA = ttimeA + (tstopA - tstartA);
         
         
         outputFile.open(resultsFileOutPath, std::ofstream::out);
@@ -655,6 +652,7 @@ int main(int argc, const char * argv[])
     outputFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
     outputFile.close();
 
+    std::cout << "multi-file parallel rectangles complete in: " << ttimeA << " seconds" << std::endl;
 #endif
     
     while ( !expertImages.empty() )
