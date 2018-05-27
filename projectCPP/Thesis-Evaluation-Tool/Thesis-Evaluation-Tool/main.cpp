@@ -47,11 +47,20 @@ int main(int argc, const char * argv[])
     int i, j, k, threadCount;
     
 
+    std::string defRootPath="/Users/kyle/Documents/Thesis-EvaluationTool/";
+    std::string rootPath=defRootPath;
+ 
+    if (argc>1)
+    {
+        rootPath=argv[1];
+    }
+
+    std::string expertFileIn=rootPath+"generate_data/moreTestData/expertDataExtended01.txt";
+    std::string traineeFileIn=rootPath+"generate_data/moreTestData/traineeDataExtended01.txt";
     
-    std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
-    std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/traineeDataExtended01.txt";
+    std::string filesPath=rootPath+"generate_data/extraData0";
     
-    std::string filesPath="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/extraData0";
+    
     
     std::string expertFileInPath;
     std::string traineeFileInPath;
@@ -63,13 +72,13 @@ int main(int argc, const char * argv[])
     
     std::string expertOut;
     
-    std::string expertsPath="/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/";
+    std::string expertsPath=rootPath+"expertFiles/extraData/";
     
-    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_001_001_Output_EZRA1-clean.txt");
-    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_002_001_Output_EZRA2-clean.txt");
-    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_003_001_OutputANA-clean.txt");
-    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_004_001_OutputErika-clean.txt");
-    expertsFilesIn.push_back("/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_005_001_OutputJohn-clean.txt");
+    expertsFilesIn.push_back(expertsPath+"out_001_001_Output_EZRA1-clean.txt");
+    expertsFilesIn.push_back(expertsPath+"out_002_001_Output_EZRA2-clean.txt");
+    expertsFilesIn.push_back(expertsPath+"out_003_001_OutputANA-clean.txt");
+    expertsFilesIn.push_back(expertsPath+"out_004_001_OutputErika-clean.txt");
+    expertsFilesIn.push_back(expertsPath+"out_005_001_OutputJohn-clean.txt");
     
     expertsFilesOut.push_back("EZRA1");
     expertsFilesOut.push_back("EZRA2");
@@ -78,17 +87,9 @@ int main(int argc, const char * argv[])
     expertsFilesOut.push_back("John");
     
     
-    //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/generate_data/moreTestData/expertDataExtended01.txt";
-    
-    //std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/ImageFiles/key.txt";
-    //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/ImageFiles/key.txt";
-    
-    //std::string expertFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_001_001_Output_EZRA1-clean.txt";
-    //std::string traineeFileIn="/Users/kyle/Documents/Thesis-EvaluationTool/expertFiles/extraData/out_002_001_Output_EZRA2-clean.txt";
-    
-    std::string jaccardSerial="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardSerialOut.txt";
-    std::string jaccardParallelRects="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardParallelRectsOut.txt";
-    std::string jaccardParallelImages="/Users/kyle/Documents/Thesis-EvaluationTool/jaccardParallelImagesOut.txt";
+    std::string jaccardSerial=rootPath+"jaccardSerialOut.txt";
+    std::string jaccardParallelRects=rootPath+"jaccardParallelRectsOut.txt";
+    std::string jaccardParallelImages=rootPath+"jaccardParallelImagesOut.txt";
     
     /*******************************************************************************/
     /*******************************************************************************/
