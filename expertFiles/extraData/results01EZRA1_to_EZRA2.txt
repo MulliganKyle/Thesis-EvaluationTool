@@ -49,3 +49,4 @@ img 47: cropSanFernando1970_07.jpg score: 3.28869 / 11
 
 Comparison completed successfully using jaccard index.
 The total score for the submission is: 26.5771 / 47 or 56.547%
+The total score for the submitted images is: 26.5771 / 47 or 56.547%

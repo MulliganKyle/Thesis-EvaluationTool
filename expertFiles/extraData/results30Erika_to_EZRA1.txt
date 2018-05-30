@@ -1,11 +1,11 @@
 img 1: cropAnchorage1964_01a.jpg score: 1.67063 / 2
 img 2: cropBingol2003_02.JPG score: 0.785559 / 2
 img 3: cropBingolTurkey2003_03.jpg score: 2.73255 / 3
-img 4: cropBingol2003_02.JPG score: 0.702611 / 2
-img 5: cropBucharestRomania1977_03.jpg score: 0.241954 / 1
-img 6: cropCanterburyNZSeries2010_01.JPG score: 0.0940725 / 1
-img 7: cropCanterburyNZSeries2010_04a.JPG score: 0.508751 / 1
-img 8: cropCanterburyNZSeries2010_09a.JPG score: 0.0424415 / 1
+img 4: cropBingol2003_02.JPG score: 0.778819 / 2
+img 5: cropBucharestRomania1977_03.jpg score: 0.814466 / 1
+img 6: cropCanterburyNZSeries2010_01.JPG score: 0.434687 / 1
+img 7: cropCanterburyNZSeries2010_04a.JPG score: 0.78871 / 1
+img 8: cropCanterburyNZSeries2010_09a.JPG score: 0.751281 / 1
 img 9: cropCanterburyNZSeries2010_13.JPG score: 1.33276 / 2
 img 10: cropCaracas1967_06.jpg score: 0.699787 / 1
 img 11: cropCaracas1967_08.jpg score: 0.236427 / 1
@@ -13,4 +13,5 @@ img 12: cropCaracas1967_13.jpg score: 0.655856 / 1
 
 
 Comparison completed successfully using jaccard index.
-The total score for the submission is: 5.63592 / 12 or 46.966%
+The total score for the submission is: 7.57595 / 12 or 63.1329%
+The total score for the submitted images is: 7.57595 / 12 or 63.1329%

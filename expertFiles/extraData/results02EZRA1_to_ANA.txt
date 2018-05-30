@@ -12,40 +12,41 @@ img 11: cropCaracas1967_08.jpg score: 1.00318 / 4
 img 12: cropCaracas1967_13.jpg score: 2.15246 / 8
 img 13: cropCaracas1967_14.jpg score: 0.831582 / 4
 img 14: cropChiChi1991_01.jpg score: 5.79783 / 23
-img 15: cropChichi1999_28.jpg score: 1.86048 / 14
-img 16: cropChichi1999_29a.jpg score: 1.43174 / 10
-img 17: cropChile2010B_04.JPG score: 0.468769 / 19
-img 18: cropChile2010_01.jpg score: 1.64581 / 8
-img 19: cropChile2010_10.jpg score: 0.257623 / 5
-img 20: cropChile2010_16.jpg score: 0.436932 / 8
-img 21: cropChile2010_24.jpg score: 2.88098 / 5
-img 22: cropChile2010_54.JPG score: 2.49646 / 6
-img 23: cropChile2010_91.JPG score: 1.16183 / 9
-img 24: cropChristchurch2011_05.jpg score: 0 / 6
-img 25: cropDSCN0792.JPG score: 0.902753 / 4
-img 26: cropDSC_0298.JPG score: 0.606265 / 3
-img 27: cropEastJapan2011_07.JPG score: 0.664348 / 5
-img 28: cropHaiti2010_02.JPG score: 0.889065 / 3
-img 29: cropImperialValley1979_02.jpg score: 0 / 6
-img 30: cropIzmit1999_01.JPG score: 0.487379 / 6
-img 31: cropIzmit1999_03.jpg score: 1.77351 / 6
-img 32: cropIzmitTurkey1999_31.jpg score: 0.684545 / 13
-img 33: cropIzmitTurkey1999_34.jpg score: 0.914009 / 16
-img 34: cropKobe1995_01.jpg score: 0.963037 / 6
-img 35: cropKobe1995_09.jpg score: 0.547513 / 7
-img 36: cropKumamoto2016_01.png score: 0.670021 / 11
-img 37: cropKumamoto2016_03.png score: 1.13886 / 5
-img 38: cropKumamoto2016_14.png score: 0.222454 / 5
-img 39: cropManagua1972_01.jpg score: 0 / 8
-img 40: cropMexicoCity1985_04.jpg score: 0.239411 / 3
-img 41: cropMuisne2016_03.png score: 0.370345 / 4
-img 42: cropNepal2015_51.JPG score: 0.533155 / 13
-img 43: cropNewZealand2011_12.JPG score: 1.84595 / 5
-img 44: cropNorthridge1994_05.JPG score: 0.245787 / 9
-img 45: cropPeru2007_01.JPG score: 0.136086 / 6
-img 46: cropSanFernando1970_06a.jpg score: 0 / 4
-img 47: cropSanFernando1970_07.jpg score: 1.06123 / 11
+img 15: cropChichi1999_28.jpg score: 2.28922 / 14
+img 16: cropChichi1999_29a.jpg score: 4.33023 / 10
+img 17: cropChile2010B_04.JPG score: 1.62263 / 19
+img 18: cropChile2010_01.jpg score: 1.932 / 8
+img 19: cropChile2010_10.jpg score: 2.24356 / 5
+img 20: cropChile2010_16.jpg score: 2.92993 / 8
+img 21: cropChile2010_24.jpg score: 2.42431 / 5
+img 22: cropChile2010_54.JPG score: 2.47495 / 6
+img 23: cropChile2010_91.JPG score: 1.37036 / 9
+img 24: cropChristchurch2011_05.jpg score: 2.48149 / 6
+img 25: cropDSCN0792.JPG score: 1.30469 / 4
+img 26: cropDSC_0298.JPG score: 1.66889 / 3
+img 27: cropEastJapan2011_07.JPG score: 2.27223 / 5
+img 28: cropHaiti2010_02.JPG score: 1.53289 / 3
+img 29: cropImperialValley1979_02.jpg score: 3.14168 / 6
+img 30: cropIzmit1999_01.JPG score: 2.50061 / 6
+img 31: cropIzmit1999_03.jpg score: 3.10729 / 6
+img 32: cropIzmitTurkey1999_31.jpg score: 1.3602 / 13
+img 33: cropIzmitTurkey1999_34.jpg score: 3.36941 / 16
+img 34: cropKobe1995_01.jpg score: 0 / 6
+img 35: cropKobe1995_09.jpg score: 2.03803 / 7
+img 36: cropKumamoto2016_01.png score: 1.32868 / 11
+img 37: cropKumamoto2016_03.png score: 1.42049 / 5
+img 38: cropKumamoto2016_14.png score: 1.65924 / 5
+img 39: cropManagua1972_01.jpg score: 1.74977 / 8
+img 40: cropMexicoCity1985_04.jpg score: 0.771435 / 3
+img 41: cropMuisne2016_03.png score: 1.75443 / 4
+img 42: cropNepal2015_51.JPG score: 0.446371 / 13
+img 43: cropNewZealand2011_12.JPG score: 3.75078 / 5
+img 44: cropNorthridge1994_05.JPG score: 0.824782 / 9
+img 45: cropPeru2007_01.JPG score: 2.89984 / 6
+img 46: cropSanFernando1970_06a.jpg score: 2.81668 / 4
+img 47: cropSanFernando1970_07.jpg score: 1.60699 / 11
 
 
 Comparison completed successfully using jaccard index.
-The total score for the submission is: 9.66133 / 47 or 20.556%
+The total score for the submission is: 16.2578 / 47 or 34.5911%
+The total score for the submitted images is: 16.2578 / 46 or 35.3431%

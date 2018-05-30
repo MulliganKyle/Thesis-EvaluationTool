@@ -24,6 +24,7 @@
 
 
 void imageCompareSerial(std::list<Image*>, std::list<Image*>);
+void imageCompareSerialExperts(std::list<Image*>, std::list<Image*>);
 void rectangleCompareSerial( Image*, Image*);
 void traineeRectangleCompare( Image*, Rectangle*);
 

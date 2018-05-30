@@ -38,6 +38,26 @@ void imageCompareSerial(std::list<Image*> traineeImages, std::list<Image*> exper
     }
 }
 
+void imageCompareSerialExperts(std::list<Image*> traineeImages, std::list<Image*> expertImages)
+{
+    std::list<Image*>::const_iterator traineeImagesIterator;
+    std::list<Image*>::const_iterator expertImagesIterator;
+    bool found;
+    
+    for ( expertImagesIterator=expertImages.begin(); expertImagesIterator!=expertImages.end(); ++expertImagesIterator)
+    {
+        for(traineeImagesIterator=traineeImages.begin(), found=false; traineeImagesIterator!=traineeImages.end() && !found; ++traineeImagesIterator)
+        {
+            //compare the names of the images
+            if ( (*traineeImagesIterator)->getName().compare((*expertImagesIterator)->getName()) == 0 )
+            {
+                rectangleCompareSerial( (*traineeImagesIterator), (*expertImagesIterator));
+                found=true;
+            }
+        }
+    }
+}
+
 //function to compare the expert rectangles
 void rectangleCompareSerial( Image* traineeImage, Image* expertImage)
 {
@@ -412,7 +432,9 @@ void multiFileTest(std::string filesPath, int threadID, int numThreads, int numF
     
     Image* imagePTR;
     
-    int i, j;
+    int j, k;
+    
+    double imageScore, fileScore, filePercent;
     
     
     int blockSize=numFiles/numThreads;
@@ -467,12 +489,18 @@ void multiFileTest(std::string filesPath, int threadID, int numThreads, int numF
         imageCompareSerial(traineeImages, expertImages);
         
         //output data to file
-        for ( imagesIterator= expertImages.begin(), i=1; imagesIterator!=expertImages.end(); ++imagesIterator, i++)
+        for ( imagesIterator= expertImages.begin(), k=1, fileScore=0; imagesIterator!=expertImages.end(); ++imagesIterator, k++)
         {
-            outputFile << "img " << i << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            outputFile << "img " << k << ": " << (*imagesIterator)->getName() << " score: " << (*imagesIterator)->getNumMatches() << " / " << (*imagesIterator)->getNumRects() << std::endl;
+            
+            imageScore=(*imagesIterator)->getNumMatches()/(*imagesIterator)->getNumRects();
+            fileScore+=imageScore;
         }
         
+        filePercent=fileScore/(k-1);
         outputFile << std::endl << std::endl << "Comparison completed successfully using jaccard index." << std::endl;
+        
+        outputFile << "The total score for the submission is: " << fileScore << " / " << k-1 << " or " << filePercent*100 << "%" << std::endl;
         
         outputFile.close();
         
