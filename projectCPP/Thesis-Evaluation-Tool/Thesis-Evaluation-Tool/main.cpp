@@ -47,6 +47,7 @@ int main(int argc, const char * argv[])
     
     
     int i, j, k, threadCount, l;
+    int selectedThreads=NUM_THREADS;
     
     
     std::string defRootPath="/Users/kyle/Documents/Thesis-EvaluationTool/";
@@ -55,6 +56,8 @@ int main(int argc, const char * argv[])
     if (argc>1)
     {
         rootPath=argv[1];
+        selectedThreads=std::stoi(argv[2]);
+        
     }
     
     std::string expertFileIn=rootPath+"generate_data/moreTestData/expertDataExtended01.txt";
@@ -292,7 +295,7 @@ int main(int argc, const char * argv[])
         traineeImagesVector.insert(traineeImagesVector.end(), traineeImages.begin(), traineeImages.end());
         
         tstart = dtime();
-        imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, NUM_THREADS);
+        imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, selectedThreads);
         tstop = dtime();
         ttime = tstop - tstart;
         
@@ -529,7 +532,7 @@ int main(int argc, const char * argv[])
         
         tstartA = dtime();
         //compare images
-        imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, NUM_THREADS);
+        imageCompareParallelWrapper(traineeImagesVector, expertImagesVector, selectedThreads);
         tstopA = dtime();
         ttimeA = ttimeA + (tstopA - tstartA);
         
@@ -583,7 +586,7 @@ int main(int argc, const char * argv[])
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel images, using " << NUM_THREADS << "threads." << std::endl;
+    outputFile << "Comparison of " << selectedThreads << " files completed successfully using jaccard index for parallel images, using " << selectedThreads << "threads." << std::endl;
     outputFile << "Output provided in " << ttime << " seconds." << std::endl;
     outputFile << "Comparison not including file output and not including time to copy to vector completed in " << ttimeA << " seconds." <<std::endl;
     outputFile << "Comparison does not include the vector copy because this method could be done without this copy by having the file read go directly to a vector instead. This was not implemented here because a list was sufficient for the other parallel methods." << std::endl;
@@ -705,7 +708,7 @@ int main(int argc, const char * argv[])
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel rectangles, using " << NUM_THREADS << "threads." << std::endl;
+    outputFile << "Comparison of " << selectedThreads << " files completed successfully using jaccard index for parallel rectangles, using " << selectedThreads << "threads." << std::endl;
     outputFile << "Output provided in " << ttime << " seconds." << std::endl;
     outputFile << "Comparison not including file output completed in " << ttimeA << " seconds." <<std::endl;
     outputFile.close();
@@ -737,12 +740,12 @@ int main(int argc, const char * argv[])
     /*******************************************************************************/
 #if 1
     tstart = dtime();
-    for (threadCount=0; threadCount< NUM_THREADS; threadCount++)
+    for (threadCount=0; threadCount< selectedThreads; threadCount++)
     {
-        threadVec.push_back(std::thread(multiFileTest, filesPath, threadCount, NUM_THREADS, NUM_FILES));
+        threadVec.push_back(std::thread(multiFileTest, filesPath, threadCount, selectedThreads, NUM_FILES));
     }
     
-    for ( threadCount=0; threadCount < NUM_THREADS; ++threadCount)
+    for ( threadCount=0; threadCount < selectedThreads; ++threadCount)
     {
         (threadVec.back()).join();
         threadVec.pop_back();
@@ -758,7 +761,7 @@ int main(int argc, const char * argv[])
         std::cout << "Error opening file" <<std::endl;
         return 1;
     }
-    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel files, using " << NUM_THREADS << "threads." << std::endl;
+    outputFile << "Comparison of " << NUM_FILES << " files completed successfully using jaccard index for parallel files, using " << selectedThreads << "threads." << std::endl;
     outputFile << "Output provided in " << ttime << " seconds." << std::endl;
     
     outputFile.close();
